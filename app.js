@@ -23,10 +23,9 @@ let reminderSettings = JSON.parse(localStorage.getItem('reminderSettings')) || {
 const BANK_MAP = {
     'KBANK': { name: 'กสิกรไทย', color: '#059669', badge: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
     'SCB': { name: 'ไทยพาณิชย์', color: '#7c3aed', badge: 'bg-purple-50 text-purple-700 border-purple-200' },
+    'DIME': { name: 'Dime! (KKP)', color: '#10b981', badge: 'bg-emerald-100 text-emerald-800 border-emerald-300' },
     'BBL': { name: 'กรุงเทพ', color: '#2563eb', badge: 'bg-blue-50 text-blue-700 border-blue-200' },
     'KTB': { name: 'กรุงไทย', color: '#0891b2', badge: 'bg-cyan-50 text-cyan-700 border-cyan-200' },
-    'TTB': { name: 'ttb', color: '#1d4ed8', badge: 'bg-blue-100 text-blue-800 border-blue-200' },
-    'BAY': { name: 'กรุงศรี', color: '#d97706', badge: 'bg-amber-50 text-amber-700 border-amber-200' },
     'GSB': { name: 'ออมสิน', color: '#db2777', badge: 'bg-pink-50 text-pink-700 border-pink-200' },
     'TRUE_MONEY': { name: 'TrueMoney', color: '#ea580c', badge: 'bg-orange-50 text-orange-700 border-orange-200' },
     'CREDIT_CARD': { name: 'บัตรเครดิต', color: '#475569', badge: 'bg-slate-100 text-slate-700 border-slate-200' },
