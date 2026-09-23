@@ -49,6 +49,47 @@ let bankChartInstance = null;
 let categoryChartInstance = null;
 let trendChartInstance = null;
 
+// Tab Switching Logic
+function switchTab(tabName) {
+    // Hide all tabs
+    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+    
+    // Show selected tab
+    const targetTab = document.getElementById(`tab-${tabName}`);
+    if (targetTab) targetTab.classList.remove('hidden');
+
+    // Desktop Nav Active State
+    document.querySelectorAll('.tab-nav-btn').forEach(btn => {
+        btn.classList.remove('active-tab', 'text-slate-900', 'font-bold');
+        btn.classList.add('text-slate-600', 'font-semibold');
+    });
+    const activeDesktopBtn = document.getElementById(`nav-btn-${tabName}`);
+    if (activeDesktopBtn) {
+        activeDesktopBtn.classList.add('active-tab', 'text-slate-900', 'font-bold');
+        activeDesktopBtn.classList.remove('text-slate-600', 'font-semibold');
+    }
+
+    // Mobile Nav Active State
+    document.querySelectorAll('.mobile-tab-btn').forEach(btn => {
+        btn.classList.remove('active-tab', 'text-slate-900', 'font-bold');
+        btn.classList.add('text-slate-600', 'font-semibold');
+    });
+    const activeMobileBtn = document.getElementById(`mobile-nav-btn-${tabName}`);
+    if (activeMobileBtn) {
+        activeMobileBtn.classList.add('active-tab', 'text-slate-900', 'font-bold');
+        activeMobileBtn.classList.remove('text-slate-600', 'font-semibold');
+    }
+
+    // Re-render charts when switching to dashboard tab
+    if (tabName === 'dashboard') {
+        setTimeout(() => {
+            const periodExpenses = getFilteredExpensesByPeriod();
+            renderCharts(periodExpenses);
+            renderTrendChart(periodExpenses);
+        }, 50);
+    }
+}
+
 // Initialize App & Listen to Firestore Realtime Updates
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('date').value = new Date().toISOString().split('T')[0];
@@ -201,6 +242,8 @@ function handleFormSubmit(e) {
             document.getElementById('expense-form').reset();
             document.getElementById('date').value = new Date().toISOString().split('T')[0];
             removeSlipPreview();
+            alert('บันทึกข้อมูลเรียบร้อยแล้ว!');
+            switchTab('history'); // Auto switch to History Tab
         })
         .catch((error) => {
             alert('เกิดข้อผิดพลาดในการบันทึก: ' + error.message);
