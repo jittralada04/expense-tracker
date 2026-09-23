@@ -24,6 +24,17 @@ body {
     background: #94a3b8;
 }
 
+/* Active Tab Button Style */
+.active-tab {
+    background-color: #059669 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25) !important;
+}
+
+.active-tab i {
+    color: #ffffff !important;
+}
+
 /* Active Filter Button State */
 .active-period {
     background-color: #059669 !important;
