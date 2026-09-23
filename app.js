@@ -17,9 +17,10 @@ const db = firebase.firestore();
 let allExpenses = []; 
 let currentPeriodFilter = 'ALL'; 
 let currentBase64Slip = null;
+let monthlyBudgetLimit = parseFloat(localStorage.getItem('monthlyBudgetLimit')) || 15000;
 let reminderSettings = JSON.parse(localStorage.getItem('reminderSettings')) || { enabled: false, time: "20:00" };
 
-// Bank Display Mapping (Clean Light Theme Badges)
+// Bank Display Mapping
 const BANK_MAP = {
     'KBANK': { name: 'กสิกรไทย', color: '#059669', badge: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
     'SCB': { name: 'ไทยพาณิชย์', color: '#7c3aed', badge: 'bg-purple-50 text-purple-700 border-purple-200' },
@@ -41,6 +42,7 @@ const CATEGORY_MAP = {
     'bills': { name: '💡 ค่าน้ำ ค่าไฟ เน็ต', color: '#2563eb' },
     'entertainment': { name: '🎬 ความบันเทิง', color: '#7c3aed' },
     'health': { name: '💊 สุขภาพ & ยา', color: '#059669' },
+    'salary': { name: '💰 เงินเดือน & รายได้พิเศษ', color: '#10b981' },
     'other': { name: '📦 อื่นๆ', color: '#64748b' }
 };
 
@@ -51,14 +53,11 @@ let trendChartInstance = null;
 
 // Tab Switching Logic
 function switchTab(tabName) {
-    // Hide all tabs
     document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
     
-    // Show selected tab
     const targetTab = document.getElementById(`tab-${tabName}`);
     if (targetTab) targetTab.classList.remove('hidden');
 
-    // Desktop Nav Active State
     document.querySelectorAll('.tab-nav-btn').forEach(btn => {
         btn.classList.remove('active-tab', 'text-slate-900', 'font-bold');
         btn.classList.add('text-slate-600', 'font-semibold');
@@ -69,7 +68,6 @@ function switchTab(tabName) {
         activeDesktopBtn.classList.remove('text-slate-600', 'font-semibold');
     }
 
-    // Mobile Nav Active State
     document.querySelectorAll('.mobile-tab-btn').forEach(btn => {
         btn.classList.remove('active-tab', 'text-slate-900', 'font-bold');
         btn.classList.add('text-slate-600', 'font-semibold');
@@ -80,7 +78,6 @@ function switchTab(tabName) {
         activeMobileBtn.classList.remove('text-slate-600', 'font-semibold');
     }
 
-    // Re-render charts when switching to dashboard tab
     if (tabName === 'dashboard') {
         setTimeout(() => {
             const periodExpenses = getFilteredExpensesByPeriod();
@@ -90,9 +87,10 @@ function switchTab(tabName) {
     }
 }
 
-// Initialize App & Listen to Firestore Realtime Updates
+// Initialize App
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('date').value = new Date().toISOString().split('T')[0];
+    document.getElementById('monthly-budget-input').value = monthlyBudgetLimit;
     
     document.getElementById('reminder-toggle').checked = reminderSettings.enabled;
     document.getElementById('reminder-time').value = reminderSettings.time;
@@ -101,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     db.collection("expenses").onSnapshot((snapshot) => {
         allExpenses = snapshot.docs.map(doc => ({
             id: doc.id,
+            type: doc.data().type || 'EXPENSE', // Default to EXPENSE if not present
             ...doc.data()
         }));
         allExpenses.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -114,7 +113,36 @@ document.addEventListener('DOMContentLoaded', () => {
     startReminderChecker();
 });
 
-// Client-Side Image Compression to Base64 (~50-80KB max)
+// Income / Expense Type Selector
+function setTxType(type) {
+    document.getElementById('tx-type').value = type;
+    const expBtn = document.getElementById('txtype-expense-btn');
+    const incBtn = document.getElementById('txtype-income-btn');
+
+    if (type === 'EXPENSE') {
+        expBtn.className = "py-2.5 rounded-xl font-bold text-xs transition flex items-center justify-center space-x-2 bg-rose-600 text-white shadow-md";
+        incBtn.className = "py-2.5 rounded-xl font-semibold text-xs text-slate-600 transition flex items-center justify-center space-x-2";
+    } else {
+        incBtn.className = "py-2.5 rounded-xl font-bold text-xs transition flex items-center justify-center space-x-2 bg-emerald-600 text-white shadow-md";
+        expBtn.className = "py-2.5 rounded-xl font-semibold text-xs text-slate-600 transition flex items-center justify-center space-x-2";
+    }
+}
+
+function setQuickTxType(type) {
+    document.getElementById('quick-tx-type').value = type;
+    const expBtn = document.getElementById('quick-txtype-expense-btn');
+    const incBtn = document.getElementById('quick-txtype-income-btn');
+
+    if (type === 'EXPENSE') {
+        expBtn.className = "py-2 rounded-lg transition bg-rose-600 text-white font-bold";
+        incBtn.className = "py-2 rounded-lg transition text-slate-600 font-semibold";
+    } else {
+        incBtn.className = "py-2 rounded-lg transition bg-emerald-600 text-white font-bold";
+        expBtn.className = "py-2 rounded-lg transition text-slate-600 font-semibold";
+    }
+}
+
+// Client-Side Image Compression
 function previewSlip(event) {
     const file = event.target.files[0];
     if (!file) return;
@@ -209,9 +237,11 @@ function getFilteredExpensesByPeriod() {
     return allExpenses;
 }
 
+// Form Submit Handler
 function handleFormSubmit(e) {
     e.preventDefault();
     
+    const type = document.getElementById('tx-type').value;
     const amount = parseFloat(document.getElementById('amount').value);
     const bank = document.getElementById('bank').value;
     const category = document.getElementById('category').value;
@@ -228,6 +258,7 @@ function handleFormSubmit(e) {
     submitBtn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i><span>กำลังบันทึก...</span>`;
 
     const newExpense = {
+        type: type, // INCOME or EXPENSE
         amount: amount,
         bank: bank,
         category: category,
@@ -241,19 +272,68 @@ function handleFormSubmit(e) {
         .then(() => {
             document.getElementById('expense-form').reset();
             document.getElementById('date').value = new Date().toISOString().split('T')[0];
+            setTxType('EXPENSE');
             removeSlipPreview();
             alert('บันทึกข้อมูลเรียบร้อยแล้ว!');
-            switchTab('history'); // Auto switch to History Tab
+            switchTab('history');
         })
         .catch((error) => {
             alert('เกิดข้อผิดพลาดในการบันทึก: ' + error.message);
         })
         .finally(() => {
             submitBtn.disabled = false;
-            submitBtn.innerHTML = `<i class="fa-solid fa-floppy-disk"></i><span>บันทึกข้อมูล</span>`;
+            submitBtn.innerHTML = `<i class="fa-solid fa-floppy-disk"></i><span>บันทึกข้อมูลเข้า Cloud</span>`;
         });
 }
 
+// Quick Form Submit Handler
+function handleQuickFormSubmit(e) {
+    e.preventDefault();
+    
+    const type = document.getElementById('quick-tx-type').value;
+    const amount = parseFloat(document.getElementById('quick-amount').value);
+    const bank = document.getElementById('quick-bank').value;
+    const category = document.getElementById('quick-category').value;
+    const note = document.getElementById('quick-note').value.trim();
+    const date = new Date().toISOString().split('T')[0];
+
+    if (isNaN(amount) || amount <= 0) {
+        alert('กรุณากรอกจำนวนเงินให้ถูกต้อง');
+        return;
+    }
+
+    const newExpense = {
+        type: type,
+        amount: amount,
+        bank: bank,
+        category: category,
+        date: date,
+        note: note,
+        slipUrl: null,
+        createdAt: new Date().toISOString()
+    };
+
+    db.collection("expenses").add(newExpense)
+        .then(() => {
+            document.getElementById('quick-expense-form').reset();
+            closeQuickAddModal();
+            alert('บันทึกข้อมูลด่วนเรียบร้อยแล้ว!');
+        })
+        .catch((error) => {
+            alert('เกิดข้อผิดพลาดในการบันทึก: ' + error.message);
+        });
+}
+
+// Quick Add Modal Handlers
+function openQuickAddModal() {
+    document.getElementById('quick-add-modal').classList.remove('hidden');
+}
+
+function closeQuickAddModal() {
+    document.getElementById('quick-add-modal').classList.add('hidden');
+}
+
+// Delete Expense
 function deleteExpense(id) {
     if (confirm('คุณต้องการลบรายการนี้ใช่หรือไม่?')) {
         db.collection("expenses").doc(id).delete()
@@ -274,6 +354,18 @@ function closeSlipModal() {
     document.getElementById('modal-slip-img').src = '';
 }
 
+function saveBudgetSetting() {
+    const budgetVal = parseFloat(document.getElementById('monthly-budget-input').value);
+    if (isNaN(budgetVal) || budgetVal < 0) {
+        alert('กรุณากรอกงบประมาณให้ถูกต้อง');
+        return;
+    }
+    monthlyBudgetLimit = budgetVal;
+    localStorage.setItem('monthlyBudgetLimit', monthlyBudgetLimit);
+    alert('บันทึกเป้าหมายงบประมาณเรียบร้อยแล้ว!');
+    updateUI();
+}
+
 function updateUI() {
     const periodExpenses = getFilteredExpensesByPeriod();
     
@@ -286,17 +378,25 @@ function updateUI() {
 function updateAnalyticalCards(filteredList) {
     const todayStr = new Date().toISOString().split('T')[0];
 
-    const totalAmount = filteredList.reduce((sum, item) => sum + item.amount, 0);
+    // Filter Income vs Expense
+    const incomeItems = filteredList.filter(item => item.type === 'INCOME');
+    const expenseItems = filteredList.filter(item => item.type !== 'INCOME'); // Default to EXPENSE
+
+    const totalIncome = incomeItems.reduce((sum, item) => sum + item.amount, 0);
+    const totalExpense = expenseItems.reduce((sum, item) => sum + item.amount, 0);
+    const netBalance = totalIncome - totalExpense;
+
     const todayAmount = allExpenses
-        .filter(item => item.date === todayStr)
+        .filter(item => item.date === todayStr && item.type !== 'INCOME')
         .reduce((sum, item) => sum + item.amount, 0);
 
-    const uniqueDates = [...new Set(filteredList.map(item => item.date))];
+    const uniqueDates = [...new Set(expenseItems.map(item => item.date))];
     const activeDaysCount = uniqueDates.length || 1;
-    const dailyAvg = totalAmount / activeDaysCount;
+    const dailyAvg = totalExpense / activeDaysCount;
 
+    // Top Category Calculation
     const catTotals = {};
-    filteredList.forEach(item => {
+    expenseItems.forEach(item => {
         catTotals[item.category] = (catTotals[item.category] || 0) + item.amount;
     });
     let topCatKey = '-';
@@ -308,10 +408,11 @@ function updateAnalyticalCards(filteredList) {
         }
     });
     const topCatName = CATEGORY_MAP[topCatKey] ? CATEGORY_MAP[topCatKey].name : '-';
-    const topCatPercent = totalAmount > 0 ? ((topCatMax / totalAmount) * 100).toFixed(0) : 0;
+    const topCatPercent = totalExpense > 0 ? ((topCatMax / totalExpense) * 100).toFixed(0) : 0;
 
+    // Top Bank Calculation
     const bankTotals = {};
-    filteredList.forEach(item => {
+    expenseItems.forEach(item => {
         bankTotals[item.bank] = (bankTotals[item.bank] || 0) + item.amount;
     });
     let topBankKey = '-';
@@ -326,11 +427,29 @@ function updateAnalyticalCards(filteredList) {
 
     const slipsCount = filteredList.filter(item => item.slipUrl).length;
 
-    document.getElementById('stat-total-expense').innerText = `฿${totalAmount.toLocaleString('th-TH', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    // Update Budget Progress Bar (Current Month)
+    const currentMonthStr = todayStr.substring(0, 7);
+    const monthExpenseTotal = allExpenses
+        .filter(item => item.date && item.date.startsWith(currentMonthStr) && item.type !== 'INCOME')
+        .reduce((sum, item) => sum + item.amount, 0);
+
+    const budgetRemaining = Math.max(0, monthlyBudgetLimit - monthExpenseTotal);
+    const budgetPercent = monthlyBudgetLimit > 0 ? Math.min(100, Math.round((monthExpenseTotal / monthlyBudgetLimit) * 100)) : 0;
+
+    document.getElementById('budget-remaining-text').innerText = `฿${budgetRemaining.toLocaleString('th-TH', { minimumFractionDigits: 2 })}`;
+    document.getElementById('budget-limit-text').innerText = `฿${monthlyBudgetLimit.toLocaleString('th-TH')}`;
+    document.getElementById('budget-percent-text').innerText = `ใช้ไปแล้ว ${budgetPercent}%`;
+    document.getElementById('budget-progress-bar').style.width = `${budgetPercent}%`;
+
+    // Render Metric Cards
+    document.getElementById('stat-total-income').innerText = `฿${totalIncome.toLocaleString('th-TH', { minimumFractionDigits: 2 })}`;
+    document.getElementById('stat-income-count').innerText = `${incomeItems.length} รายการ`;
+
+    document.getElementById('stat-total-expense').innerText = `฿${totalExpense.toLocaleString('th-TH', { minimumFractionDigits: 2 })}`;
     document.getElementById('stat-today-small').innerText = `฿${todayAmount.toLocaleString('th-TH', { minimumFractionDigits: 2 })}`;
     
-    document.getElementById('stat-daily-avg').innerText = `฿${dailyAvg.toLocaleString('th-TH', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
-    document.getElementById('stat-active-days').innerText = `${uniqueDates.length} วัน`;
+    document.getElementById('stat-net-balance').innerText = `฿${netBalance.toLocaleString('th-TH', { minimumFractionDigits: 2 })}`;
+    document.getElementById('stat-daily-avg').innerText = `฿${dailyAvg.toLocaleString('th-TH', { minimumFractionDigits: 2 })}`;
 
     document.getElementById('stat-top-cat-name').innerText = topCatName;
     document.getElementById('stat-top-cat-percent').innerText = `${topCatPercent}%`;
@@ -359,13 +478,22 @@ function renderHistoryTable(periodExpenses) {
     }
 
     if (resultList.length === 0) {
-        tableBody.innerHTML = `<tr><td colspan="7" class="text-center py-8 text-slate-400">ไม่พบรายการใช้เงินตามเงื่อนไขที่คุณเลือก</td></tr>`;
+        tableBody.innerHTML = `<tr><td colspan="8" class="text-center py-8 text-slate-400">ไม่พบรายการเงินตามเงื่อนไขที่คุณเลือก</td></tr>`;
         return;
     }
 
     tableBody.innerHTML = resultList.map(item => {
         const bankInfo = BANK_MAP[item.bank] || BANK_MAP['OTHER'];
         const catInfo = CATEGORY_MAP[item.category] || CATEGORY_MAP['other'];
+        const isIncome = item.type === 'INCOME';
+        
+        const typeBadge = isIncome
+            ? `<span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-100 text-emerald-700">รายรับ (+)</span>`
+            : `<span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-rose-100 text-rose-700">รายจ่าย (-)</span>`;
+
+        const amountColor = isIncome ? 'text-emerald-600 font-extrabold' : 'text-rose-600 font-bold';
+        const amountPrefix = isIncome ? '+฿' : '-฿';
+
         const slipBtn = item.slipUrl 
             ? `<button onclick="openSlipModal('${item.slipUrl}')" class="text-emerald-700 hover:text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-1 rounded-lg text-xs flex items-center justify-center space-x-1 transition mx-auto font-medium" title="ดูสลิป">
                 <i class="fa-solid fa-receipt text-emerald-600"></i><span>ดูสลิป</span>
@@ -375,6 +503,7 @@ function renderHistoryTable(periodExpenses) {
         return `
             <tr class="hover:bg-slate-50/80 transition">
                 <td class="p-3.5 text-slate-500 whitespace-nowrap">${formatDateTh(item.date)}</td>
+                <td class="p-3.5 whitespace-nowrap">${typeBadge}</td>
                 <td class="p-3.5 whitespace-nowrap">
                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-semibold border ${bankInfo.badge}">
                         ${bankInfo.name}
@@ -383,7 +512,7 @@ function renderHistoryTable(periodExpenses) {
                 <td class="p-3.5 whitespace-nowrap text-slate-800 font-medium">${catInfo.name}</td>
                 <td class="p-3.5 text-slate-500 max-w-xs truncate">${escapeHtml(item.note || '-')}</td>
                 <td class="p-3.5 text-center whitespace-nowrap">${slipBtn}</td>
-                <td class="p-3.5 font-bold text-right text-rose-600 whitespace-nowrap text-sm">฿${item.amount.toLocaleString('th-TH', { minimumFractionDigits: 2 })}</td>
+                <td class="p-3.5 text-right whitespace-nowrap text-sm ${amountColor}">${amountPrefix}${item.amount.toLocaleString('th-TH', { minimumFractionDigits: 2 })}</td>
                 <td class="p-3.5 text-center whitespace-nowrap">
                     <button onclick="deleteExpense('${item.id}')" class="text-slate-400 hover:text-rose-600 transition p-1" title="ลบรายการ">
                         <i class="fa-solid fa-trash-can text-sm"></i>
@@ -398,7 +527,10 @@ function renderCharts(filteredList) {
     const bankTotals = {};
     const catTotals = {};
 
-    filteredList.forEach(item => {
+    // Filter only Expenses for doughnut charts
+    const expenseItems = filteredList.filter(item => item.type !== 'INCOME');
+
+    expenseItems.forEach(item => {
         bankTotals[item.bank] = (bankTotals[item.bank] || 0) + item.amount;
         catTotals[item.category] = (catTotals[item.category] || 0) + item.amount;
     });
@@ -440,8 +572,9 @@ function renderCharts(filteredList) {
 
 function renderTrendChart(filteredList) {
     const dailyMap = {};
+    const expenseItems = filteredList.filter(item => item.type !== 'INCOME');
 
-    const sorted = [...filteredList].sort((a, b) => new Date(a.date) - new Date(b.date));
+    const sorted = [...expenseItems].sort((a, b) => new Date(a.date) - new Date(b.date));
 
     sorted.forEach(item => {
         if (!item.date) return;
@@ -548,12 +681,13 @@ function startReminderChecker() {
 
 function exportData() {
     if (allExpenses.length === 0) { alert('ไม่มีข้อมูลสำหรับส่งออก'); return; }
-    let csvContent = "data:text/csv;charset=utf-8,\uFEFFID,Date,Bank,Category,Amount,Note,HasSlip\n";
+    let csvContent = "data:text/csv;charset=utf-8,\uFEFFID,Date,Type,Bank,Category,Amount,Note,HasSlip\n";
     allExpenses.forEach(item => {
         const bankName = BANK_MAP[item.bank] ? BANK_MAP[item.bank].name : item.bank;
         const catName = CATEGORY_MAP[item.category] ? CATEGORY_MAP[item.category].name : item.category;
+        const typeStr = item.type === 'INCOME' ? "INCOME" : "EXPENSE";
         const hasSlip = item.slipUrl ? "YES" : "NO";
-        csvContent += `${item.id},${item.date},${bankName},${catName},${item.amount},"${(item.note || '').replace(/"/g, '""')}",${hasSlip}\n`;
+        csvContent += `${item.id},${item.date},${typeStr},${bankName},${catName},${item.amount},"${(item.note || '').replace(/"/g, '""')}",${hasSlip}\n`;
     });
     const link = document.createElement("a");
     link.setAttribute("href", encodeURI(csvContent));
