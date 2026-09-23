@@ -43,6 +43,7 @@ const CATEGORY_MAP = {
     'entertainment': { name: '🎬 ความบันเทิง', color: '#7c3aed' },
     'health': { name: '💊 สุขภาพ & ยา', color: '#059669' },
     'salary': { name: '💰 เงินเดือน & รายได้พิเศษ', color: '#10b981' },
+    'transfer': { name: '🔄 โอนระหว่างบัญชี', color: '#0284c7' },
     'other': { name: '📦 อื่นๆ', color: '#64748b' }
 };
 
@@ -113,18 +114,23 @@ document.addEventListener('DOMContentLoaded', () => {
     startReminderChecker();
 });
 
-// Income / Expense Type Selector
+// Income / Expense / Transfer Type Selector
 function setTxType(type) {
     document.getElementById('tx-type').value = type;
     const expBtn = document.getElementById('txtype-expense-btn');
     const incBtn = document.getElementById('txtype-income-btn');
+    const trsBtn = document.getElementById('txtype-transfer-btn');
 
-    if (type === 'EXPENSE') {
-        expBtn.className = "py-2.5 rounded-xl font-bold text-xs transition flex items-center justify-center space-x-2 bg-rose-600 text-white shadow-md";
-        incBtn.className = "py-2.5 rounded-xl font-semibold text-xs text-slate-600 transition flex items-center justify-center space-x-2";
-    } else {
-        incBtn.className = "py-2.5 rounded-xl font-bold text-xs transition flex items-center justify-center space-x-2 bg-emerald-600 text-white shadow-md";
-        expBtn.className = "py-2.5 rounded-xl font-semibold text-xs text-slate-600 transition flex items-center justify-center space-x-2";
+    if (expBtn) expBtn.className = "py-2.5 rounded-xl font-semibold text-xs text-slate-600 transition flex items-center justify-center space-x-1.5";
+    if (incBtn) incBtn.className = "py-2.5 rounded-xl font-semibold text-xs text-slate-600 transition flex items-center justify-center space-x-1.5";
+    if (trsBtn) trsBtn.className = "py-2.5 rounded-xl font-semibold text-xs text-slate-600 transition flex items-center justify-center space-x-1.5";
+
+    if (type === 'EXPENSE' && expBtn) {
+        expBtn.className = "py-2.5 rounded-xl font-bold text-xs transition flex items-center justify-center space-x-1.5 bg-rose-600 text-white shadow-md";
+    } else if (type === 'INCOME' && incBtn) {
+        incBtn.className = "py-2.5 rounded-xl font-bold text-xs transition flex items-center justify-center space-x-1.5 bg-emerald-600 text-white shadow-md";
+    } else if (type === 'TRANSFER' && trsBtn) {
+        trsBtn.className = "py-2.5 rounded-xl font-bold text-xs transition flex items-center justify-center space-x-1.5 bg-sky-600 text-white shadow-md";
     }
 }
 
@@ -132,13 +138,18 @@ function setQuickTxType(type) {
     document.getElementById('quick-tx-type').value = type;
     const expBtn = document.getElementById('quick-txtype-expense-btn');
     const incBtn = document.getElementById('quick-txtype-income-btn');
+    const trsBtn = document.getElementById('quick-txtype-transfer-btn');
 
-    if (type === 'EXPENSE') {
+    if (expBtn) expBtn.className = "py-2 rounded-lg transition text-slate-600 font-semibold";
+    if (incBtn) incBtn.className = "py-2 rounded-lg transition text-slate-600 font-semibold";
+    if (trsBtn) trsBtn.className = "py-2 rounded-lg transition text-slate-600 font-semibold";
+
+    if (type === 'EXPENSE' && expBtn) {
         expBtn.className = "py-2 rounded-lg transition bg-rose-600 text-white font-bold";
-        incBtn.className = "py-2 rounded-lg transition text-slate-600 font-semibold";
-    } else {
+    } else if (type === 'INCOME' && incBtn) {
         incBtn.className = "py-2 rounded-lg transition bg-emerald-600 text-white font-bold";
-        expBtn.className = "py-2 rounded-lg transition text-slate-600 font-semibold";
+    } else if (type === 'TRANSFER' && trsBtn) {
+        trsBtn.className = "py-2 rounded-lg transition bg-sky-600 text-white font-bold";
     }
 }
 
@@ -378,16 +389,18 @@ function updateUI() {
 function updateAnalyticalCards(filteredList) {
     const todayStr = new Date().toISOString().split('T')[0];
 
-    // Filter Income vs Expense
+    // Filter Income vs Expense vs Self-Transfers
     const incomeItems = filteredList.filter(item => item.type === 'INCOME');
-    const expenseItems = filteredList.filter(item => item.type !== 'INCOME'); // Default to EXPENSE
+    const expenseItems = filteredList.filter(item => item.type === 'EXPENSE');
+    const transferItems = filteredList.filter(item => item.type === 'TRANSFER');
 
     const totalIncome = incomeItems.reduce((sum, item) => sum + item.amount, 0);
     const totalExpense = expenseItems.reduce((sum, item) => sum + item.amount, 0);
+    const totalTransfer = transferItems.reduce((sum, item) => sum + item.amount, 0);
     const netBalance = totalIncome - totalExpense;
 
     const todayAmount = allExpenses
-        .filter(item => item.date === todayStr && item.type !== 'INCOME')
+        .filter(item => item.date === todayStr && item.type === 'EXPENSE')
         .reduce((sum, item) => sum + item.amount, 0);
 
     const uniqueDates = [...new Set(expenseItems.map(item => item.date))];
@@ -427,10 +440,10 @@ function updateAnalyticalCards(filteredList) {
 
     const slipsCount = filteredList.filter(item => item.slipUrl).length;
 
-    // Update Budget Progress Bar (Current Month)
+    // Update Budget Progress Bar (Current Month - Only Real Expenses)
     const currentMonthStr = todayStr.substring(0, 7);
     const monthExpenseTotal = allExpenses
-        .filter(item => item.date && item.date.startsWith(currentMonthStr) && item.type !== 'INCOME')
+        .filter(item => item.date && item.date.startsWith(currentMonthStr) && item.type === 'EXPENSE')
         .reduce((sum, item) => sum + item.amount, 0);
 
     const budgetRemaining = Math.max(0, monthlyBudgetLimit - monthExpenseTotal);
@@ -455,7 +468,7 @@ function updateAnalyticalCards(filteredList) {
     document.getElementById('stat-top-cat-percent').innerText = `${topCatPercent}%`;
 
     document.getElementById('stat-top-bank-name').innerText = topBankName;
-    document.getElementById('stat-total-slips').innerText = `${slipsCount} สลิป`;
+    document.getElementById('stat-total-slips').innerText = `${slipsCount} สลิป (${transferItems.length} โอนย้าย)`;
 }
 
 function renderHistoryTable(periodExpenses) {
@@ -485,14 +498,23 @@ function renderHistoryTable(periodExpenses) {
     tableBody.innerHTML = resultList.map(item => {
         const bankInfo = BANK_MAP[item.bank] || BANK_MAP['OTHER'];
         const catInfo = CATEGORY_MAP[item.category] || CATEGORY_MAP['other'];
-        const isIncome = item.type === 'INCOME';
         
-        const typeBadge = isIncome
-            ? `<span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-100 text-emerald-700">รายรับ (+)</span>`
-            : `<span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-rose-100 text-rose-700">รายจ่าย (-)</span>`;
+        const isIncome = item.type === 'INCOME';
+        const isTransfer = item.type === 'TRANSFER';
+        
+        let typeBadge = `<span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-rose-100 text-rose-700">รายจ่าย (-)</span>`;
+        let amountColor = 'text-rose-600 font-bold';
+        let amountPrefix = '-฿';
 
-        const amountColor = isIncome ? 'text-emerald-600 font-extrabold' : 'text-rose-600 font-bold';
-        const amountPrefix = isIncome ? '+฿' : '-฿';
+        if (isIncome) {
+            typeBadge = `<span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-100 text-emerald-700">รายรับ (+)</span>`;
+            amountColor = 'text-emerald-600 font-extrabold';
+            amountPrefix = '+฿';
+        } else if (isTransfer) {
+            typeBadge = `<span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-sky-100 text-sky-800 border border-sky-200">โอนระหว่างบัญชี (⇄)</span>`;
+            amountColor = 'text-sky-700 font-semibold';
+            amountPrefix = '⇄ ฿';
+        }
 
         const slipBtn = item.slipUrl 
             ? `<button onclick="openSlipModal('${item.slipUrl}')" class="text-emerald-700 hover:text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-1 rounded-lg text-xs flex items-center justify-center space-x-1 transition mx-auto font-medium" title="ดูสลิป">
@@ -527,8 +549,8 @@ function renderCharts(filteredList) {
     const bankTotals = {};
     const catTotals = {};
 
-    // Filter only Expenses for doughnut charts
-    const expenseItems = filteredList.filter(item => item.type !== 'INCOME');
+    // Filter only EXPENSE items for spending doughnut charts
+    const expenseItems = filteredList.filter(item => item.type === 'EXPENSE');
 
     expenseItems.forEach(item => {
         bankTotals[item.bank] = (bankTotals[item.bank] || 0) + item.amount;
@@ -572,7 +594,7 @@ function renderCharts(filteredList) {
 
 function renderTrendChart(filteredList) {
     const dailyMap = {};
-    const expenseItems = filteredList.filter(item => item.type !== 'INCOME');
+    const expenseItems = filteredList.filter(item => item.type === 'EXPENSE');
 
     const sorted = [...expenseItems].sort((a, b) => new Date(a.date) - new Date(b.date));
 

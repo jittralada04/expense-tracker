@@ -2,10 +2,10 @@
   {
     "bank": "SCB",
     "date": "2026-06-03",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 20.0,
     "note": "รับโอนจาก KBANK x8678 น.ส. จิตรลดา วงษ์น",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-06-03T13:37:00.000Z"
   },
   {
@@ -38,10 +38,10 @@
   {
     "bank": "SCB",
     "date": "2026-06-08",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 100.0,
     "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-06-08T16:28:00.000Z"
   },
   {
@@ -74,10 +74,10 @@
   {
     "bank": "SCB",
     "date": "2026-06-14",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 30.0,
     "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-06-14T21:23:00.000Z"
   },
   {
@@ -92,28 +92,28 @@
   {
     "bank": "SCB",
     "date": "2026-06-15",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 129.0,
     "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-06-15T19:43:00.000Z"
   },
   {
     "bank": "SCB",
     "date": "2026-06-15",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 24.0,
     "note": "รับโอนจาก KBANK x8678 น.ส. จิตรลดา วงษ์น",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-06-15T19:47:00.000Z"
   },
   {
     "bank": "SCB",
     "date": "2026-06-15",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 28.0,
     "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-06-15T19:50:00.000Z"
   },
   {
@@ -137,10 +137,10 @@
   {
     "bank": "SCB",
     "date": "2026-06-16",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 100.0,
     "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-06-16T09:07:00.000Z"
   },
   {
@@ -155,10 +155,10 @@
   {
     "bank": "SCB",
     "date": "2026-06-23",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 200.0,
     "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-06-23T10:36:00.000Z"
   },
   {
@@ -182,10 +182,10 @@
   {
     "bank": "SCB",
     "date": "2026-06-24",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 119.0,
     "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-06-24T11:08:00.000Z"
   },
   {
@@ -236,10 +236,10 @@
   {
     "bank": "SCB",
     "date": "2026-06-25",
-    "type": "EXPENSE",
+    "type": "TRANSFER",
     "amount": 37.0,
     "note": "PromptPay x0973 น.ส.จิตรลดา วงษ์นันท์",
-    "category": "other",
+    "category": "transfer",
     "createdAt": "2026-06-25T19:39:00.000Z"
   },
   {
@@ -254,10 +254,10 @@
   {
     "bank": "SCB",
     "date": "2026-06-27",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 200.0,
     "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-06-27T18:38:00.000Z"
   },
   {
@@ -290,10 +290,10 @@
   {
     "bank": "SCB",
     "date": "2026-07-03",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 200.0,
     "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-07-03T14:59:00.000Z"
   },
   {
@@ -317,10 +317,10 @@
   {
     "bank": "SCB",
     "date": "2026-07-13",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 1000.0,
     "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-07-13T14:23:00.000Z"
   },
   {
@@ -353,10 +353,10 @@
   {
     "bank": "SCB",
     "date": "2026-07-13",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 3000.0,
     "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-07-13T15:08:00.000Z"
   },
   {
@@ -398,10 +398,10 @@
   {
     "bank": "SCB",
     "date": "2026-07-17",
-    "type": "EXPENSE",
+    "type": "TRANSFER",
     "amount": 2700.0,
     "note": "โอนไป GSB x7591 นางสาว จิตรลดา วงษ์นันท์",
-    "category": "other",
+    "category": "transfer",
     "createdAt": "2026-07-17T13:15:00.000Z"
   },
   {
@@ -416,10 +416,10 @@
   {
     "bank": "SCB",
     "date": "2026-07-20",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 392.0,
     "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-07-20T14:15:00.000Z"
   },
   {
@@ -434,19 +434,19 @@
   {
     "bank": "SCB",
     "date": "2026-07-20",
-    "type": "EXPENSE",
+    "type": "TRANSFER",
     "amount": 100.0,
     "note": "โอนไป KBNK x8678 น.ส. จิตรลดา วงษ์นันท์",
-    "category": "other",
+    "category": "transfer",
     "createdAt": "2026-07-20T18:17:00.000Z"
   },
   {
     "bank": "SCB",
     "date": "2026-07-24",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 60.0,
     "note": "รับโอนจาก KBANK x8678 น.ส. จิตรลดา วงษ์น",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-07-24T00:12:00.000Z"
   },
   {
@@ -461,10 +461,10 @@
   {
     "bank": "SCB",
     "date": "2026-07-26",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 60.0,
     "note": "รับโอนจาก KBANK x8678 น.ส. จิตรลดา วงษ์น",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-07-26T21:37:00.000Z"
   },
   {
@@ -479,19 +479,19 @@
   {
     "bank": "SCB",
     "date": "2026-07-27",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 40.0,
     "note": "รับโอนจาก KBANK x8678 น.ส. จิตรลดา วงษ์น",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-07-27T19:22:00.000Z"
   },
   {
     "bank": "SCB",
     "date": "2026-07-27",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 200.0,
     "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-07-27T19:40:00.000Z"
   },
   {
@@ -542,10 +542,10 @@
   {
     "bank": "SCB",
     "date": "2026-07-30",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 200.0,
     "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-07-30T20:59:00.000Z"
   },
   {
@@ -578,10 +578,10 @@
   {
     "bank": "SCB",
     "date": "2026-08-01",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 100.0,
     "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-08-01T19:49:00.000Z"
   },
   {
@@ -614,10 +614,10 @@
   {
     "bank": "SCB",
     "date": "2026-08-07",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 100.0,
     "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-08-07T02:08:00.000Z"
   },
   {
@@ -650,10 +650,10 @@
   {
     "bank": "SCB",
     "date": "2026-08-12",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 1000.0,
     "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-08-12T17:35:00.000Z"
   },
   {
@@ -677,10 +677,10 @@
   {
     "bank": "SCB",
     "date": "2026-08-12",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 4500.0,
     "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-08-12T23:29:00.000Z"
   },
   {
@@ -776,10 +776,10 @@
   {
     "bank": "SCB",
     "date": "2026-08-17",
-    "type": "EXPENSE",
+    "type": "TRANSFER",
     "amount": 2000.0,
     "note": "โอนไป KKB x7350 นางสาว จิตรลดา วงษ์นันท์",
-    "category": "other",
+    "category": "transfer",
     "createdAt": "2026-08-17T16:47:00.000Z"
   },
   {
@@ -848,10 +848,10 @@
   {
     "bank": "SCB",
     "date": "2026-08-24",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 300.0,
     "note": "รับโอนจาก KKP x7350 นางสาว จิตรลดา วงษ์น",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-08-24T13:26:00.000Z"
   },
   {
@@ -875,10 +875,10 @@
   {
     "bank": "SCB",
     "date": "2026-08-24",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 200.0,
     "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-08-24T21:35:00.000Z"
   },
   {
@@ -911,10 +911,10 @@
   {
     "bank": "SCB",
     "date": "2026-08-31",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 170.0,
     "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-08-31T20:39:00.000Z"
   },
   {
@@ -965,10 +965,10 @@
   {
     "bank": "SCB",
     "date": "2026-09-05",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 100.0,
     "note": "รับโอนจาก KKP x7350 นางสาว จิตรลดา วงษ์น",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-09-05T16:22:00.000Z"
   },
   {
@@ -1505,10 +1505,10 @@
   {
     "bank": "KTB",
     "date": "2026-07-05",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 1000.0,
     "note": "รับโอนเงิน Internet/Mobile GSB จาก GSB X7591 นางสาว จิตรลดา วงษ++",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-07-05T10:52:00.000Z"
   },
   {
@@ -1586,28 +1586,28 @@
   {
     "bank": "KTB",
     "date": "2026-07-13",
-    "type": "EXPENSE",
+    "type": "TRANSFER",
     "amount": 33.0,
     "note": "โอนเงิน MAKE by KBank โอนไป KTB X5681 น.ส.จิตรลดา วงษ์นั++",
-    "category": "other",
+    "category": "transfer",
     "createdAt": "2026-07-13T10:46:00.000Z"
   },
   {
     "bank": "KTB",
     "date": "2026-07-20",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 500.0,
     "note": "รับโอนเงิน Internet/Mobile KTB จาก KTB X5681 MISSJITLADA WONGN++",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-07-20T18:13:00.000Z"
   },
   {
     "bank": "KTB",
     "date": "2026-07-20",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 100.0,
     "note": "รับโอนเงิน Internet/Mobile SCB จาก SCB X7401 นางสาว จิตรลดา วงษ++",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-07-20T18:17:00.000Z"
   },
   {
@@ -1640,37 +1640,37 @@
   {
     "bank": "KTB",
     "date": "2026-07-21",
-    "type": "EXPENSE",
+    "type": "TRANSFER",
     "amount": 30.0,
     "note": "โอนเงิน MAKE by KBank โอนไป KTB X6045 จิตรลดา วงษ์นัน++",
-    "category": "other",
+    "category": "transfer",
     "createdAt": "2026-07-21T19:19:00.000Z"
   },
   {
     "bank": "KTB",
     "date": "2026-07-22",
-    "type": "EXPENSE",
+    "type": "TRANSFER",
     "amount": 30.0,
     "note": "โอนเงิน MAKE by KBank โอนไป KTB X6045 จิตรลดา วงษ์นัน++",
-    "category": "other",
+    "category": "transfer",
     "createdAt": "2026-07-22T20:11:00.000Z"
   },
   {
     "bank": "KTB",
     "date": "2026-07-23",
-    "type": "EXPENSE",
+    "type": "TRANSFER",
     "amount": 40.0,
     "note": "โอนเงิน MAKE by KBank โอนไป KTB X6045 จิตรลดา วงษ์นัน++",
-    "category": "other",
+    "category": "transfer",
     "createdAt": "2026-07-23T15:09:00.000Z"
   },
   {
     "bank": "KTB",
     "date": "2026-07-23",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 1000.0,
     "note": "รับโอนเงิน Internet/Mobile KTB จาก KTB X5681 MISSJITLADA WONGN++",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-07-23T18:07:00.000Z"
   },
   {
@@ -1685,10 +1685,10 @@
   {
     "bank": "KTB",
     "date": "2026-07-24",
-    "type": "EXPENSE",
+    "type": "TRANSFER",
     "amount": 60.0,
     "note": "โอนเงิน MAKE by KBank โอนไป SCB X7401 นางสาว จิตรลดา วงษ++",
-    "category": "other",
+    "category": "transfer",
     "createdAt": "2026-07-24T00:12:00.000Z"
   },
   {
@@ -1703,10 +1703,10 @@
   {
     "bank": "KTB",
     "date": "2026-07-24",
-    "type": "EXPENSE",
+    "type": "TRANSFER",
     "amount": 200.0,
     "note": "โอนเงิน MAKE by KBank โอนไป KTB X6045 จิตรลดา วงษ์นัน++",
-    "category": "other",
+    "category": "transfer",
     "createdAt": "2026-07-24T11:55:00.000Z"
   },
   {
@@ -1730,10 +1730,10 @@
   {
     "bank": "KTB",
     "date": "2026-07-24",
-    "type": "EXPENSE",
+    "type": "TRANSFER",
     "amount": 400.0,
     "note": "โอนเงิน MAKE by KBank โอนไป KTB X5681 น.ส.จิตรลดา วงษ์นั++",
-    "category": "other",
+    "category": "transfer",
     "createdAt": "2026-07-24T13:32:00.000Z"
   },
   {
@@ -1748,10 +1748,10 @@
   {
     "bank": "KTB",
     "date": "2026-07-26",
-    "type": "EXPENSE",
+    "type": "TRANSFER",
     "amount": 60.0,
     "note": "โอนเงิน MAKE by KBank โอนไป SCB X7401 นางสาว จิตรลดา วงษ++",
-    "category": "other",
+    "category": "transfer",
     "createdAt": "2026-07-26T21:37:00.000Z"
   },
   {
@@ -1766,10 +1766,10 @@
   {
     "bank": "KTB",
     "date": "2026-07-27",
-    "type": "EXPENSE",
+    "type": "TRANSFER",
     "amount": 40.0,
     "note": "โอนเงิน MAKE by KBank โอนไป SCB X7401 นางสาว จิตรลดา วงษ++",
-    "category": "other",
+    "category": "transfer",
     "createdAt": "2026-07-27T19:22:00.000Z"
   },
   {
@@ -1784,10 +1784,10 @@
   {
     "bank": "KTB",
     "date": "2026-07-30",
-    "type": "INCOME",
+    "type": "TRANSFER",
     "amount": 500.0,
     "note": "รับโอนเงิน Internet/Mobile GSB จาก GSB X7591 นางสาว จิตรลดา วงษ++",
-    "category": "salary",
+    "category": "transfer",
     "createdAt": "2026-07-30T16:37:00.000Z"
   },
   {
