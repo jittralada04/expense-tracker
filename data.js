@@ -1,4 +1,4 @@
-[
+window.INITIAL_STATEMENT_DATA = [
   {
     "bank": "SCB",
     "date": "2026-06-03",
@@ -1808,4 +1808,4 @@
     "category": "other",
     "createdAt": "2026-07-30T21:10:00.000Z"
   }
-]
+];

@@ -99,135 +99,176 @@
             </div>
         </header>
 
-        <main class="max-w-5xl mx-auto px-4 sm:px-8 py-6 space-y-6">
+        <main class="max-w-[1600px] w-full mx-auto px-4 sm:px-8 py-6 space-y-6">
 
-            <!-- Banner แจ้งเตือนการลงบันทึกประจำวัน -->
-            <div id="daily-status-banner" class="bg-amber-50 border border-amber-200 p-4 rounded-2xl flex justify-between items-center hidden shadow-sm">
+            <!-- Pop-up แจ้งเตือนการลงบันทึกประจำวัน (Floating Bottom Center Toast) -->
+            <div id="daily-status-banner" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 max-w-xl w-[92%] sm:w-auto bg-amber-500 text-white p-4 sm:px-6 sm:py-3.5 rounded-full shadow-2xl shadow-amber-500/40 flex items-center justify-between gap-4 border border-amber-400/50 hidden transition-all duration-300">
                 <div class="flex items-center space-x-3">
-                    <div class="w-9 h-9 rounded-xl bg-amber-100 flex items-center justify-center text-amber-600 shrink-0">
-                        <i class="fa-solid fa-bell-ring text-base"></i>
+                    <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-bell text-sm"></i>
                     </div>
                     <div>
-                        <p class="font-medium text-amber-900 text-sm">วันนี้คุณยังไม่ได้ลงบันทึกการใช้เงินเลย!</p>
-                        <p class="text-xs text-amber-700">อย่าลืมสรุปรายจ่ายของวันนี้เพื่อติดตามพฤติกรรมทางการเงินของคุณนะครับ</p>
+                        <p class="font-bold text-xs sm:text-sm leading-snug">วันนี้คุณยังไม่ได้ลงบันทึกการใช้เงินเลย!</p>
+                        <p class="text-[11px] text-amber-100 hidden sm:block">อย่าลืมสรุปรายจ่ายของวันนี้เพื่อติดตามพฤติกรรมทางการเงินของคุณนะครับ</p>
                     </div>
                 </div>
-                <button onclick="openQuickAddModal()" class="bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold px-3.5 py-2 rounded-xl transition shrink-0">
-                    ลงบันทึกเลย
-                </button>
+                <div class="flex items-center space-x-2 shrink-0">
+                    <button onclick="openQuickAddModal()" class="bg-white hover:bg-amber-50 text-amber-600 text-xs font-bold px-4 py-1.5 rounded-full shadow-md transition">
+                        ลงบันทึกเลย
+                    </button>
+                    <button onclick="closeDailyBanner()" class="w-7 h-7 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition" title="ปิดการแจ้งเตือน">
+                        <i class="fa-solid fa-xmark text-xs"></i>
+                    </button>
+                </div>
             </div>
 
             <!-- ==================== TAB 1: DASHBOARD & ANALYTICS ==================== -->
-            <section id="tab-dashboard" class="tab-content space-y-6">
+            <section id="tab-dashboard" class="tab-content space-y-7">
                 
-                <!-- Filter Period & Budget Overview Banner -->
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-white p-3 rounded-2xl shadow-sm border border-slate-200/60">
-                    <div class="flex items-center space-x-1 bg-slate-100 p-1 rounded-xl w-full sm:w-auto">
-                        <button onclick="setPeriodFilter('ALL')" id="filter-btn-ALL" class="period-btn active-period text-xs font-semibold px-3.5 py-1.5 rounded-lg transition w-full sm:w-auto text-center">ทั้งหมด</button>
-                        <button onclick="setPeriodFilter('THIS_MONTH')" id="filter-btn-THIS_MONTH" class="period-btn text-xs font-semibold px-3.5 py-1.5 rounded-lg text-slate-500 hover:text-slate-800 transition w-full sm:w-auto text-center">เดือนนี้</button>
-                        <button onclick="setPeriodFilter('THIS_WEEK')" id="filter-btn-THIS_WEEK" class="period-btn text-xs font-semibold px-3.5 py-1.5 rounded-lg text-slate-500 hover:text-slate-800 transition w-full sm:w-auto text-center">สัปดาห์นี้</button>
-                        <button onclick="setPeriodFilter('TODAY')" id="filter-btn-TODAY" class="period-btn text-xs font-semibold px-3.5 py-1.5 rounded-lg text-slate-500 hover:text-slate-800 transition w-full sm:w-auto text-center">วันนี้</button>
+                <!-- Filter Period Header -->
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white p-4 rounded-3xl shadow-sm border border-slate-200/50">
+                    <div>
+                        <h2 class="text-base font-bold text-slate-900 flex items-center space-x-2">
+                            <i class="fa-solid fa-chart-line text-emerald-500"></i>
+                            <span>ภาพรวมบัญชีและการเงิน</span>
+                        </h2>
+                        <p id="period-subtitle" class="text-xs text-slate-500 mt-0.5">แสดงข้อมูลทั้งหมดในระบบ</p>
                     </div>
-                    <span id="period-subtitle" class="text-xs text-slate-500 px-2 font-light">แสดงข้อมูลทั้งหมด</span>
+                    <div class="flex items-center space-x-1 bg-slate-100 p-1.5 rounded-2xl w-full sm:w-auto">
+                        <button onclick="setPeriodFilter('ALL')" id="filter-btn-ALL" class="period-btn active-period text-xs font-semibold px-4 py-2 rounded-xl transition w-full sm:w-auto text-center">ทั้งหมด</button>
+                        <button onclick="setPeriodFilter('THIS_MONTH')" id="filter-btn-THIS_MONTH" class="period-btn text-xs font-semibold px-4 py-2 rounded-xl text-slate-500 hover:text-slate-800 transition w-full sm:w-auto text-center">เดือนนี้</button>
+                        <button onclick="setPeriodFilter('THIS_WEEK')" id="filter-btn-THIS_WEEK" class="period-btn text-xs font-semibold px-4 py-2 rounded-xl text-slate-500 hover:text-slate-800 transition w-full sm:w-auto text-center">สัปดาห์นี้</button>
+                        <button onclick="setPeriodFilter('TODAY')" id="filter-btn-TODAY" class="period-btn text-xs font-semibold px-4 py-2 rounded-xl text-slate-500 hover:text-slate-800 transition w-full sm:w-auto text-center">วันนี้</button>
+                    </div>
                 </div>
 
-                <!-- Budget Progress Card (งบประมาณรายเดือน) -->
-                <div class="bg-gradient-to-r from-emerald-600 to-teal-700 rounded-3xl p-5 text-white shadow-lg shadow-emerald-600/20 relative overflow-hidden">
-                    <div class="flex justify-between items-start relative z-10">
-                        <div>
-                            <span class="text-emerald-100 text-xs font-medium uppercase tracking-wider">งบประมาณรายเดือนคงเหลือ</span>
-                            <h2 id="budget-remaining-text" class="text-3xl font-extrabold mt-1">฿0.00</h2>
+                <!-- Budget & Savings Goal Grid (Clean Card Design) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <!-- 1. Budget Progress Card -->
+                    <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200/60 relative overflow-hidden flex flex-col justify-between">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200/50 mb-2">
+                                    <i class="fa-solid fa-wallet text-emerald-500"></i>
+                                    <span>งบประมาณรายเดือน</span>
+                                </span>
+                                <p class="text-xs text-slate-400 font-medium mt-1">คงเหลือใช้ได้อีก</p>
+                                <h2 id="budget-remaining-text" class="text-3xl font-extrabold text-slate-900 mt-0.5">฿0.00</h2>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-slate-500 font-medium">งบตั้งไว้: <b id="budget-limit-text" class="text-slate-700">฿0.00</b></span>
+                                <span id="budget-percent-text" class="block text-xs font-bold text-emerald-600 mt-1">ใช้ไป 0%</span>
+                            </div>
                         </div>
-                        <div class="text-right">
-                            <span class="text-emerald-100 text-xs">งบตั้งไว้: <b id="budget-limit-text">฿0.00</b></span>
-                            <p id="budget-percent-text" class="text-emerald-200 text-xs mt-1 font-bold">ใช้ไปแล้ว 0%</p>
+                        <div class="mt-5">
+                            <div class="w-full bg-slate-100 rounded-full h-3.5 overflow-hidden p-0.5 border border-slate-200/50">
+                                <div id="budget-progress-bar" class="bg-gradient-to-r from-emerald-500 to-teal-500 h-full rounded-full transition-all duration-500" style="width: 0%"></div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Progress Bar -->
-                    <div class="w-full bg-emerald-900/40 rounded-full h-3 mt-4 overflow-hidden relative z-10 border border-emerald-400/20">
-                        <div id="budget-progress-bar" class="bg-gradient-to-r from-emerald-300 to-amber-300 h-full rounded-full transition-all duration-500" style="width: 0%"></div>
+
+                    <!-- 2. Savings Goal Card -->
+                    <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200/60 relative overflow-hidden flex flex-col justify-between">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200/50 mb-2">
+                                    <i class="fa-solid fa-bullseye text-amber-500"></i>
+                                    <span>เป้าหมายเงินเก็บ (Savings Goal)</span>
+                                </span>
+                                <p class="text-xs text-slate-400 font-medium mt-1">เงินออมสะสมเดือนนี้</p>
+                                <h2 id="savings-current-text" class="text-3xl font-extrabold text-amber-600 mt-0.5">฿0.00</h2>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-slate-500 font-medium">เป้าหมาย: <b id="savings-goal-text" class="text-slate-700">฿0.00</b></span>
+                                <span id="savings-percent-text" class="block text-xs font-bold text-amber-600 mt-1">สำเร็จ 0%</span>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <div class="w-full bg-slate-100 rounded-full h-3.5 overflow-hidden p-0.5 border border-slate-200/50">
+                                <div id="savings-progress-bar" class="bg-gradient-to-r from-amber-400 to-orange-500 h-full rounded-full transition-all duration-500" style="width: 0%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Metric Insights Cards (Income, Expense, Balance, Daily Avg) -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     <!-- 1. รายรับรวม -->
-                    <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200/60">
+                    <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200/60 hover:shadow-md transition">
                         <div class="flex justify-between items-start">
                             <div>
-                                <p class="text-xs font-medium text-slate-500">รายรับรวม (Income)</p>
-                                <h3 id="stat-total-income" class="text-2xl font-bold text-emerald-600 mt-1">฿0.00</h3>
+                                <p class="text-xs font-semibold text-slate-400">รายรับรวม (Income)</p>
+                                <h3 id="stat-total-income" class="text-2xl font-extrabold text-emerald-600 mt-1">฿0.00</h3>
                             </div>
-                            <div class="w-10 h-10 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                            <div class="w-10 h-10 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                                 <i class="fa-solid fa-arrow-down-left text-base"></i>
                             </div>
                         </div>
-                        <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs">
-                            <span class="text-slate-500">รายการรับ:</span>
-                            <span id="stat-income-count" class="font-bold text-slate-800">0 รายการ</span>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                            <span id="stat-income-count" class="font-medium text-slate-600 truncate w-full">เงินเดือน: ฿0 | พิเศษ: ฿0</span>
                         </div>
                     </div>
 
                     <!-- 2. รายจ่ายรวม -->
-                    <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200/60">
+                    <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200/60 hover:shadow-md transition">
                         <div class="flex justify-between items-start">
                             <div>
-                                <p class="text-xs font-medium text-slate-500">รายจ่ายรวม (Expense)</p>
-                                <h3 id="stat-total-expense" class="text-2xl font-bold text-rose-600 mt-1">฿0.00</h3>
+                                <p class="text-xs font-semibold text-slate-400">รายจ่ายรวม (Expense)</p>
+                                <h3 id="stat-total-expense" class="text-2xl font-extrabold text-rose-600 mt-1">฿0.00</h3>
                             </div>
-                            <div class="w-10 h-10 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center">
+                            <div class="w-10 h-10 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center shrink-0">
                                 <i class="fa-solid fa-arrow-up-right text-base"></i>
                             </div>
                         </div>
-                        <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs">
-                            <span class="text-slate-500">วันนี้ใช้ไป:</span>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                            <span class="text-slate-400 font-medium">วันนี้ใช้ไป:</span>
                             <span id="stat-today-small" class="font-bold text-slate-800">฿0.00</span>
                         </div>
                     </div>
 
                     <!-- 3. ยอดคงเหลือสุทธิ -->
-                    <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200/60">
+                    <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200/60 hover:shadow-md transition">
                         <div class="flex justify-between items-start">
                             <div>
-                                <p class="text-xs font-medium text-slate-500">เงินคงเหลือสุทธิ (Net)</p>
-                                <h3 id="stat-net-balance" class="text-2xl font-bold text-slate-900 mt-1">฿0.00</h3>
+                                <p class="text-xs font-semibold text-slate-400">คงเหลือสุทธิ (Net)</p>
+                                <h3 id="stat-net-balance" class="text-2xl font-extrabold text-slate-900 mt-1">฿0.00</h3>
                             </div>
-                            <div class="w-10 h-10 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center">
+                            <div class="w-10 h-10 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
                                 <i class="fa-solid fa-scale-balanced text-base"></i>
                             </div>
                         </div>
-                        <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs">
-                            <span class="text-slate-500">เฉลี่ยจ่ายต่อวัน:</span>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                            <span class="text-slate-400 font-medium">เฉลี่ยต่อวัน:</span>
                             <span id="stat-daily-avg" class="font-bold text-slate-800">฿0.00</span>
                         </div>
                     </div>
 
                     <!-- 4. หมวดที่จ่ายหนักสุด -->
-                    <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200/60">
+                    <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200/60 hover:shadow-md transition">
                         <div class="flex justify-between items-start">
                             <div>
-                                <p class="text-xs font-medium text-slate-500">หมวดจ่ายหนักสุด</p>
-                                <h3 id="stat-top-cat-name" class="text-lg font-bold text-slate-800 mt-1 truncate max-w-[150px]">-</h3>
+                                <p class="text-xs font-semibold text-slate-400">จ่ายหนักสุด</p>
+                                <h3 id="stat-top-cat-name" class="text-base font-bold text-slate-800 mt-1.5 truncate max-w-[140px]">-</h3>
                             </div>
-                            <div class="w-10 h-10 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center">
+                            <div class="w-10 h-10 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
                                 <i class="fa-solid fa-chart-pie text-base"></i>
                             </div>
                         </div>
-                        <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs">
-                            <span class="text-slate-500">สัดส่วน:</span>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                            <span class="text-slate-400 font-medium">สัดส่วน:</span>
                             <span id="stat-top-cat-percent" class="font-bold text-emerald-600">0%</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- กราฟแนวโน้มรายวัน -->
-                <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200/70">
-                    <div class="flex justify-between items-center mb-3">
+                <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200/60">
+                    <div class="flex justify-between items-center mb-4 pb-3 border-b border-slate-100">
                         <h3 class="text-sm font-bold text-slate-900 flex items-center space-x-2">
-                            <i class="fa-solid fa-chart-line text-emerald-500"></i>
+                            <i class="fa-solid fa-chart-line text-emerald-500 text-base"></i>
                             <span>แนวโน้มการใช้เงินรายวัน</span>
                         </h3>
-                        <span class="text-[11px] text-slate-400">เปรียบเทียบในรอบเดือน</span>
+                        <span class="text-xs text-slate-400">เปรียบเทียบในรอบช่วงเวลาที่เลือก</span>
                     </div>
                     <div class="relative h-64">
                         <canvas id="trend-chart"></canvas>
@@ -235,22 +276,22 @@
                 </div>
 
                 <!-- กราฟสัดส่วนธนาคาร & หมวดหมู่ -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="bg-white rounded-3xl p-4 shadow-sm border border-slate-200/70">
-                        <h3 class="text-xs font-bold text-slate-700 mb-2 text-center flex items-center justify-center space-x-1.5">
-                            <i class="fa-solid fa-building-columns text-emerald-500"></i>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200/60">
+                        <h3 class="text-xs font-bold text-slate-700 mb-4 text-center flex items-center justify-center space-x-2 pb-2 border-b border-slate-100">
+                            <i class="fa-solid fa-building-columns text-emerald-500 text-sm"></i>
                             <span>สัดส่วนตามธนาคาร</span>
                         </h3>
-                        <div class="relative h-56 flex items-center justify-center">
+                        <div class="relative h-60 flex items-center justify-center">
                             <canvas id="bank-chart"></canvas>
                         </div>
                     </div>
-                    <div class="bg-white rounded-3xl p-4 shadow-sm border border-slate-200/70">
-                        <h3 class="text-xs font-bold text-slate-700 mb-2 text-center flex items-center justify-center space-x-1.5">
-                            <i class="fa-solid fa-pie-chart text-amber-500"></i>
+                    <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200/60">
+                        <h3 class="text-xs font-bold text-slate-700 mb-4 text-center flex items-center justify-center space-x-2 pb-2 border-b border-slate-100">
+                            <i class="fa-solid fa-pie-chart text-amber-500 text-sm"></i>
                             <span>สัดส่วนตามหมวดหมู่</span>
                         </h3>
-                        <div class="relative h-56 flex items-center justify-center">
+                        <div class="relative h-60 flex items-center justify-center">
                             <canvas id="category-chart"></canvas>
                         </div>
                     </div>
@@ -318,15 +359,18 @@
                             <label for="category" class="block text-xs font-semibold text-slate-600 mb-1.5">หมวดหมู่ *</label>
                             <select id="category" required
                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-3.5 text-sm text-slate-800 font-medium focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition">
-                                <option value="food">🍔 อาหาร & เครื่องดื่ม</option>
-                                <option value="travel">🚗 เดินทาง & น้ำมัน</option>
-                                <option value="shopping">🛍️ ช้อปปิ้ง & ของใช้</option>
-                                <option value="bills">💡 ค่าน้ำ ค่าไฟ เน็ต บ้าน</option>
-                                <option value="entertainment">🎬 ความบันเทิง & พักผ่อน</option>
-                                <option value="health">💊 สุขภาพ & ยา</option>
-                                <option value="salary">💰 เงินเดือน & รายได้พิเศษ</option>
-                                <option value="transfer">🔄 โอนระหว่างบัญชี</option>
-                                <option value="other">📦 อื่นๆ</option>
+                                <option value="food">อาหาร & เครื่องดื่ม</option>
+                                <option value="travel">เดินทาง & น้ำมัน</option>
+                                <option value="shopping">ช้อปปิ้ง & ของใช้</option>
+                                <option value="bills_utility">ค่าน้ำ & ค่าไฟ (หอพัก)</option>
+                                <option value="bills_internet">ค่าเน็ต & โทรศัพท์ (AIS/True)</option>
+                                <option value="entertainment">ความบันเทิง & พักผ่อน</option>
+                                <option value="health">สุขภาพ & ยา</option>
+                                <option value="salary">เงินเดือนหลัก</option>
+                                <option value="extra_income">รายได้พิเศษ & โบนัส</option>
+                                <option value="savings_goal">เงินออม & การลงทุน (SCB Gold/S&P/SET50)</option>
+                                <option value="transfer">โอนระหว่างบัญชี</option>
+                                <option value="other">อื่นๆ</option>
                             </select>
                         </div>
 
@@ -384,15 +428,56 @@
                             </h3>
                             <p class="text-xs text-slate-500 mt-0.5">ค้นหาและตรวจสอบหลักฐานสลิปการโอนเงิน</p>
                         </div>
-                        <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
-                            <!-- Search Note -->
-                            <div class="relative flex-1 sm:w-52">
+                        <div class="flex flex-wrap items-center gap-2.5 w-full">
+                            <!-- Search Input -->
+                            <div class="relative flex-1 min-w-[160px]">
                                 <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-xs text-slate-400"></i>
-                                <input type="text" id="search-input" onkeyup="renderHistoryTable()" placeholder="ค้นหาบันทึก..."
+                                <input type="text" id="search-input" onkeyup="renderHistoryTable()" placeholder="ค้นหาโน้ต / หมายเหตุ..."
                                     class="w-full bg-white border border-slate-200 rounded-xl pl-8 pr-3 py-2 text-xs text-slate-800 outline-none focus:border-emerald-500">
                             </div>
-                            <!-- Filter Bank -->
-                            <select id="filter-bank" onchange="renderHistoryTable()" class="bg-white border border-slate-200 rounded-xl text-xs text-slate-700 px-3 py-2 outline-none focus:border-emerald-500 font-medium">
+
+                            <!-- Filter Month (เลือกเดือน) -->
+                            <div class="flex items-center space-x-1">
+                                <label class="text-[11px] font-semibold text-slate-500 hidden sm:inline">เดือน:</label>
+                                <input type="month" id="filter-month" onchange="renderHistoryTable()"
+                                    class="bg-white border border-slate-200 rounded-xl text-xs text-slate-700 px-2.5 py-1.5 outline-none focus:border-emerald-500 font-medium">
+                            </div>
+
+                            <!-- Filter Date Range (ช่วงวันที่) -->
+                            <div class="flex items-center space-x-1 text-xs text-slate-500">
+                                <input type="date" id="filter-start-date" onchange="renderHistoryTable()" title="วันที่เริ่มต้น"
+                                    class="bg-white border border-slate-200 rounded-xl text-xs text-slate-700 px-2 py-1.5 outline-none focus:border-emerald-500 font-medium">
+                                <span>ถึง</span>
+                                <input type="date" id="filter-end-date" onchange="renderHistoryTable()" title="วันที่สิ้นสุด"
+                                    class="bg-white border border-slate-200 rounded-xl text-xs text-slate-700 px-2 py-1.5 outline-none focus:border-emerald-500 font-medium">
+                            </div>
+
+                            <!-- Filter Type (ประเภท: ทั้งหมด, รายรับ, รายจ่าย, โอน) -->
+                            <select id="filter-type" onchange="renderHistoryTable()" class="bg-white border border-slate-200 rounded-xl text-xs text-slate-700 px-2.5 py-2 outline-none focus:border-emerald-500 font-semibold">
+                                <option value="ALL">ทุกประเภท</option>
+                                <option value="EXPENSE">รายจ่าย (-)</option>
+                                <option value="INCOME">รายรับ (+)</option>
+                                <option value="TRANSFER">โอนระหว่างบัญชี (⇄)</option>
+                            </select>
+
+                            <!-- Filter Category (หมวดหมู่) -->
+                            <select id="filter-category" onchange="renderHistoryTable()" class="bg-white border border-slate-200 rounded-xl text-xs text-slate-700 px-2.5 py-2 outline-none focus:border-emerald-500 font-medium">
+                                <option value="ALL">ทุกหมวดหมู่</option>
+                                <option value="food">อาหาร & เครื่องดื่ม</option>
+                                <option value="transport">เดินทาง & น้ำมัน</option>
+                                <option value="shopping">ช้อปปิ้ง</option>
+                                <option value="bills_utility">ค่าน้ำ-ค่าไฟ</option>
+                                <option value="bills_internet">ค่าเน็ต & โทรศัพท์ (AIS)</option>
+                                <option value="entertainment">ความบันเทิง</option>
+                                <option value="savings_goal">เงินออม & การลงทุน</option>
+                                <option value="salary">เงินเดือน (Salary)</option>
+                                <option value="extra_income">รายได้พิเศษ</option>
+                                <option value="transfer">โอนเงิน</option>
+                                <option value="other_expense">รายจ่ายอื่นๆ / แอปจ่ายเงิน</option>
+                            </select>
+
+                            <!-- Filter Bank (ธนาคาร) -->
+                            <select id="filter-bank" onchange="renderHistoryTable()" class="bg-white border border-slate-200 rounded-xl text-xs text-slate-700 px-2.5 py-2 outline-none focus:border-emerald-500 font-medium">
                                 <option value="ALL">ทุกธนาคาร</option>
                                 <option value="KBANK">กสิกรไทย</option>
                                 <option value="SCB">ไทยพาณิชย์</option>
@@ -401,24 +486,44 @@
                                 <option value="KTB">กรุงไทย</option>
                                 <option value="GSB">ออมสิน</option>
                                 <option value="TRUE_MONEY">TrueMoney</option>
-                                <option value="CREDIT_CARD">บัตรเครดิต</option>
                                 <option value="CASH">เงินสด</option>
                                 <option value="OTHER">อื่นๆ</option>
                             </select>
+
+                            <button onclick="resetHistoryFilters()" class="text-slate-500 hover:text-slate-800 bg-slate-100 hover:bg-slate-200 px-3 py-2 rounded-xl transition text-xs font-semibold flex items-center space-x-1" title="ล้างตัวกรองทั้งหมด">
+                                <i class="fa-solid fa-rotate-left text-xs"></i>
+                                <span>ล้างตัวกรอง</span>
+                            </button>
                         </div>
                     </div>
 
                     <div class="overflow-x-auto min-h-[350px] max-h-[600px] overflow-y-auto">
                         <table class="w-full text-left border-collapse">
-                            <thead class="bg-slate-50 text-slate-500 text-[11px] uppercase font-semibold sticky top-0 border-b border-slate-100 z-10">
+                            <thead class="bg-slate-50 text-slate-600 text-[11px] uppercase font-bold sticky top-0 border-b border-slate-200/80 z-10 select-none">
                                 <tr>
-                                    <th class="p-3.5">วันที่</th>
+                                    <!-- Sortable Date Column Header -->
+                                    <th onclick="toggleSort('date')" class="p-3.5 cursor-pointer hover:bg-slate-100/80 transition group" title="คลิกเพื่อเรียงลำดับตามวันที่">
+                                        <div class="flex items-center space-x-1">
+                                            <span>วันที่</span>
+                                            <span id="sort-icon-date" class="text-slate-400 group-hover:text-slate-700">
+                                                <i class="fa-solid fa-sort"></i>
+                                            </span>
+                                        </div>
+                                    </th>
                                     <th class="p-3.5">ประเภท</th>
                                     <th class="p-3.5">ธนาคาร</th>
                                     <th class="p-3.5">หมวดหมู่</th>
                                     <th class="p-3.5">หมายเหตุ</th>
                                     <th class="p-3.5 text-center">สลิป</th>
-                                    <th class="p-3.5 text-right">จำนวนเงิน</th>
+                                    <!-- Sortable Amount Column Header -->
+                                    <th onclick="toggleSort('amount')" class="p-3.5 text-right cursor-pointer hover:bg-slate-100/80 transition group" title="คลิกเพื่อเรียงลำดับตามจำนวนเงิน">
+                                        <div class="flex items-center justify-end space-x-1">
+                                            <span>จำนวนเงิน</span>
+                                            <span id="sort-icon-amount" class="text-slate-400 group-hover:text-slate-700">
+                                                <i class="fa-solid fa-sort"></i>
+                                            </span>
+                                        </div>
+                                    </th>
                                     <th class="p-3.5 text-center">จัดการ</th>
                                 </tr>
                             </thead>
@@ -432,20 +537,29 @@
 
             <!-- ==================== TAB 4: SETTINGS & BUDGET ==================== -->
             <section id="tab-settings" class="tab-content hidden max-w-xl mx-auto space-y-6">
-                <!-- Budget Setting Card -->
+                <!-- Budget & Savings Goal Setting Card -->
                 <div class="bg-white rounded-3xl shadow-sm border border-slate-200/70 p-6 space-y-4">
                     <h3 class="font-bold text-slate-900 text-base flex items-center space-x-2 border-b border-slate-100 pb-3">
                         <i class="fa-solid fa-bullseye text-emerald-500"></i>
-                        <span>ตั้งค่าเป้าหมายงบประมาณรายเดือน (Budget Limit)</span>
+                        <span>ตั้งค่าเป้าหมายการเงินรายเดือน (Budget & Savings Goal)</span>
                     </h3>
-                    <p class="text-xs text-slate-500">กำหนดวงเงินค่าใช้จ่ายสูงสุดประจำเดือน เพื่อให้ระบบคำนวณหลอดแจ้งเตือนอัตโนมัติ</p>
-                    <div>
-                        <label for="monthly-budget-input" class="block text-xs font-semibold text-slate-600 mb-1">งบประมาณรายเดือน (บาท)</label>
-                        <input type="number" step="100" min="0" id="monthly-budget-input" placeholder="เช่น 15000"
-                            class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-3 text-lg font-bold text-slate-800 outline-none focus:border-emerald-500">
+                    <p class="text-xs text-slate-500">กำหนดวงเงินค่าใช้จ่ายสูงสุด และเป้าหมายเงินออมประจำเดือน เพื่อให้ระบบคำนวณหลอดแจ้งเตือนอัตโนมัติ</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label for="monthly-budget-input" class="block text-xs font-semibold text-slate-600 mb-1">งบประมาณรายเดือน (บาท)</label>
+                            <input type="number" step="100" min="0" id="monthly-budget-input" placeholder="เช่น 15000"
+                                class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-3 text-base font-bold text-slate-800 outline-none focus:border-emerald-500">
+                        </div>
+                        <div>
+                            <label for="monthly-savings-input" class="block text-xs font-semibold text-slate-600 mb-1">เป้าหมายเงินเก็บ (บาท)</label>
+                            <input type="number" step="100" min="0" id="monthly-savings-input" placeholder="เช่น 5000"
+                                class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-3 text-base font-bold text-amber-600 outline-none focus:border-amber-500">
+                        </div>
                     </div>
+
                     <button onclick="saveBudgetSetting()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-2xl transition shadow-md">
-                        บันทึกงบประมาณ
+                        บันทึกการตั้งค่า
                     </button>
                 </div>
 
@@ -459,10 +573,13 @@
                         <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">🍔 อาหาร & เครื่องดื่ม</div>
                         <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">🚗 เดินทาง & น้ำมัน</div>
                         <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">🛍️ ช้อปปิ้ง & ของใช้</div>
-                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">💡 ค่าน้ำ ค่าไฟ เน็ต บ้าน</div>
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">💡 ค่าน้ำ & ค่าไฟ (หอพัก)</div>
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">🌐 ค่าเน็ต & โทรศัพท์ (AIS)</div>
                         <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">🎬 ความบันเทิง & พักผ่อน</div>
                         <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">💊 สุขภาพ & ยา</div>
-                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">💰 เงินเดือน & รายได้พิเศษ</div>
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">💰 เงินเดือนหลัก</div>
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">🎁 รายได้พิเศษ & โบนัส</div>
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">🎯 เงินออม & การลงทุน</div>
                         <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">🔄 โอนระหว่างบัญชี</div>
                         <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">📦 อื่นๆ</div>
                     </div>
@@ -521,10 +638,13 @@
                             <option value="food">🍔 อาหาร</option>
                             <option value="travel">🚗 เดินทาง</option>
                             <option value="shopping">🛍️ ช้อปปิ้ง</option>
-                            <option value="bills">💡 ค่าน้ำไฟ</option>
+                            <option value="bills_utility">💡 ค่าน้ำ-ไฟ</option>
+                            <option value="bills_internet">🌐 ค่าเน็ต</option>
                             <option value="entertainment">🎬 ความบันเทิง</option>
                             <option value="health">💊 สุขภาพ</option>
                             <option value="salary">💰 เงินเดือน</option>
+                            <option value="extra_income">🎁 รายได้พิเศษ</option>
+                            <option value="savings_goal">🎯 เงินออม</option>
                             <option value="transfer">🔄 โอนย้าย</option>
                             <option value="other">📦 อื่นๆ</option>
                         </select>
@@ -544,21 +664,119 @@
         </div>
     </div>
 
+    <!-- Hidden File Input for Attaching Slips to Existing Transactions -->
+    <input type="file" id="attach-slip-file-input" accept="image/*" class="hidden" onchange="handleAttachSlipFile(event)">
+
     <!-- Modal แสดงรูปสลิปขนาดใหญ่ -->
     <div id="slip-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-50 flex items-center justify-center hidden" onclick="closeSlipModal()">
-        <div class="bg-white rounded-3xl shadow-2xl max-w-md w-full p-4 space-y-3 m-4 relative" onclick="event.stopPropagation()">
-            <div class="flex justify-between items-center border-b border-slate-100 pb-2.5">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-md w-full p-5 space-y-4 m-4 relative" onclick="event.stopPropagation()">
+            <div class="flex justify-between items-center border-b border-slate-100 pb-3">
                 <h3 class="font-bold text-slate-900 text-sm flex items-center space-x-2">
-                    <i class="fa-solid fa-receipt text-emerald-500"></i>
+                    <i class="fa-solid fa-receipt text-emerald-500 text-base"></i>
                     <span>หลักฐานสลิปการใช้เงิน</span>
                 </h3>
                 <button onclick="closeSlipModal()" class="text-slate-400 hover:text-slate-600 transition">
                     <i class="fa-solid fa-xmark text-lg"></i>
                 </button>
             </div>
-            <div class="flex justify-center p-2 bg-slate-50 rounded-2xl overflow-hidden max-h-[70vh]">
-                <img id="modal-slip-img" src="" alt="Slip Image" class="object-contain max-h-[65vh] rounded-xl shadow-sm">
+            <div class="flex justify-center p-2 bg-slate-50 rounded-2xl overflow-hidden max-h-[60vh]">
+                <img id="modal-slip-img" src="" alt="Slip Image" class="object-contain max-h-[55vh] rounded-xl shadow-sm">
             </div>
+
+            <!-- Action buttons for managing slip -->
+            <div id="slip-modal-actions" class="flex items-center justify-between pt-2 border-t border-slate-100 gap-2">
+                <button onclick="triggerAttachSlip(targetAttachDocId)" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 px-3 rounded-xl transition flex items-center justify-center space-x-1.5">
+                    <i class="fa-solid fa-arrow-path text-slate-500"></i>
+                    <span>เปลี่ยนรูปสลิป</span>
+                </button>
+                <button onclick="removeSlipFromDoc()" class="w-full bg-rose-50 hover:bg-rose-100 text-rose-700 text-xs font-semibold py-2.5 px-3 rounded-xl border border-rose-200/50 transition flex items-center justify-center space-x-1.5">
+                    <i class="fa-solid fa-trash-can text-rose-500"></i>
+                    <span>ลบสลิปออก</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal แก้ไขรายการ Edit Transaction Modal -->
+    <div id="edit-modal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-3xl shadow-xl max-w-lg w-full p-6 space-y-4 m-4">
+            <div class="flex justify-between items-center border-b border-slate-100 pb-3">
+                <h3 class="font-bold text-slate-900 text-base flex items-center space-x-2">
+                    <i class="fa-solid fa-pen-to-square text-indigo-500"></i>
+                    <span>แก้ไขรายการ</span>
+                </h3>
+                <button onclick="closeEditModal()" class="text-slate-400 hover:text-slate-600 transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            
+            <form id="edit-expense-form" onsubmit="saveEditedExpense(event)" class="space-y-3">
+                <input type="hidden" id="edit-doc-id">
+                
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">วันที่ & เวลา</label>
+                        <input type="datetime-local" id="edit-date" required class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-800 outline-none focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">ประเภท</label>
+                        <select id="edit-type" required class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-800 outline-none focus:border-indigo-500">
+                            <option value="EXPENSE">รายจ่าย (Expense)</option>
+                            <option value="INCOME">รายรับ (Income)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">จำนวนเงิน (บาท)</label>
+                        <input type="number" id="edit-amount" step="0.01" min="0" required class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-800 outline-none focus:border-indigo-500 font-semibold text-slate-900">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">หมวดหมู่</label>
+                        <select id="edit-category" required class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-800 outline-none focus:border-indigo-500">
+                            <option value="food">อาหาร / เครื่องดื่ม</option>
+                            <option value="transport">เดินทาง / น้ำมัน</option>
+                            <option value="shopping">ช้อปปิ้ง / ซื้อของ</option>
+                            <option value="bills_utility">ค่าน้ำ - ค่าไฟ</option>
+                            <option value="bills_internet">ค่าอินเทอร์เน็ต (AIS)</option>
+                            <option value="entertainment">ความบันเทิง / พักผ่อน</option>
+                            <option value="savings_goal">เงินออม / เงินลงทุน</option>
+                            <option value="other_expense">รายจ่ายอื่นๆ</option>
+                            <option value="salary">เงินเดือน (Salary)</option>
+                            <option value="extra_income">รายได้พิเศษ (Extra Income)</option>
+                            <option value="transfer">โอนเงิน / ปรับสมดุล</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">ธนาคาร / ช่องทาง</label>
+                    <select id="edit-bank" required class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-800 outline-none focus:border-indigo-500">
+                        <option value="kbank">K-Bank (กสิกรไทย)</option>
+                        <option value="scb">SCB (ไทยพาณิชย์)</option>
+                        <option value="ttb">ttb (ทหารไทยธนชาต)</option>
+                        <option value="bbl">BBL (กรุงเทพ)</option>
+                        <option value="bay">Krungsri (กรุงศรี)</option>
+                        <option value="ktb">KTB (กรุงไทย)</option>
+                        <option value="cash">เงินสด (Cash)</option>
+                        <option value="other">อื่นๆ</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">บันทึกเพิ่มเติม / หมายเหตุ</label>
+                    <input type="text" id="edit-note" placeholder="รายละเอียดรายการ..." class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-800 outline-none focus:border-indigo-500">
+                </div>
+
+                <div class="flex justify-end space-x-2 pt-3 border-t border-slate-100">
+                    <button type="button" onclick="closeEditModal()" class="px-4 py-2 text-xs text-slate-500 hover:text-slate-700 font-medium transition">ยกเลิก</button>
+                    <button type="submit" class="px-5 py-2 text-xs bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold shadow-md shadow-indigo-600/20 transition flex items-center space-x-1.5">
+                        <i class="fa-solid fa-floppy-disk text-xs"></i>
+                        <span>บันทึกการแก้ไข</span>
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -601,6 +819,8 @@
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
 
-    <script src="app.js?v=4"></script>
+    <!-- Initial Local Data Script (Bypasses CORS restrictions on file://) -->
+    <script src="data.js"></script>
+    <script src="app.js?v=5"></script>
 </body>
 </html>
