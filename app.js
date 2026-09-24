@@ -118,11 +118,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load Local Data from window.INITIAL_STATEMENT_DATA (Guarantees instant rendering under file://)
     if (window.INITIAL_STATEMENT_DATA && Array.isArray(window.INITIAL_STATEMENT_DATA) && window.INITIAL_STATEMENT_DATA.length > 0) {
-        allExpenses = window.INITIAL_STATEMENT_DATA.map((item, idx) => ({
-            id: item.id || `local-${idx}`,
-            type: item.type || 'EXPENSE',
-            ...item
-        }));
+        allExpenses = window.INITIAL_STATEMENT_DATA.map((item, idx) => {
+            let cat = item.category;
+            if (item.note && item.note.toUpperCase().includes('TRUE MONEY')) {
+                cat = 'food';
+            }
+            return {
+                id: item.id || `local-${idx}`,
+                type: item.type || 'EXPENSE',
+                ...item,
+                category: cat
+            };
+        });
         allExpenses.sort((a, b) => new Date(b.date) - new Date(a.date));
         updateUI();
         checkDailyStatus();
@@ -132,11 +139,19 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
         db.collection("expenses").onSnapshot((snapshot) => {
             if (snapshot.docs && snapshot.docs.length > 0) {
-                allExpenses = snapshot.docs.map(doc => ({
-                    id: doc.id,
-                    type: doc.data().type || 'EXPENSE',
-                    ...doc.data()
-                }));
+                allExpenses = snapshot.docs.map(doc => {
+                    const d = doc.data();
+                    let cat = d.category;
+                    if (d.note && d.note.toUpperCase().includes('TRUE MONEY')) {
+                        cat = 'food';
+                    }
+                    return {
+                        id: doc.id,
+                        type: d.type || 'EXPENSE',
+                        ...d,
+                        category: cat
+                    };
+                });
                 allExpenses.sort((a, b) => new Date(b.date) - new Date(a.date));
                 updateUI();
                 checkDailyStatus();
