@@ -98,6 +98,14 @@ function switchTab(tabName) {
 
 // Initialize App
 document.addEventListener('DOMContentLoaded', () => {
+    // Restore sidebar collapse state
+    if (localStorage.getItem('sidebarCollapsed') === 'true') {
+        const sidebar = document.querySelector('aside');
+        if (sidebar) sidebar.classList.add('sidebar-collapsed');
+        const toggleIcon = document.getElementById('sidebar-toggle-icon');
+        if (toggleIcon) toggleIcon.className = 'fa-solid fa-bars text-sm';
+    }
+
     // Restore active tab from localStorage
     const savedTab = localStorage.getItem('activeExpenseTab') || 'dashboard';
     switchTab(savedTab);
@@ -116,7 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const reminderTime = document.getElementById('reminder-time');
     if (reminderTime) reminderTime.value = reminderSettings.time;
 
-    // Load Local Data from window.INITIAL_STATEMENT_DATA (Guarantees instant rendering under file://)
+    // Load Local Data from window.INITIAL_STATEMENT_DATA
+    let initialLoaded = false;
     if (window.INITIAL_STATEMENT_DATA && Array.isArray(window.INITIAL_STATEMENT_DATA) && window.INITIAL_STATEMENT_DATA.length > 0) {
         allExpenses = window.INITIAL_STATEMENT_DATA.map((item, idx) => {
             let cat = item.category;
@@ -133,13 +142,14 @@ document.addEventListener('DOMContentLoaded', () => {
         allExpenses.sort((a, b) => new Date(b.date) - new Date(a.date));
         updateUI();
         checkDailyStatus();
+        initialLoaded = true;
     }
 
     // ☁️ Real-time Firestore Listener
     try {
         db.collection("expenses").onSnapshot((snapshot) => {
             if (snapshot.docs && snapshot.docs.length > 0) {
-                allExpenses = snapshot.docs.map(doc => {
+                const cloudItems = snapshot.docs.map(doc => {
                     const d = doc.data();
                     let cat = d.category;
                     if (d.note && d.note.toUpperCase().includes('TRUE MONEY')) {
@@ -152,6 +162,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         category: cat
                     };
                 });
+                
+                // Merge cloud items with local initial items by id/key
+                const mergedMap = new Map();
+                allExpenses.forEach(item => mergedMap.set(item.id, item));
+                cloudItems.forEach(item => mergedMap.set(item.id, item));
+                
+                allExpenses = Array.from(mergedMap.values());
                 allExpenses.sort((a, b) => new Date(b.date) - new Date(a.date));
                 updateUI();
                 checkDailyStatus();
@@ -871,10 +888,10 @@ function renderHistoryTable() {
             const amountB = b.amount || 0;
             return currentSortDir === 'asc' ? amountA - amountB : amountB - amountA;
         } else {
-            // Default: 'date'
-            const dateA = new Date(a.date || 0).getTime();
-            const dateB = new Date(b.date || 0).getTime();
-            return currentSortDir === 'asc' ? dateA - dateB : dateB - dateA;
+            // Default: 'date' - sort by full timestamp (createdAt or date)
+            const timeA = a.createdAt ? new Date(a.createdAt).getTime() : new Date(a.date || 0).getTime();
+            const timeB = b.createdAt ? new Date(b.createdAt).getTime() : new Date(b.date || 0).getTime();
+            return currentSortDir === 'asc' ? timeA - timeB : timeB - timeA;
         }
     });
 
@@ -883,8 +900,36 @@ function renderHistoryTable() {
         return;
     }
 
+    // Find the last item of each day to highlight (end of day transaction)
+    const lastItemOfDayIds = new Set();
+    const dateSeen = new Set();
+    
+    // Scan in chronological order or current order
+    // If sorted date-desc (newest first), the FIRST time we encounter a new date, that item was the LAST transaction of that day
+    if (currentSortField === 'date' && currentSortDir === 'desc') {
+        resultList.forEach(item => {
+            if (item && item.date && !dateSeen.has(item.date)) {
+                dateSeen.add(item.date);
+                lastItemOfDayIds.add(item.id);
+            }
+        });
+    } else {
+        // Group items by date and pick the latest timestamp of each date
+        const dateToLastItemMap = {};
+        resultList.forEach(item => {
+            if (!item || !item.date) return;
+            const itemTime = item.createdAt ? new Date(item.createdAt).getTime() : new Date(item.date).getTime();
+            if (!dateToLastItemMap[item.date] || itemTime > dateToLastItemMap[item.date].time) {
+                dateToLastItemMap[item.date] = { id: item.id, time: itemTime };
+            }
+        });
+        Object.values(dateToLastItemMap).forEach(val => lastItemOfDayIds.add(val.id));
+    }
+
     tableBody.innerHTML = resultList.map(item => {
         if (!item) return '';
+        const isLastOfDay = lastItemOfDayIds.has(item.id);
+
         const bankInfo = (item.bank && BANK_MAP[item.bank]) ? BANK_MAP[item.bank] : BANK_MAP['OTHER'];
         const catInfo = (item.category && CATEGORY_MAP[item.category]) ? CATEGORY_MAP[item.category] : CATEGORY_MAP['other'];
         
@@ -916,9 +961,19 @@ function renderHistoryTable() {
         const numAmount = (item.amount !== undefined && item.amount !== null) ? item.amount : 0;
         const formattedAmount = numAmount.toLocaleString('th-TH', { minimumFractionDigits: 2 });
 
+        // Highlight row styling for last transaction of the day
+        const rowBgClass = isLastOfDay 
+            ? 'bg-amber-50/70 hover:bg-amber-100/60 border-b-2 border-amber-200/80 transition-colors' 
+            : 'hover:bg-slate-50/80 transition-colors';
+        
+        const lastBadge = isLastOfDay 
+            ? `<span class="ml-1.5 inline-flex items-center text-[9px] font-semibold text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded-md" title="รายการสุดท้ายของวัน"><i class="fa-solid fa-flag text-[8px] mr-1 text-amber-600"></i>ปิดวัน</span>` 
+            : '';
+
         return `
-            <tr class="hover:bg-slate-50/80 transition">
-                <td class="p-3.5 text-slate-500 whitespace-nowrap">${formatDateTh(item.date)}</td>
+            <tr class="${rowBgClass}">
+                <td class="p-3.5 text-slate-700 font-semibold whitespace-nowrap">${formatDateTh(item.date)}${lastBadge}</td>
+                <td class="p-3.5 text-slate-500 whitespace-nowrap">${formatTimeTh(item.createdAt)}</td>
                 <td class="p-3.5 whitespace-nowrap">${typeBadge}</td>
                 <td class="p-3.5 whitespace-nowrap">
                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-semibold border ${bankInfo.badge}">
@@ -1129,8 +1184,51 @@ function exportData() {
 
 function formatDateTh(dateStr) {
     if (!dateStr) return '-';
-    const [year, month, day] = dateStr.split('-');
-    return `${day}/${month}/${parseInt(year) + 543}`;
+    const parts = dateStr.split('-');
+    if (parts.length === 3) {
+        const [year, month, day] = parts;
+        return `${day}/${month}/${parseInt(year) + 543}`;
+    }
+    return dateStr;
+}
+
+function formatTimeTh(createdAt) {
+    if (!createdAt) return '<span class="text-slate-400">-</span>';
+    
+    let timeStr = '';
+    if (typeof createdAt === 'string' && createdAt.includes('T')) {
+        const timePart = createdAt.split('T')[1];
+        if (timePart) {
+            timeStr = timePart.substring(0, 5); // "13:45"
+        }
+    } else if (typeof createdAt.toDate === 'function') {
+        const d = createdAt.toDate();
+        const hrs = String(d.getHours()).padStart(2, '0');
+        const mins = String(d.getMinutes()).padStart(2, '0');
+        timeStr = `${hrs}:${mins}`;
+    }
+
+    if (timeStr && timeStr !== '00:00' && timeStr !== '12:00') {
+        return `<span class="inline-flex items-center text-slate-700 font-medium"><i class="fa-regular fa-clock text-[10px] text-slate-400 mr-1.5"></i>${timeStr} น.</span>`;
+    } else if (timeStr === '12:00' || timeStr === '00:00') {
+        return `<span class="text-slate-400">${timeStr} น.</span>`;
+    }
+
+    return '<span class="text-slate-400">-</span>';
+}
+
+// Toggle Sidebar (Desktop Collapse / Expand)
+function toggleSidebar() {
+    const sidebar = document.querySelector('aside');
+    if (!sidebar) return;
+    
+    const isCollapsed = sidebar.classList.toggle('sidebar-collapsed');
+    localStorage.setItem('sidebarCollapsed', isCollapsed);
+    
+    const toggleIcon = document.getElementById('sidebar-toggle-icon');
+    if (toggleIcon) {
+        toggleIcon.className = isCollapsed ? 'fa-solid fa-bars text-sm' : 'fa-solid fa-bars-staggered text-sm';
+    }
 }
 
 function escapeHtml(text) {

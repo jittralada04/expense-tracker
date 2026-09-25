@@ -46,3 +46,35 @@ body {
 input, select, button {
     font-family: 'Prompt', sans-serif;
 }
+
+/* Sidebar Collapsed Styles for Desktop */
+@media (min-width: 768px) {
+    aside {
+        transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    aside.sidebar-collapsed {
+        width: 5rem !important; /* 80px */
+    }
+    aside.sidebar-collapsed .sidebar-text {
+        display: none !important;
+    }
+    aside.sidebar-collapsed nav span {
+        display: none !important;
+    }
+    aside.sidebar-collapsed .p-4.hidden.md\:block button span {
+        display: none !important;
+    }
+    aside.sidebar-collapsed .p-4.hidden.md\:block button {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        justify-content: center !important;
+    }
+    aside.sidebar-collapsed nav button {
+        justify-content: center !important;
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+    aside.sidebar-collapsed .p-4.border-t button span {
+        display: none !important;
+    }
+}

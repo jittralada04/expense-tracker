@@ -1,318 +1,2667 @@
 window.INITIAL_STATEMENT_DATA = [
   {
-    "bank": "SCB",
-    "date": "2026-06-03",
+    "bank": "KTB",
+    "date": "2026-09-24",
+    "type": "EXPENSE",
+    "amount": 30.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-09-24T13:20:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-24",
     "type": "TRANSFER",
-    "amount": 20.0,
-    "note": "รับโอนจาก KBANK x8678 น.ส. จิตรลดา วงษ์น",
+    "amount": 1.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NMWPSW) TR To EWALLETID 006990438006045",
     "category": "transfer",
-    "createdAt": "2026-06-03T13:37:00.000Z"
+    "createdAt": "2026-09-24T13:37:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-06-03",
-    "type": "EXPENSE",
-    "amount": 86.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-06-03T13:44:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-03",
-    "type": "INCOME",
-    "amount": 114.0,
-    "note": "รับโอนจาก KBANK x1618 นาย วีรภัทร แก้วสอ",
-    "category": "extra_income",
-    "createdAt": "2026-06-03T14:03:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-03",
-    "type": "EXPENSE",
-    "amount": 114.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-06-03T14:03:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-08",
-    "type": "TRANSFER",
-    "amount": 100.0,
-    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "transfer",
-    "createdAt": "2026-06-08T16:28:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-09",
-    "type": "EXPENSE",
-    "amount": 6.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-06-09T08:04:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-09",
-    "type": "EXPENSE",
-    "amount": 32.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-06-09T13:33:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-12",
-    "type": "EXPENSE",
-    "amount": 37.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-06-12T09:33:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-14",
+    "bank": "KTB",
+    "date": "2026-09-23",
     "type": "TRANSFER",
     "amount": 30.0,
-    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "note": "โอนเงินออก-พร้อมเพย์ (NMWPSW) TR To EWALLETID 006990438006045",
     "category": "transfer",
-    "createdAt": "2026-06-14T21:23:00.000Z"
+    "createdAt": "2026-09-23T14:00:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-06-14",
+    "bank": "KTB",
+    "date": "2026-09-23",
     "type": "EXPENSE",
-    "amount": 41.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-06-14T21:24:00.000Z"
+    "amount": 21.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-09-23T14:02:00.000Z"
   },
   {
     "bank": "SCB",
-    "date": "2026-06-15",
-    "type": "TRANSFER",
-    "amount": 129.0,
-    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "transfer",
-    "createdAt": "2026-06-15T19:43:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-15",
-    "type": "TRANSFER",
-    "amount": 24.0,
-    "note": "รับโอนจาก KBANK x8678 น.ส. จิตรลดา วงษ์น",
-    "category": "transfer",
-    "createdAt": "2026-06-15T19:47:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-15",
-    "type": "TRANSFER",
-    "amount": 28.0,
-    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "transfer",
-    "createdAt": "2026-06-15T19:50:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-15",
-    "type": "INCOME",
-    "amount": 23.0,
-    "note": "รับโอนจาก KTB x6045 KTB G-WALLET",
-    "category": "extra_income",
-    "createdAt": "2026-06-15T19:54:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-15",
-    "type": "EXPENSE",
-    "amount": 206.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-06-15T20:02:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-16",
-    "type": "TRANSFER",
-    "amount": 100.0,
-    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "transfer",
-    "createdAt": "2026-06-16T09:07:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-18",
-    "type": "EXPENSE",
-    "amount": 62.5,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-06-18T20:08:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-23",
+    "date": "2026-09-22",
     "type": "TRANSFER",
     "amount": 200.0,
     "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
     "category": "transfer",
-    "createdAt": "2026-06-23T10:36:00.000Z"
+    "createdAt": "2026-09-22T19:55:00.000Z"
   },
   {
     "bank": "SCB",
-    "date": "2026-06-23",
+    "date": "2026-09-22",
     "type": "EXPENSE",
-    "amount": 62.0,
+    "amount": 140.0,
     "note": "SIPS TRUE MONEY CO.,LTD.",
     "category": "food",
-    "createdAt": "2026-06-23T10:42:00.000Z"
+    "createdAt": "2026-09-22T20:01:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-22",
+    "type": "TRANSFER",
+    "amount": 20.0,
+    "note": "โอนเงินออก (IORSWT) 030-020405337591",
+    "category": "transfer",
+    "createdAt": "2026-09-22T12:29:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-22",
+    "type": "INCOME",
+    "amount": 3000.0,
+    "note": "เงินโอนเข้า (BSD22) BPS/014/04/MAHASARAKHAM",
+    "category": "extra_income",
+    "createdAt": "2026-09-22T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-22",
+    "type": "TRANSFER",
+    "amount": 2000.0,
+    "note": "โอนเงินออก (IORSWT) 069-2093477350",
+    "category": "transfer",
+    "createdAt": "2026-09-22T15:41:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-22",
+    "type": "TRANSFER",
+    "amount": 25.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORWSW) TR To EWALLETID 004999054159792",
+    "category": "transfer",
+    "createdAt": "2026-09-22T16:06:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-22",
+    "type": "EXPENSE",
+    "amount": 85.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 014-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-09-22T19:54:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-22",
+    "type": "TRANSFER",
+    "amount": 200.0,
+    "note": "โอนเงินออก (IORSWT) 014-6002697401",
+    "category": "transfer",
+    "createdAt": "2026-09-22T19:55:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-09-22",
+    "type": "INCOME",
+    "amount": 20.0,
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-09-22T12:00:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-09-22",
+    "type": "EXPENSE",
+    "amount": 5.0,
+    "note": "MyMo Payment from SAV",
+    "category": "other_expense",
+    "createdAt": "2026-09-22T12:00:00.000Z"
   },
   {
     "bank": "SCB",
-    "date": "2026-06-24",
+    "date": "2026-09-21",
+    "type": "EXPENSE",
+    "amount": 114.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-09-21T18:22:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-09-21",
+    "type": "EXPENSE",
+    "amount": 57.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-09-21T20:29:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-21",
+    "type": "EXPENSE",
+    "amount": 25.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-09-21T14:02:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-21",
+    "type": "EXPENSE",
+    "amount": 100.0,
+    "note": "จ่ายค่าสินค้า/บริการ (NBSWP) 97306-3360101121557",
+    "category": "other_expense",
+    "createdAt": "2026-09-21T14:16:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-21",
+    "type": "EXPENSE",
+    "amount": 197.57,
+    "note": "จ่ายค่าสินค้า/บริการ (NBSWP) 24642-TikTok PayLater",
+    "category": "other_expense",
+    "createdAt": "2026-09-21T19:01:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-21",
+    "type": "EXPENSE",
+    "amount": 189.0,
+    "note": "หักบัญชีอัตโนมัติ (CGSWP) 20933-0611090973",
+    "category": "other_expense",
+    "createdAt": "2026-09-21T19:47:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-21",
+    "type": "TRANSFER",
+    "amount": 20.0,
+    "note": "โอนเงินออก (IORSWT) 030-020330817055",
+    "category": "transfer",
+    "createdAt": "2026-09-21T20:15:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-20",
+    "type": "INCOME",
+    "amount": 100.0,
+    "note": "เงินโอนเข้า-พร้อมเพย์ (MORISD) TR fr 004-2263935260~ Future",
+    "category": "extra_income",
+    "createdAt": "2026-09-20T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-20",
+    "type": "EXPENSE",
+    "amount": 100.0,
+    "note": "ถอนเงินไม่ใช้บัตร (ATSWCR) K10146",
+    "category": "other_expense",
+    "createdAt": "2026-09-20T02:11:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-20",
+    "type": "TRANSFER",
+    "amount": 3000.0,
+    "note": "โอนเงินออก (IORSWT) 069-2093477350",
+    "category": "transfer",
+    "createdAt": "2026-09-20T16:46:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-20",
+    "type": "TRANSFER",
+    "amount": 7.7,
+    "note": "โอนเงินออก-พร้อมเพย์ (NMWPSW) TR To EWALLETID 006990438006045",
+    "category": "transfer",
+    "createdAt": "2026-09-20T18:17:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-09-19",
+    "type": "TRANSFER",
+    "amount": 200.0,
+    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "category": "transfer",
+    "createdAt": "2026-09-19T21:54:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-19",
+    "type": "EXPENSE",
+    "amount": 20.0,
+    "note": "จ่ายค่าสินค้า/บริการ (NMPSWP) 010753700088205-O1344040860246679YG",
+    "category": "other_expense",
+    "createdAt": "2026-09-19T01:40:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-19",
+    "type": "EXPENSE",
+    "amount": 3000.0,
+    "note": "Education Loan (BSD24) กยศ./กองทุนให้กู้ยืมเพื่อการศึกษา/1",
+    "category": "other_expense",
+    "createdAt": "2026-09-19T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-19",
+    "type": "TRANSFER",
+    "amount": 200.0,
+    "note": "โอนเงินออก (IORSWT) 014-6002697401",
+    "category": "transfer",
+    "createdAt": "2026-09-19T21:54:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-18",
+    "type": "TRANSFER",
+    "amount": 150.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NMWPSW) TR To EWALLETID 006990438006045",
+    "category": "transfer",
+    "createdAt": "2026-09-18T15:38:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-17",
+    "type": "INCOME",
+    "amount": 4800.0,
+    "note": "เงินโอนเข้า-พร้อมเพย์ (MORISD) TR fr 014-4061580330",
+    "category": "extra_income",
+    "createdAt": "2026-09-17T08:31:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-17",
+    "type": "TRANSFER",
+    "amount": 1600.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0646182513",
+    "category": "transfer",
+    "createdAt": "2026-09-17T10:36:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-17",
+    "type": "TRANSFER",
+    "amount": 1600.0,
+    "note": "โอนเงินออก (NBSWT) TR to 3360555597",
+    "category": "transfer",
+    "createdAt": "2026-09-17T10:36:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-17",
+    "type": "EXPENSE",
+    "amount": 30.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-09-17T13:11:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-17",
+    "type": "EXPENSE",
+    "amount": 721.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 004-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-09-17T16:01:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-16",
+    "type": "INCOME",
+    "amount": 200.0,
+    "note": "เงินโอนเข้า (IORSDT) 069-2093477350",
+    "category": "extra_income",
+    "createdAt": "2026-09-16T10:02:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-16",
+    "type": "EXPENSE",
+    "amount": 50.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-09-16T10:04:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-14",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NMWPSW) TR To EWALLETID 006990438006045",
+    "category": "transfer",
+    "createdAt": "2026-09-14T14:19:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-09-13",
+    "type": "EXPENSE",
+    "amount": 34.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-09-13T20:58:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-13",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0612981152",
+    "category": "transfer",
+    "createdAt": "2026-09-13T20:31:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-09-12",
+    "type": "TRANSFER",
+    "amount": 200.0,
+    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "category": "transfer",
+    "createdAt": "2026-09-12T01:24:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-09-12",
+    "type": "EXPENSE",
+    "amount": 200.0,
+    "note": "Terminal No. S1HCR67HC/Cardless ATM",
+    "category": "other_expense",
+    "createdAt": "2026-09-12T01:25:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-09-12",
     "type": "EXPENSE",
     "amount": 118.0,
     "note": "SIPS TRUE MONEY CO.,LTD.",
     "category": "food",
-    "createdAt": "2026-06-24T11:02:00.000Z"
+    "createdAt": "2026-09-12T19:32:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-06-24",
+    "bank": "KTB",
+    "date": "2026-09-12",
+    "type": "INCOME",
+    "amount": 200.0,
+    "note": "เงินโอนเข้า (IORSDT) 069-2093477350~ Future Amount: 200",
+    "category": "extra_income",
+    "createdAt": "2026-09-12T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-12",
     "type": "TRANSFER",
-    "amount": 119.0,
-    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "amount": 200.0,
+    "note": "โอนเงินออก (IORSWT) 014-6002697401~ Future Amount: 200",
     "category": "transfer",
-    "createdAt": "2026-06-24T11:08:00.000Z"
+    "createdAt": "2026-09-12T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-12",
+    "type": "INCOME",
+    "amount": 200.0,
+    "note": "เงินโอนเข้า (IORSDT) 030-020439442326",
+    "category": "extra_income",
+    "createdAt": "2026-09-12T10:29:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-12",
+    "type": "TRANSFER",
+    "amount": 59.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NMWPSW) TR To EWALLETID 006990438006045",
+    "category": "transfer",
+    "createdAt": "2026-09-12T14:17:00.000Z"
   },
   {
     "bank": "SCB",
-    "date": "2026-06-24",
+    "date": "2026-09-10",
+    "type": "TRANSFER",
+    "amount": 200.0,
+    "note": "รับโอนจาก KKP x7350 นางสาว จิตรลดา วงษ์น",
+    "category": "transfer",
+    "createdAt": "2026-09-10T15:21:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-09-10",
+    "type": "EXPENSE",
+    "amount": 71.5,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-09-10T15:41:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-10",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NMWPSW) TR To EWALLETID 006990438006045",
+    "category": "transfer",
+    "createdAt": "2026-09-10T15:22:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-10",
+    "type": "EXPENSE",
+    "amount": 20.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 004-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-09-10T18:36:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-09",
+    "type": "INCOME",
+    "amount": 200.0,
+    "note": "เงินโอนเข้า (IORSDT) 069-2093477350",
+    "category": "extra_income",
+    "createdAt": "2026-09-09T20:29:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-09",
+    "type": "TRANSFER",
+    "amount": 35.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0942909546",
+    "category": "transfer",
+    "createdAt": "2026-09-09T20:44:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-09",
+    "type": "TRANSFER",
+    "amount": 51.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NBIDSW) TR To MSISDN 0910749878",
+    "category": "transfer",
+    "createdAt": "2026-09-09T21:44:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-09-08",
+    "type": "TRANSFER",
+    "amount": 18.0,
+    "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
+    "category": "transfer",
+    "createdAt": "2026-09-08T20:39:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-08",
     "type": "EXPENSE",
     "amount": 25.0,
-    "note": "PromptPay x3884 น.ส.กิตติพร ช่อประพันธ์",
-    "category": "other",
-    "createdAt": "2026-06-24T19:40:00.000Z"
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-09-08T12:17:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-06-24",
-    "type": "EXPENSE",
-    "amount": 20.0,
-    "note": "PromptPay x7729 นาย แสวง ศรีเทพ",
-    "category": "other",
-    "createdAt": "2026-06-24T19:48:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-24",
-    "type": "EXPENSE",
-    "amount": 20.0,
-    "note": "PromptPay x1086 นางสาว หฤทัย ศรีชัยมูล",
-    "category": "other",
-    "createdAt": "2026-06-24T19:54:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-24",
-    "type": "EXPENSE",
-    "amount": 50.0,
-    "note": "PromptPay x5599 นาย วีรภัทร แก้วสอาด",
-    "category": "other",
-    "createdAt": "2026-06-24T21:51:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-25",
-    "type": "EXPENSE",
-    "amount": 45.0,
-    "note": "จ่ายบิล Ksher_TALADNOI",
-    "category": "bills",
-    "createdAt": "2026-06-25T12:16:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-25",
-    "type": "TRANSFER",
-    "amount": 37.0,
-    "note": "PromptPay x0973 น.ส.จิตรลดา วงษ์นันท์",
-    "category": "transfer",
-    "createdAt": "2026-06-25T19:39:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-25",
+    "bank": "KTB",
+    "date": "2026-09-08",
     "type": "INCOME",
-    "amount": 1.43,
-    "note": "จากระบบเงินฝาก",
+    "amount": 54.0,
+    "note": "เงินโอนเข้า (IORSDT) 004-2318198678",
     "category": "extra_income",
-    "createdAt": "2026-06-25T00:00:00.000Z"
+    "createdAt": "2026-09-08T20:37:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-06-27",
+    "bank": "GSB",
+    "date": "2026-09-08",
     "type": "TRANSFER",
-    "amount": 200.0,
-    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "amount": 18.0,
+    "note": "MyMo Transfer from SAV",
     "category": "transfer",
-    "createdAt": "2026-06-27T18:38:00.000Z"
+    "createdAt": "2026-09-08T12:00:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-06-27",
-    "type": "EXPENSE",
-    "amount": 74.5,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-06-27T22:08:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-06-28",
-    "type": "EXPENSE",
-    "amount": 55.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-06-28T13:57:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-02",
-    "type": "EXPENSE",
-    "amount": 17.5,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-07-02T10:12:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-03",
+    "bank": "KBANK",
+    "date": "2026-09-08",
     "type": "TRANSFER",
-    "amount": 200.0,
-    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "amount": 54.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X5681 น.ส.จิตรลดา วงษ์นั++ )52-30(",
     "category": "transfer",
-    "createdAt": "2026-07-03T14:59:00.000Z"
+    "createdAt": "2026-09-08T20:37:00.000Z"
   },
   {
     "bank": "SCB",
-    "date": "2026-07-03",
+    "date": "2026-09-07",
     "type": "EXPENSE",
-    "amount": 107.0,
+    "amount": 51.0,
     "note": "SIPS TRUE MONEY CO.,LTD.",
     "category": "food",
-    "createdAt": "2026-07-03T14:59:00.000Z"
+    "createdAt": "2026-09-07T16:44:00.000Z"
   },
   {
     "bank": "SCB",
-    "date": "2026-07-06",
+    "date": "2026-09-07",
+    "type": "EXPENSE",
+    "amount": 12.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-09-07T20:03:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-09-07",
+    "type": "EXPENSE",
+    "amount": 12.5,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-09-07T20:04:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-09-07",
+    "type": "EXPENSE",
+    "amount": 34.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-09-07T23:43:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-07",
     "type": "EXPENSE",
     "amount": 35.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 004-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-09-07T09:30:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-07",
+    "type": "TRANSFER",
+    "amount": 20.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NBIDSW) TR To MSISDN 0652031219",
+    "category": "transfer",
+    "createdAt": "2026-09-07T16:08:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-06",
+    "type": "TRANSFER",
+    "amount": 200.0,
+    "note": "โอนเงินออก (NBSWT) TR to 6617927508",
+    "category": "transfer",
+    "createdAt": "2026-09-06T16:13:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-06",
+    "type": "EXPENSE",
+    "amount": 277.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 004-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-09-06T20:44:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-09-05",
+    "type": "EXPENSE",
+    "amount": 363.79,
+    "note": "จ่ายบิล Credit Repayment",
+    "category": "bills",
+    "createdAt": "2026-09-05T13:31:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-09-05",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "รับโอนจาก KKP x7350 นางสาว จิตรลดา วงษ์น",
+    "category": "transfer",
+    "createdAt": "2026-09-05T16:22:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-05",
+    "type": "INCOME",
+    "amount": 400.0,
+    "note": "เงินโอนเข้า (IORSDT) 069-2093477350",
+    "category": "extra_income",
+    "createdAt": "2026-09-05T16:22:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-09-04",
+    "type": "EXPENSE",
+    "amount": 68.0,
     "note": "SIPS TRUE MONEY CO.,LTD.",
     "category": "food",
-    "createdAt": "2026-07-06T23:34:00.000Z"
+    "createdAt": "2026-09-04T15:58:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-09-04",
+    "type": "EXPENSE",
+    "amount": 116.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-09-04T16:31:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-04",
+    "type": "INCOME",
+    "amount": 6000.0,
+    "note": "เงินโอนเข้า (NBSDT) TR fr 8650049656",
+    "category": "extra_income",
+    "createdAt": "2026-09-04T20:13:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-04",
+    "type": "TRANSFER",
+    "amount": 6000.0,
+    "note": "โอนเงินออก (IORSWT) 069-2093477350",
+    "category": "transfer",
+    "createdAt": "2026-09-04T20:18:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-09-03",
+    "type": "INCOME",
+    "amount": 450.0,
+    "note": "รับโอนจาก KTB x5474 MISSKANOKWAN LAPTAWE",
+    "category": "extra_income",
+    "createdAt": "2026-09-03T20:38:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-03",
+    "type": "EXPENSE",
+    "amount": 35.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 004-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-09-03T08:50:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-03",
+    "type": "INCOME",
+    "amount": 700.0,
+    "note": "เงินโอนเข้า-พร้อมเพย์ (MORISD) TR fr 014-4130504643",
+    "category": "extra_income",
+    "createdAt": "2026-09-03T11:57:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-03",
+    "type": "TRANSFER",
+    "amount": 300.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0646182513",
+    "category": "transfer",
+    "createdAt": "2026-09-03T12:03:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-03",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนเงินออก (NBSWT) TR to 3360555597",
+    "category": "transfer",
+    "createdAt": "2026-09-03T12:05:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-03",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NMWPSW) TR To EWALLETID 006990438006045",
+    "category": "transfer",
+    "createdAt": "2026-09-03T12:21:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-03",
+    "type": "EXPENSE",
+    "amount": 25.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-09-03T12:46:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-03",
+    "type": "EXPENSE",
+    "amount": 30.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-09-03T20:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-03",
+    "type": "TRANSFER",
+    "amount": 20.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0661038288",
+    "category": "transfer",
+    "createdAt": "2026-09-03T20:57:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-09-01",
+    "type": "EXPENSE",
+    "amount": 25.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-09-01T19:14:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-31",
+    "type": "TRANSFER",
+    "amount": 170.0,
+    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "category": "transfer",
+    "createdAt": "2026-08-31T20:39:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-31",
+    "type": "EXPENSE",
+    "amount": 105.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-08-31T20:43:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-31",
+    "type": "TRANSFER",
+    "amount": 170.0,
+    "note": "โอนเงินออก (IORSWT) 014-6002697401",
+    "category": "transfer",
+    "createdAt": "2026-08-31T20:39:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-30",
+    "type": "TRANSFER",
+    "amount": 250.0,
+    "note": "โอนเงินออก (IORSWT) 025-0231526310",
+    "category": "transfer",
+    "createdAt": "2026-08-30T08:51:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-30",
+    "type": "EXPENSE",
+    "amount": 50.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 030-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-30T21:18:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-29",
+    "type": "EXPENSE",
+    "amount": 90.0,
+    "note": "เติมเงิน WIDx4105/K Plus W",
+    "category": "other",
+    "createdAt": "2026-08-29T14:23:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-29",
+    "type": "INCOME",
+    "amount": 600.0,
+    "note": "เงินโอนเข้า (IORSDT) 069-2093477350",
+    "category": "extra_income",
+    "createdAt": "2026-08-29T17:29:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-29",
+    "type": "TRANSFER",
+    "amount": 50.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NBIDSW) TR To MSISDN 0611157678",
+    "category": "transfer",
+    "createdAt": "2026-08-29T18:22:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-29",
+    "type": "TRANSFER",
+    "amount": 25.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To NATID 3360101479290",
+    "category": "transfer",
+    "createdAt": "2026-08-29T18:28:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-29",
+    "type": "EXPENSE",
+    "amount": 16.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 030-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-29T21:01:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-28",
+    "type": "EXPENSE",
+    "amount": 70.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 004-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-28T15:10:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-28",
+    "type": "TRANSFER",
+    "amount": 85.0,
+    "note": "โอนเงินออก (IORSWT) 004-1943143494",
+    "category": "transfer",
+    "createdAt": "2026-08-28T16:20:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-27",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0630235074",
+    "category": "transfer",
+    "createdAt": "2026-08-27T13:07:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-27",
+    "type": "TRANSFER",
+    "amount": 10.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0945248626",
+    "category": "transfer",
+    "createdAt": "2026-08-27T16:07:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-27",
+    "type": "TRANSFER",
+    "amount": 199.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORWSW) TR To EWALLETID 004999077457405",
+    "category": "transfer",
+    "createdAt": "2026-08-27T17:31:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-27",
+    "type": "TRANSFER",
+    "amount": 69.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To NATID 1409600062867",
+    "category": "transfer",
+    "createdAt": "2026-08-27T17:34:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-27",
+    "type": "INCOME",
+    "amount": 400.0,
+    "note": "เงินโอนเข้า (IORSDT) 069-2093477350",
+    "category": "extra_income",
+    "createdAt": "2026-08-27T17:42:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-27",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORWSW) TR To EWALLETID 004999055971138",
+    "category": "transfer",
+    "createdAt": "2026-08-27T17:49:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-27",
+    "type": "TRANSFER",
+    "amount": 20.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NBIDSW) TR To NATID 3369900003171",
+    "category": "transfer",
+    "createdAt": "2026-08-27T18:01:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-27",
+    "type": "EXPENSE",
+    "amount": 70.0,
+    "note": "จ่ายค่าสินค้า/บริการ (NMPSWP) 010753700088205-2123699035002117154",
+    "category": "other_expense",
+    "createdAt": "2026-08-27T18:20:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-27",
+    "type": "EXPENSE",
+    "amount": 48.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 004-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-27T18:23:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-26",
+    "type": "EXPENSE",
+    "amount": 24.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-08-26T20:46:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-26",
+    "type": "INCOME",
+    "amount": 100.0,
+    "note": "เงินโอนเข้า-พร้อมเพย์ (NBIDSD) TR To MSISDN 0611090973",
+    "category": "extra_income",
+    "createdAt": "2026-08-26T12:03:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-26",
+    "type": "EXPENSE",
+    "amount": 8.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-26T12:32:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-26",
+    "type": "INCOME",
+    "amount": 20.0,
+    "note": "เงินโอนเข้า (IORSDT) 030-020414872570",
+    "category": "extra_income",
+    "createdAt": "2026-08-26T14:58:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-26",
+    "type": "EXPENSE",
+    "amount": 250.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 014-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-26T14:59:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-26",
+    "type": "TRANSFER",
+    "amount": 30.0,
+    "note": "โอนเงินออก (IORSWT) 034-020004870118",
+    "category": "transfer",
+    "createdAt": "2026-08-26T20:06:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-26",
+    "type": "TRANSFER",
+    "amount": 20.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORWSW) TR To EWALLETID 004999017220731",
+    "category": "transfer",
+    "createdAt": "2026-08-26T20:36:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-25",
+    "type": "TRANSFER",
+    "amount": 1.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0933279062",
+    "category": "transfer",
+    "createdAt": "2026-08-25T08:55:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-25",
+    "type": "TRANSFER",
+    "amount": 8.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0809818551",
+    "category": "transfer",
+    "createdAt": "2026-08-25T08:58:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-25",
+    "type": "EXPENSE",
+    "amount": 100.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 014-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-25T17:20:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-25",
+    "type": "EXPENSE",
+    "amount": 235.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 014-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-25T17:27:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-25",
+    "type": "EXPENSE",
+    "amount": 30.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-25T20:41:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-24",
+    "type": "TRANSFER",
+    "amount": 300.0,
+    "note": "รับโอนจาก KKP x7350 นางสาว จิตรลดา วงษ์น",
+    "category": "transfer",
+    "createdAt": "2026-08-24T13:26:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-24",
+    "type": "EXPENSE",
+    "amount": 500.0,
+    "note": "Buy SCBS&P500 CL000032786929",
+    "category": "savings_goal",
+    "createdAt": "2026-08-24T13:27:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-24",
+    "type": "EXPENSE",
+    "amount": 110.0,
+    "note": "Buy SCBGOLD CL000032786929",
+    "category": "savings_goal",
+    "createdAt": "2026-08-24T13:29:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-24",
+    "type": "TRANSFER",
+    "amount": 200.0,
+    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "category": "transfer",
+    "createdAt": "2026-08-24T21:35:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-24",
+    "type": "EXPENSE",
+    "amount": 121.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-08-24T21:41:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-24",
+    "type": "TRANSFER",
+    "amount": 200.0,
+    "note": "โอนเงินออก (IORSWT) 014-6002697401",
+    "category": "transfer",
+    "createdAt": "2026-08-24T21:35:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-23",
+    "type": "TRANSFER",
+    "amount": 30.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NBIDSW) TR To MSISDN 0628635012",
+    "category": "transfer",
+    "createdAt": "2026-08-23T15:19:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-22",
+    "type": "EXPENSE",
+    "amount": 25.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-08-22T21:56:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-22",
+    "type": "EXPENSE",
+    "amount": 60.0,
+    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
+    "category": "bills",
+    "createdAt": "2026-08-22T22:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-22",
+    "type": "EXPENSE",
+    "amount": 1081.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-22T18:30:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-22",
+    "type": "EXPENSE",
+    "amount": 20.0,
+    "note": "จ่ายค่าสินค้า/บริการ (NBSWP) 12C-0833810723",
+    "category": "other_expense",
+    "createdAt": "2026-08-22T21:08:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-22",
+    "type": "EXPENSE",
+    "amount": 100.0,
+    "note": "จ่ายค่าสินค้า/บริการ (NBSWP) 97306-3360101121557",
+    "category": "other_expense",
+    "createdAt": "2026-08-22T21:13:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-21",
+    "type": "EXPENSE",
+    "amount": 10.0,
+    "note": "จ่ายบิล ดัชมิลล์ เวนดิ้ง",
+    "category": "bills",
+    "createdAt": "2026-08-21T03:09:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-21",
+    "type": "EXPENSE",
+    "amount": 93.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-08-21T12:31:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-21",
+    "type": "EXPENSE",
+    "amount": 30.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-21T08:53:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-21",
+    "type": "EXPENSE",
+    "amount": 8.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-21T08:55:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-21",
+    "type": "EXPENSE",
+    "amount": 50.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-21T11:46:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-21",
+    "type": "INCOME",
+    "amount": 1500.0,
+    "note": "เงินโอนเข้า-พร้อมเพย์ (MORISD) TR fr 014-4130504643",
+    "category": "extra_income",
+    "createdAt": "2026-08-21T17:43:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-20",
+    "type": "TRANSFER",
+    "amount": 2000.0,
+    "note": "โอนเงินออก (IORSWT) 069-2093477350",
+    "category": "transfer",
+    "createdAt": "2026-08-20T13:57:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-19",
+    "type": "EXPENSE",
+    "amount": 49.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-08-19T16:21:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-19",
+    "type": "EXPENSE",
+    "amount": 3000.0,
+    "note": "Education Loan (BSD24) กยศ./กองทุนให้กู้ยืมเพื่อการศึกษา/1",
+    "category": "other_expense",
+    "createdAt": "2026-08-19T12:00:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-18",
+    "type": "EXPENSE",
+    "amount": 54.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-08-18T02:29:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-18",
+    "type": "EXPENSE",
+    "amount": 60.0,
+    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
+    "category": "bills",
+    "createdAt": "2026-08-18T22:23:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-17",
+    "type": "TRANSFER",
+    "amount": 2000.0,
+    "note": "โอนไป KKB x7350 นางสาว จิตรลดา วงษ์นันท์",
+    "category": "transfer",
+    "createdAt": "2026-08-17T16:47:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-08-17",
+    "type": "INCOME",
+    "amount": 100.04,
+    "note": "SPIN SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-08-17T12:00:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-08-17",
+    "type": "EXPENSE",
+    "amount": 3700.0,
+    "note": "MyMo Transfer from SAV",
+    "category": "other",
+    "createdAt": "2026-08-17T12:00:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-08-17",
+    "type": "EXPENSE",
+    "amount": 5.0,
+    "note": "MyMo Payment from SAV",
+    "category": "other",
+    "createdAt": "2026-08-17T12:00:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-08-17",
+    "type": "EXPENSE",
+    "amount": 5.0,
+    "note": "MyMo Payment from SAV",
+    "category": "other",
+    "createdAt": "2026-08-17T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-17",
+    "type": "INCOME",
+    "amount": 10.0,
+    "note": "เงินโอนเข้า (IORSDT) 004-0823428383",
+    "category": "extra_income",
+    "createdAt": "2026-08-17T19:43:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-16",
+    "type": "EXPENSE",
+    "amount": 100.0,
+    "note": "จ่ายบิล UNIPHARM MSU",
+    "category": "bills",
+    "createdAt": "2026-08-16T15:58:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-16",
+    "type": "EXPENSE",
+    "amount": 66.0,
+    "note": "จ่ายบิล Payment to ShopeeFood",
+    "category": "bills",
+    "createdAt": "2026-08-16T20:47:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-15",
+    "type": "EXPENSE",
+    "amount": 500.0,
+    "note": "เติมเงิน WIDx6045/KTB",
+    "category": "other",
+    "createdAt": "2026-08-15T15:06:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-15",
+    "type": "EXPENSE",
+    "amount": 200.0,
+    "note": "Terminal No. S1HCR67HC/Cardless ATM",
+    "category": "other",
+    "createdAt": "2026-08-15T23:48:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-08-15",
+    "type": "EXPENSE",
+    "amount": 2000.0,
+    "note": "MyMo Transfer from SAV",
+    "category": "other",
+    "createdAt": "2026-08-15T12:00:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-14",
+    "type": "EXPENSE",
+    "amount": 145.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-08-14T01:46:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-14",
+    "type": "EXPENSE",
+    "amount": 40.0,
+    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
+    "category": "bills",
+    "createdAt": "2026-08-14T21:35:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-08-14",
+    "type": "INCOME",
+    "amount": 100.04,
+    "note": "SPIN SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-08-14T12:00:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-13",
+    "type": "EXPENSE",
+    "amount": 1000.0,
+    "note": "Buy SCBS&P500A CL000032786929",
+    "category": "savings_goal",
+    "createdAt": "2026-08-13T04:12:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-13",
+    "type": "EXPENSE",
+    "amount": 50.0,
+    "note": "จ่ายบิล Ksher_TALADNOI",
+    "category": "bills",
+    "createdAt": "2026-08-13T14:21:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-13",
+    "type": "EXPENSE",
+    "amount": 85.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-08-13T14:32:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-13",
+    "type": "EXPENSE",
+    "amount": 50.0,
+    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
+    "category": "bills",
+    "createdAt": "2026-08-13T21:56:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-08-13",
+    "type": "EXPENSE",
+    "amount": 4500.0,
+    "note": "MyMo Transfer from SAV",
+    "category": "other",
+    "createdAt": "2026-08-13T12:00:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-08-13",
+    "type": "EXPENSE",
+    "amount": 5000.0,
+    "note": "MyMo Transfer from SAV",
+    "category": "other",
+    "createdAt": "2026-08-13T12:00:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-12",
+    "type": "TRANSFER",
+    "amount": 1000.0,
+    "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
+    "category": "transfer",
+    "createdAt": "2026-08-12T17:35:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-12",
+    "type": "EXPENSE",
+    "amount": 500.0,
+    "note": "DDR บริษัทหลักทรัพย์ อินโนเวสท์ เอกซ์ จำ",
+    "category": "savings_goal",
+    "createdAt": "2026-08-12T17:41:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-12",
+    "type": "EXPENSE",
+    "amount": 30.0,
+    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
+    "category": "bills",
+    "createdAt": "2026-08-12T23:01:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-12",
+    "type": "TRANSFER",
+    "amount": 4500.0,
+    "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
+    "category": "transfer",
+    "createdAt": "2026-08-12T23:29:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-08-12",
+    "type": "EXPENSE",
+    "amount": 3000.0,
+    "note": "MyMo Transfer from SAV",
+    "category": "other",
+    "createdAt": "2026-08-12T12:00:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-08-12",
+    "type": "EXPENSE",
+    "amount": 1000.0,
+    "note": "MyMo Transfer from SAV",
+    "category": "other",
+    "createdAt": "2026-08-12T12:00:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-11",
+    "type": "EXPENSE",
+    "amount": 24.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-08-11T21:51:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-10",
+    "type": "EXPENSE",
+    "amount": 24.5,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-08-10T20:18:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-10",
+    "type": "EXPENSE",
+    "amount": 10.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 004-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-10T01:38:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-10",
+    "type": "EXPENSE",
+    "amount": 8.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-10T08:50:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-10",
+    "type": "EXPENSE",
+    "amount": 10.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-10T12:02:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-08-08",
+    "type": "INCOME",
+    "amount": 3800.0,
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-08-08T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-08",
+    "type": "EXPENSE",
+    "amount": 10.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 004-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-08T04:11:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-08",
+    "type": "EXPENSE",
+    "amount": 827.68,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 004-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-08T15:37:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-08",
+    "type": "TRANSFER",
+    "amount": 3800.0,
+    "note": "โอนเงินออก (IORSWT) 030-020405337591",
+    "category": "transfer",
+    "createdAt": "2026-08-08T15:38:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-08",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NMWPSW) TR To EWALLETID 006990438006045",
+    "category": "transfer",
+    "createdAt": "2026-08-08T20:08:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-07",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "category": "transfer",
+    "createdAt": "2026-08-07T02:08:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-07",
+    "type": "EXPENSE",
+    "amount": 52.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-08-07T02:10:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-07",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนเงินออก (IORSWT) 014-6002697401",
+    "category": "transfer",
+    "createdAt": "2026-08-07T02:08:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-07",
+    "type": "INCOME",
+    "amount": 520.0,
+    "note": "เงินโอนเข้า (IORSDT) 004-1692627934~ Future Amount: 520",
+    "category": "extra_income",
+    "createdAt": "2026-08-07T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-07",
+    "type": "INCOME",
+    "amount": 4000.0,
+    "note": "เงินโอนเข้า (NBSDT) TR fr 8650049656",
+    "category": "extra_income",
+    "createdAt": "2026-08-07T06:50:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-05",
+    "type": "EXPENSE",
+    "amount": 37.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-08-05T20:08:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-05",
+    "type": "EXPENSE",
+    "amount": 20.0,
+    "note": "จ่ายค่าสินค้า/บริการ (NBSWP) 12C-0833810723",
+    "category": "other_expense",
+    "createdAt": "2026-08-05T15:10:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-05",
+    "type": "EXPENSE",
+    "amount": 30.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-08-05T16:22:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-04",
+    "type": "EXPENSE",
+    "amount": 26.5,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-08-04T21:21:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-04",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NMWPSW) TR To EWALLETID 006990438006045",
+    "category": "transfer",
+    "createdAt": "2026-08-04T21:16:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-02",
+    "type": "INCOME",
+    "amount": 500.0,
+    "note": "ฝากเงิน (SDCH)",
+    "category": "extra_income",
+    "createdAt": "2026-08-02T11:54:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-02",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NMWPSW) TR To EWALLETID 006990438006045",
+    "category": "transfer",
+    "createdAt": "2026-08-02T14:40:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-01",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
+    "category": "transfer",
+    "createdAt": "2026-08-01T19:49:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-08-01",
+    "type": "EXPENSE",
+    "amount": 38.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-08-01T19:57:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-08-01",
+    "type": "EXPENSE",
+    "amount": 100.0,
+    "note": "MyMo Transfer from SAV",
+    "category": "other",
+    "createdAt": "2026-08-01T12:00:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-08-01",
+    "type": "EXPENSE",
+    "amount": 100.0,
+    "note": "MyMo Transfer from SAV",
+    "category": "other",
+    "createdAt": "2026-08-01T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-08-01",
+    "type": "INCOME",
+    "amount": 100.0,
+    "note": "เงินโอนเข้า-พร้อมเพย์ (MORISD) TR fr 030-020405337591",
+    "category": "extra_income",
+    "createdAt": "2026-08-01T19:48:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-31",
+    "type": "EXPENSE",
+    "amount": 25.0,
+    "note": "จ่ายบิล Ksher_TALADNOI",
+    "category": "bills",
+    "createdAt": "2026-07-31T16:39:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-31",
+    "type": "EXPENSE",
+    "amount": 40.0,
+    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
+    "category": "bills",
+    "createdAt": "2026-07-31T21:58:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-30",
+    "type": "TRANSFER",
+    "amount": 200.0,
+    "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
+    "category": "transfer",
+    "createdAt": "2026-07-30T20:59:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-30",
+    "type": "EXPENSE",
+    "amount": 106.5,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-07-30T21:04:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-07-30",
+    "type": "EXPENSE",
+    "amount": 500.0,
+    "note": "MyMo Transfer from SAV",
+    "category": "other",
+    "createdAt": "2026-07-30T12:00:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-07-30",
+    "type": "EXPENSE",
+    "amount": 200.0,
+    "note": "MyMo Transfer from SAV",
+    "category": "other",
+    "createdAt": "2026-07-30T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-30",
+    "type": "TRANSFER",
+    "amount": 500.0,
+    "note": "รับโอนเงิน Internet/Mobile GSB จาก GSB X7591 นางสาว จิตรลดา วงษ++",
+    "category": "transfer",
+    "createdAt": "2026-07-30T16:37:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-30",
+    "type": "EXPENSE",
+    "amount": 500.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป X9189 น.ส. อนัญญา ผลจันท++",
+    "category": "other",
+    "createdAt": "2026-07-30T16:38:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-30",
+    "type": "EXPENSE",
+    "amount": 10.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X8288 MR. JAR LAR LAW D",
+    "category": "other",
+    "createdAt": "2026-07-30T21:10:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-30",
+    "type": "TRANSFER",
+    "amount": 500.0,
+    "note": "รับโอนเงิน Internet/Mobile GSB จาก GSB X7591 นางสาว จิตรลดา วงษ++",
+    "category": "transfer",
+    "createdAt": "2026-07-30T16:37:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-30",
+    "type": "TRANSFER",
+    "amount": 500.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป X9189 น.ส. อนัญญา ผลจันท++",
+    "category": "transfer",
+    "createdAt": "2026-07-30T16:38:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-30",
+    "type": "TRANSFER",
+    "amount": 10.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X8288 MR. JAR LAR LAW D ++",
+    "category": "transfer",
+    "createdAt": "2026-07-30T21:10:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-29",
+    "type": "EXPENSE",
+    "amount": 72.5,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-07-29T00:42:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-29",
+    "type": "EXPENSE",
+    "amount": 30.0,
+    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
+    "category": "bills",
+    "createdAt": "2026-07-29T00:45:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-29",
+    "type": "EXPENSE",
+    "amount": 40.0,
+    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
+    "category": "bills",
+    "createdAt": "2026-07-29T22:57:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-07-29",
+    "type": "EXPENSE",
+    "amount": 200.0,
+    "note": "MyMo Transfer from SAV",
+    "category": "other",
+    "createdAt": "2026-07-29T12:00:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-07-29",
+    "type": "EXPENSE",
+    "amount": 200.0,
+    "note": "MyMo ATM CASH WITHDRAWAL",
+    "category": "other",
+    "createdAt": "2026-07-29T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-29",
+    "type": "INCOME",
+    "amount": 200.0,
+    "note": "เงินโอนเข้า-พร้อมเพย์ (MORISD) TR fr 030-020405337591",
+    "category": "extra_income",
+    "createdAt": "2026-07-29T15:55:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-29",
+    "type": "EXPENSE",
+    "amount": 90.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 014-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-07-29T15:56:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-29",
+    "type": "EXPENSE",
+    "amount": 100.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 014-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-07-29T15:57:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-28",
+    "type": "EXPENSE",
+    "amount": 10.0,
+    "note": "จ่ายบิล ดัชมิลล์ เวนดิ้ง",
+    "category": "bills",
+    "createdAt": "2026-07-28T03:46:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-28",
+    "type": "EXPENSE",
+    "amount": 25.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X6704 Ksher_TALADNOI",
+    "category": "bills",
+    "createdAt": "2026-07-28T13:37:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-28",
+    "type": "EXPENSE",
+    "amount": 25.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X6704 Ksher_TALADNOI",
+    "category": "other_expense",
+    "createdAt": "2026-07-28T13:37:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-27",
+    "type": "TRANSFER",
+    "amount": 40.0,
+    "note": "รับโอนจาก KBANK x8678 น.ส. จิตรลดา วงษ์น",
+    "category": "transfer",
+    "createdAt": "2026-07-27T19:22:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-27",
+    "type": "TRANSFER",
+    "amount": 200.0,
+    "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
+    "category": "transfer",
+    "createdAt": "2026-07-27T19:40:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-27",
+    "type": "EXPENSE",
+    "amount": 113.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-07-27T19:50:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-07-27",
+    "type": "EXPENSE",
+    "amount": 200.0,
+    "note": "MyMo Transfer from SAV",
+    "category": "other",
+    "createdAt": "2026-07-27T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-27",
+    "type": "EXPENSE",
+    "amount": 40.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X7860 Ksher_TALADNOI",
+    "category": "bills",
+    "createdAt": "2026-07-27T16:33:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-27",
+    "type": "TRANSFER",
+    "amount": 40.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป SCB X7401 นางสาว จิตรลดา วงษ++",
+    "category": "transfer",
+    "createdAt": "2026-07-27T19:22:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-27",
+    "type": "EXPENSE",
+    "amount": 40.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X7860 Ksher_TALADNOI",
+    "category": "other_expense",
+    "createdAt": "2026-07-27T16:33:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-27",
+    "type": "TRANSFER",
+    "amount": 40.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป SCB X7401 นางสาว จิตรลดา วงษ++",
+    "category": "transfer",
+    "createdAt": "2026-07-27T19:22:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-26",
+    "type": "TRANSFER",
+    "amount": 60.0,
+    "note": "รับโอนจาก KBANK x8678 น.ส. จิตรลดา วงษ์น",
+    "category": "transfer",
+    "createdAt": "2026-07-26T21:37:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-26",
+    "type": "EXPENSE",
+    "amount": 57.5,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-07-26T21:41:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-26",
+    "type": "EXPENSE",
+    "amount": 30.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X8903 Ksher_TALADNOI",
+    "category": "bills",
+    "createdAt": "2026-07-26T14:18:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-26",
+    "type": "TRANSFER",
+    "amount": 60.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป SCB X7401 นางสาว จิตรลดา วงษ++",
+    "category": "transfer",
+    "createdAt": "2026-07-26T21:37:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-26",
+    "type": "EXPENSE",
+    "amount": 30.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X8903 Ksher_TALADNOI",
+    "category": "other_expense",
+    "createdAt": "2026-07-26T14:18:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-26",
+    "type": "TRANSFER",
+    "amount": 60.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป SCB X7401 นางสาว จิตรลดา วงษ++",
+    "category": "transfer",
+    "createdAt": "2026-07-26T21:37:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-24",
+    "type": "TRANSFER",
+    "amount": 60.0,
+    "note": "รับโอนจาก KBANK x8678 น.ส. จิตรลดา วงษ์น",
+    "category": "transfer",
+    "createdAt": "2026-07-24T00:12:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-24",
+    "type": "EXPENSE",
+    "amount": 65.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-07-24T00:14:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-24",
+    "type": "TRANSFER",
+    "amount": 60.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป SCB X7401 นางสาว จิตรลดา วงษ++",
+    "category": "transfer",
+    "createdAt": "2026-07-24T00:12:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-24",
+    "type": "EXPENSE",
+    "amount": 30.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X6437 Ksher_TALADNOI",
+    "category": "bills",
+    "createdAt": "2026-07-24T09:23:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-24",
+    "type": "TRANSFER",
+    "amount": 200.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X6045 จิตรลดา วงษ์นัน++",
+    "category": "transfer",
+    "createdAt": "2026-07-24T11:55:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-24",
+    "type": "EXPENSE",
+    "amount": 16.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X3581 ดัชมิลล์ เวนดิ้ง",
+    "category": "bills",
+    "createdAt": "2026-07-24T12:24:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-24",
+    "type": "EXPENSE",
+    "amount": 3.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X8622 RATANACHAI COPY",
+    "category": "bills",
+    "createdAt": "2026-07-24T13:20:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-24",
+    "type": "TRANSFER",
+    "amount": 400.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X5681 น.ส.จิตรลดา วงษ์นั++",
+    "category": "transfer",
+    "createdAt": "2026-07-24T13:32:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-24",
+    "type": "INCOME",
+    "amount": 400.0,
+    "note": "เงินโอนเข้า (IORSDT) 004-2318198678",
+    "category": "extra_income",
+    "createdAt": "2026-07-24T13:32:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-24",
+    "type": "TRANSFER",
+    "amount": 400.0,
+    "note": "โอนเงินออก (IORSWT) 034-020069438482",
+    "category": "transfer",
+    "createdAt": "2026-07-24T13:33:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-24",
+    "type": "TRANSFER",
+    "amount": 60.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป SCB X7401 นางสาว จิตรลดา วงษ++",
+    "category": "transfer",
+    "createdAt": "2026-07-24T00:12:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-24",
+    "type": "EXPENSE",
+    "amount": 30.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X6437 Ksher_TALADNOI",
+    "category": "other_expense",
+    "createdAt": "2026-07-24T09:23:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-24",
+    "type": "TRANSFER",
+    "amount": 200.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X6045 จิตรลดา วงษ์นัน++",
+    "category": "transfer",
+    "createdAt": "2026-07-24T11:55:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-24",
+    "type": "EXPENSE",
+    "amount": 16.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X3581 ดัชมิลล์ เวนดิ้ง",
+    "category": "other_expense",
+    "createdAt": "2026-07-24T12:24:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-24",
+    "type": "EXPENSE",
+    "amount": 3.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X8622 RATANACHAI COPY CENTER",
+    "category": "other_expense",
+    "createdAt": "2026-07-24T13:20:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-24",
+    "type": "TRANSFER",
+    "amount": 400.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X5681 น.ส.จิตรลดา วงษ์นั++",
+    "category": "transfer",
+    "createdAt": "2026-07-24T13:32:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-07-23",
+    "type": "INCOME",
+    "amount": 2000.0,
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-07-23T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-23",
+    "type": "TRANSFER",
+    "amount": 40.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X6045 จิตรลดา วงษ์นัน++",
+    "category": "transfer",
+    "createdAt": "2026-07-23T15:09:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-23",
+    "type": "TRANSFER",
+    "amount": 1000.0,
+    "note": "รับโอนเงิน Internet/Mobile KTB จาก KTB X5681 MISSJITLADA WONGN++",
+    "category": "transfer",
+    "createdAt": "2026-07-23T18:07:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-23",
+    "type": "EXPENSE",
+    "amount": 475.33,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X0829 บจก. แอดวานซ์ ไวร์เลส",
+    "category": "bills_internet",
+    "createdAt": "2026-07-23T18:36:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-23",
+    "type": "INCOME",
+    "amount": 3000.0,
+    "note": "เงินโอนเข้า (IORSDT) 014-4051940168",
+    "category": "extra_income",
+    "createdAt": "2026-07-23T16:13:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-23",
+    "type": "TRANSFER",
+    "amount": 2000.0,
+    "note": "โอนเงินออก (IORSWT) 030-020405337591",
+    "category": "transfer",
+    "createdAt": "2026-07-23T18:07:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-23",
+    "type": "TRANSFER",
+    "amount": 1000.0,
+    "note": "โอนเงินออก (IORSWT) 004-2318198678",
+    "category": "transfer",
+    "createdAt": "2026-07-23T18:07:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-23",
+    "type": "TRANSFER",
+    "amount": 40.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X6045 จิตรลดา วงษ์นัน++",
+    "category": "transfer",
+    "createdAt": "2026-07-23T15:09:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-23",
+    "type": "TRANSFER",
+    "amount": 1000.0,
+    "note": "รับโอนเงิน Internet/Mobile KTB จาก KTB X5681 MISSJITLADA WONGN++",
+    "category": "transfer",
+    "createdAt": "2026-07-23T18:07:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-23",
+    "type": "EXPENSE",
+    "amount": 475.33,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X0829 บจก. แอดวานซ์ ไวร์เลส เน็ทเวอร์ค",
+    "category": "bills_internet",
+    "createdAt": "2026-07-23T18:36:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-07-22",
+    "type": "INCOME",
+    "amount": 3000.0,
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-07-22T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-22",
+    "type": "TRANSFER",
+    "amount": 30.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X6045 จิตรลดา วงษ์นัน++",
+    "category": "transfer",
+    "createdAt": "2026-07-22T20:11:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-22",
+    "type": "EXPENSE",
+    "amount": 3000.0,
+    "note": "Education Loan (BSD24) กยศ./กองทุนให้กู้ยืมเพื่อการศึกษา/1",
+    "category": "other_expense",
+    "createdAt": "2026-07-22T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-22",
+    "type": "TRANSFER",
+    "amount": 3000.0,
+    "note": "โอนเงินออก (IORSWT) 030-020405337591",
+    "category": "transfer",
+    "createdAt": "2026-07-22T14:38:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-22",
+    "type": "TRANSFER",
+    "amount": 30.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X6045 จิตรลดา วงษ์นัน++",
+    "category": "transfer",
+    "createdAt": "2026-07-22T20:11:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-21",
+    "type": "EXPENSE",
+    "amount": 25.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X8681 นางแสง ไชยประสิทธ++",
+    "category": "other",
+    "createdAt": "2026-07-21T12:46:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-21",
+    "type": "EXPENSE",
+    "amount": 40.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X3217 ศุภลักษณ์ อาหารตามสั่ง",
+    "category": "bills",
+    "createdAt": "2026-07-21T12:53:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-21",
+    "type": "TRANSFER",
+    "amount": 30.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X6045 จิตรลดา วงษ์นัน++",
+    "category": "transfer",
+    "createdAt": "2026-07-21T19:19:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-21",
+    "type": "TRANSFER",
+    "amount": 25.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X8681 นางแสง ไชยประสิทธ++",
+    "category": "transfer",
+    "createdAt": "2026-07-21T12:46:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-21",
+    "type": "EXPENSE",
+    "amount": 40.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X3217 ศุภลักษณ์ อาหารตามสั่ง",
+    "category": "other_expense",
+    "createdAt": "2026-07-21T12:53:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-21",
+    "type": "TRANSFER",
+    "amount": 30.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X6045 จิตรลดา วงษ์นัน++ )52-30(",
+    "category": "transfer",
+    "createdAt": "2026-07-21T19:19:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-20",
+    "type": "TRANSFER",
+    "amount": 392.0,
+    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "category": "transfer",
+    "createdAt": "2026-07-20T14:15:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-20",
+    "type": "EXPENSE",
+    "amount": 303.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-07-20T14:28:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-20",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนไป KBNK x8678 น.ส. จิตรลดา วงษ์นันท์",
+    "category": "transfer",
+    "createdAt": "2026-07-20T18:17:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-20",
+    "type": "TRANSFER",
+    "amount": 500.0,
+    "note": "รับโอนเงิน Internet/Mobile KTB จาก KTB X5681 MISSJITLADA WONGN++",
+    "category": "transfer",
+    "createdAt": "2026-07-20T18:13:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-20",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "รับโอนเงิน Internet/Mobile SCB จาก SCB X7401 นางสาว จิตรลดา วงษ++",
+    "category": "transfer",
+    "createdAt": "2026-07-20T18:17:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-20",
+    "type": "EXPENSE",
+    "amount": 10.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X0115 น.ส. จุฑารัตน์ พิน++",
+    "category": "other",
+    "createdAt": "2026-07-20T21:36:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-20",
+    "type": "TRANSFER",
+    "amount": 392.0,
+    "note": "โอนเงินออก (IORSWT) 014-6002697401",
+    "category": "transfer",
+    "createdAt": "2026-07-20T14:15:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-20",
+    "type": "TRANSFER",
+    "amount": 500.0,
+    "note": "โอนเงินออก (IORSWT) 004-2318198678",
+    "category": "transfer",
+    "createdAt": "2026-07-20T18:13:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-20",
+    "type": "TRANSFER",
+    "amount": 500.0,
+    "note": "รับโอนเงิน Internet/Mobile KTB จาก KTB X5681 MISSJITLADA WONGN++",
+    "category": "transfer",
+    "createdAt": "2026-07-20T18:13:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-20",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "รับโอนเงิน Internet/Mobile SCB จาก SCB X7401 นางสาว จิตรลดา วงษ++",
+    "category": "transfer",
+    "createdAt": "2026-07-20T18:17:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-20",
+    "type": "TRANSFER",
+    "amount": 10.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X0115 น.ส. จุฑารัตน์ พิน++",
+    "category": "transfer",
+    "createdAt": "2026-07-20T21:36:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-07-19",
+    "type": "INCOME",
+    "amount": 1400.0,
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-07-19T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-19",
+    "type": "INCOME",
+    "amount": 2400.0,
+    "note": "เงินโอนเข้า (IORSDT) 004-2078568065",
+    "category": "extra_income",
+    "createdAt": "2026-07-19T11:16:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-19",
+    "type": "TRANSFER",
+    "amount": 1400.0,
+    "note": "โอนเงินออก (IORSWT) 030-020405337591",
+    "category": "transfer",
+    "createdAt": "2026-07-19T13:44:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-19",
+    "type": "EXPENSE",
+    "amount": 40.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 030-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-07-19T21:26:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-19",
+    "type": "EXPENSE",
+    "amount": 100.0,
+    "note": "ถอนเงินไม่ใช้บัตร (ATSWCR) K10146",
+    "category": "other_expense",
+    "createdAt": "2026-07-19T21:27:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-07-18",
+    "type": "EXPENSE",
+    "amount": 100.0,
+    "note": "MyMo Transfer from SAV",
+    "category": "other",
+    "createdAt": "2026-07-18T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-18",
+    "type": "INCOME",
+    "amount": 100.0,
+    "note": "เงินโอนเข้า-พร้อมเพย์ (MORISD) TR fr 030-020405337591",
+    "category": "extra_income",
+    "createdAt": "2026-07-18T20:47:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-18",
+    "type": "TRANSFER",
+    "amount": 70.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0643315599",
+    "category": "transfer",
+    "createdAt": "2026-07-18T20:48:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-17",
+    "type": "EXPENSE",
+    "amount": 70.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-07-17T12:59:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-17",
+    "type": "TRANSFER",
+    "amount": 2700.0,
+    "note": "โอนไป GSB x7591 นางสาว จิตรลดา วงษ์นันท์",
+    "category": "transfer",
+    "createdAt": "2026-07-17T13:15:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-17",
+    "type": "EXPENSE",
+    "amount": 30.0,
+    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
+    "category": "bills",
+    "createdAt": "2026-07-17T22:25:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-07-17",
+    "type": "INCOME",
+    "amount": 2700.0,
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-07-17T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-16",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนเงินออก (IORSWT) 004-0268781056",
+    "category": "transfer",
+    "createdAt": "2026-07-16T12:56:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-16",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NMWPSW) TR To EWALLETID 006990438006045",
+    "category": "transfer",
+    "createdAt": "2026-07-16T13:33:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-15",
+    "type": "TRANSFER",
+    "amount": 20.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORWSW) TR To EWALLETID 004999002783891",
+    "category": "transfer",
+    "createdAt": "2026-07-15T16:43:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-15",
+    "type": "EXPENSE",
+    "amount": 28.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 014-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-07-15T18:46:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-14",
+    "type": "EXPENSE",
+    "amount": 103.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-07-14T21:18:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-14",
+    "type": "EXPENSE",
+    "amount": 50.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 014-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-07-14T14:31:00.000Z"
   },
   {
     "bank": "SCB",
@@ -378,823 +2727,211 @@ window.INITIAL_STATEMENT_DATA = [
     "createdAt": "2026-07-13T20:09:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-07-14",
-    "type": "EXPENSE",
-    "amount": 103.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-07-14T21:18:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-17",
-    "type": "EXPENSE",
-    "amount": 70.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-07-17T12:59:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-17",
-    "type": "TRANSFER",
-    "amount": 2700.0,
-    "note": "โอนไป GSB x7591 นางสาว จิตรลดา วงษ์นันท์",
-    "category": "transfer",
-    "createdAt": "2026-07-17T13:15:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-17",
-    "type": "EXPENSE",
-    "amount": 30.0,
-    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
-    "category": "bills",
-    "createdAt": "2026-07-17T22:25:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-20",
-    "type": "TRANSFER",
-    "amount": 392.0,
-    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "transfer",
-    "createdAt": "2026-07-20T14:15:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-20",
-    "type": "EXPENSE",
-    "amount": 303.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-07-20T14:28:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-20",
-    "type": "TRANSFER",
-    "amount": 100.0,
-    "note": "โอนไป KBNK x8678 น.ส. จิตรลดา วงษ์นันท์",
-    "category": "transfer",
-    "createdAt": "2026-07-20T18:17:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-24",
-    "type": "TRANSFER",
-    "amount": 60.0,
-    "note": "รับโอนจาก KBANK x8678 น.ส. จิตรลดา วงษ์น",
-    "category": "transfer",
-    "createdAt": "2026-07-24T00:12:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-24",
-    "type": "EXPENSE",
-    "amount": 65.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-07-24T00:14:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-26",
-    "type": "TRANSFER",
-    "amount": 60.0,
-    "note": "รับโอนจาก KBANK x8678 น.ส. จิตรลดา วงษ์น",
-    "category": "transfer",
-    "createdAt": "2026-07-26T21:37:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-26",
-    "type": "EXPENSE",
-    "amount": 57.5,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-07-26T21:41:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-27",
-    "type": "TRANSFER",
-    "amount": 40.0,
-    "note": "รับโอนจาก KBANK x8678 น.ส. จิตรลดา วงษ์น",
-    "category": "transfer",
-    "createdAt": "2026-07-27T19:22:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-27",
-    "type": "TRANSFER",
-    "amount": 200.0,
-    "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
-    "category": "transfer",
-    "createdAt": "2026-07-27T19:40:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-27",
-    "type": "EXPENSE",
-    "amount": 113.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-07-27T19:50:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-28",
-    "type": "EXPENSE",
-    "amount": 10.0,
-    "note": "จ่ายบิล ดัชมิลล์ เวนดิ้ง",
-    "category": "bills",
-    "createdAt": "2026-07-28T03:46:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-29",
-    "type": "EXPENSE",
-    "amount": 72.5,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-07-29T00:42:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-29",
-    "type": "EXPENSE",
-    "amount": 30.0,
-    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
-    "category": "bills",
-    "createdAt": "2026-07-29T00:45:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-29",
-    "type": "EXPENSE",
-    "amount": 40.0,
-    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
-    "category": "bills",
-    "createdAt": "2026-07-29T22:57:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-30",
-    "type": "TRANSFER",
-    "amount": 200.0,
-    "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
-    "category": "transfer",
-    "createdAt": "2026-07-30T20:59:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-30",
-    "type": "EXPENSE",
-    "amount": 106.5,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-07-30T21:04:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-31",
-    "type": "EXPENSE",
-    "amount": 25.0,
-    "note": "จ่ายบิล Ksher_TALADNOI",
-    "category": "bills",
-    "createdAt": "2026-07-31T16:39:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-07-31",
-    "type": "EXPENSE",
-    "amount": 40.0,
-    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
-    "category": "bills",
-    "createdAt": "2026-07-31T21:58:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-01",
-    "type": "TRANSFER",
-    "amount": 100.0,
-    "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
-    "category": "transfer",
-    "createdAt": "2026-08-01T19:49:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-01",
-    "type": "EXPENSE",
-    "amount": 38.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-08-01T19:57:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-04",
-    "type": "EXPENSE",
-    "amount": 26.5,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-08-04T21:21:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-05",
-    "type": "EXPENSE",
-    "amount": 37.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-08-05T20:08:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-07",
-    "type": "TRANSFER",
-    "amount": 100.0,
-    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
-    "category": "transfer",
-    "createdAt": "2026-08-07T02:08:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-07",
-    "type": "EXPENSE",
-    "amount": 52.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-08-07T02:10:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-10",
-    "type": "EXPENSE",
-    "amount": 24.5,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-08-10T20:18:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-11",
-    "type": "EXPENSE",
-    "amount": 24.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-08-11T21:51:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-12",
-    "type": "TRANSFER",
-    "amount": 1000.0,
-    "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
-    "category": "transfer",
-    "createdAt": "2026-08-12T17:35:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-12",
-    "type": "EXPENSE",
-    "amount": 500.0,
-    "note": "DDR บริษัทหลักทรัพย์ อินโนเวสท์ เอกซ์ จำ",
-    "category": "savings_goal",
-    "createdAt": "2026-08-12T17:41:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-12",
-    "type": "EXPENSE",
-    "amount": 30.0,
-    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
-    "category": "bills",
-    "createdAt": "2026-08-12T23:01:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-12",
-    "type": "TRANSFER",
-    "amount": 4500.0,
-    "note": "รับโอนจาก GSB x7591 นางสาว จิตรลดา วงษ์น",
-    "category": "transfer",
-    "createdAt": "2026-08-12T23:29:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-13",
+    "bank": "GSB",
+    "date": "2026-07-13",
     "type": "EXPENSE",
     "amount": 1000.0,
-    "note": "Buy SCBS&P500A CL000032786929",
-    "category": "savings_goal",
-    "createdAt": "2026-08-13T04:12:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-13",
-    "type": "EXPENSE",
-    "amount": 50.0,
-    "note": "จ่ายบิล Ksher_TALADNOI",
-    "category": "bills",
-    "createdAt": "2026-08-13T14:21:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-13",
-    "type": "EXPENSE",
-    "amount": 85.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-08-13T14:32:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-13",
-    "type": "EXPENSE",
-    "amount": 50.0,
-    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
-    "category": "bills",
-    "createdAt": "2026-08-13T21:56:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-14",
-    "type": "EXPENSE",
-    "amount": 145.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-08-14T01:46:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-14",
-    "type": "EXPENSE",
-    "amount": 40.0,
-    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
-    "category": "bills",
-    "createdAt": "2026-08-14T21:35:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-15",
-    "type": "EXPENSE",
-    "amount": 500.0,
-    "note": "เติมเงิน WIDx6045/KTB",
+    "note": "MyMo Transfer from SAV",
     "category": "other",
-    "createdAt": "2026-08-15T15:06:00.000Z"
+    "createdAt": "2026-07-13T12:00:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-08-15",
-    "type": "EXPENSE",
-    "amount": 200.0,
-    "note": "Terminal No. S1HCR67HC/Cardless ATM",
-    "category": "other",
-    "createdAt": "2026-08-15T23:48:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-16",
+    "bank": "GSB",
+    "date": "2026-07-13",
     "type": "EXPENSE",
     "amount": 100.0,
-    "note": "จ่ายบิล UNIPHARM MSU",
-    "category": "bills",
-    "createdAt": "2026-08-16T15:58:00.000Z"
+    "note": "MyMo Digital Fund Withdraw from",
+    "category": "other",
+    "createdAt": "2026-07-13T12:00:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-08-16",
+    "bank": "GSB",
+    "date": "2026-07-13",
     "type": "EXPENSE",
-    "amount": 66.0,
-    "note": "จ่ายบิล Payment to ShopeeFood",
-    "category": "bills",
-    "createdAt": "2026-08-16T20:47:00.000Z"
+    "amount": 100.0,
+    "note": "MyMo Digital Fund Withdraw from",
+    "category": "other",
+    "createdAt": "2026-07-13T12:00:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-08-17",
+    "bank": "GSB",
+    "date": "2026-07-13",
+    "type": "EXPENSE",
+    "amount": 3000.0,
+    "note": "MyMo Transfer from SAV",
+    "category": "other",
+    "createdAt": "2026-07-13T12:00:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-13",
     "type": "TRANSFER",
-    "amount": 2000.0,
-    "note": "โอนไป KKB x7350 นางสาว จิตรลดา วงษ์นันท์",
+    "amount": 33.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X5681 น.ส.จิตรลดา วงษ์นั++",
     "category": "transfer",
-    "createdAt": "2026-08-17T16:47:00.000Z"
+    "createdAt": "2026-07-13T10:46:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-08-18",
-    "type": "EXPENSE",
-    "amount": 54.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-08-18T02:29:00.000Z"
+    "bank": "KTB",
+    "date": "2026-07-13",
+    "type": "INCOME",
+    "amount": 33.0,
+    "note": "เงินโอนเข้า (IORSDT) 004-2318198678",
+    "category": "extra_income",
+    "createdAt": "2026-07-13T10:46:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-08-18",
-    "type": "EXPENSE",
-    "amount": 60.0,
-    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
-    "category": "bills",
-    "createdAt": "2026-08-18T22:23:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-19",
-    "type": "EXPENSE",
-    "amount": 49.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-08-19T16:21:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-21",
-    "type": "EXPENSE",
-    "amount": 10.0,
-    "note": "จ่ายบิล ดัชมิลล์ เวนดิ้ง",
-    "category": "bills",
-    "createdAt": "2026-08-21T03:09:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-21",
-    "type": "EXPENSE",
-    "amount": 93.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-08-21T12:31:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-22",
-    "type": "EXPENSE",
-    "amount": 25.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-08-22T21:56:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-22",
-    "type": "EXPENSE",
-    "amount": 60.0,
-    "note": "จ่ายบิล ร้านค้าออมสิน มหาเฮง (ไพโรจน์ หน",
-    "category": "bills",
-    "createdAt": "2026-08-22T22:00:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-24",
+    "bank": "KTB",
+    "date": "2026-07-13",
     "type": "TRANSFER",
+    "amount": 35.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NMWPSW) TR To EWALLETID 006990438006045",
+    "category": "transfer",
+    "createdAt": "2026-07-13T10:46:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-13",
+    "type": "INCOME",
     "amount": 300.0,
-    "note": "รับโอนจาก KKP x7350 นางสาว จิตรลดา วงษ์น",
-    "category": "transfer",
-    "createdAt": "2026-08-24T13:26:00.000Z"
+    "note": "ฝากเงิน (SDCH)",
+    "category": "extra_income",
+    "createdAt": "2026-07-13T12:15:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-08-24",
+    "bank": "KBANK",
+    "date": "2026-07-13",
+    "type": "TRANSFER",
+    "amount": 33.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X5681 น.ส.จิตรลดา วงษ์นั++",
+    "category": "transfer",
+    "createdAt": "2026-07-13T10:46:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-11",
     "type": "EXPENSE",
+    "amount": 82.0,
+    "note": "จ่ายค่าสินค้า/บริการ (NMPSWP) 010554609572407-132656",
+    "category": "other_expense",
+    "createdAt": "2026-07-11T13:27:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-11",
+    "type": "TRANSFER",
+    "amount": 40.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0639296980",
+    "category": "transfer",
+    "createdAt": "2026-07-11T13:57:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-11",
+    "type": "TRANSFER",
+    "amount": 20.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0624607928",
+    "category": "transfer",
+    "createdAt": "2026-07-11T13:58:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-11",
+    "type": "TRANSFER",
+    "amount": 5.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0624607928",
+    "category": "transfer",
+    "createdAt": "2026-07-11T13:58:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-11",
+    "type": "TRANSFER",
+    "amount": 60.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0643315599",
+    "category": "transfer",
+    "createdAt": "2026-07-11T19:33:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-10",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0643315599",
+    "category": "transfer",
+    "createdAt": "2026-07-10T18:06:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-07-09",
+    "type": "INCOME",
     "amount": 500.0,
-    "note": "Buy SCBS&P500 CL000032786929",
-    "category": "savings_goal",
-    "createdAt": "2026-08-24T13:27:00.000Z"
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-07-09T12:00:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-08-24",
+    "bank": "KTB",
+    "date": "2026-07-09",
+    "type": "INCOME",
+    "amount": 600.0,
+    "note": "เงินโอนเข้า (NBSDT) TR fr 8650049656",
+    "category": "extra_income",
+    "createdAt": "2026-07-09T15:30:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-09",
     "type": "EXPENSE",
-    "amount": 110.0,
-    "note": "Buy SCBGOLD CL000032786929",
-    "category": "savings_goal",
-    "createdAt": "2026-08-24T13:29:00.000Z"
+    "amount": 20.0,
+    "note": "จ่ายค่าสินค้า/บริการ (NBSWP) 12C-0833810723",
+    "category": "other_expense",
+    "createdAt": "2026-07-09T18:46:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-08-24",
+    "bank": "KTB",
+    "date": "2026-07-09",
     "type": "TRANSFER",
-    "amount": 200.0,
-    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "amount": 16.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0958954127",
     "category": "transfer",
-    "createdAt": "2026-08-24T21:35:00.000Z"
+    "createdAt": "2026-07-09T20:00:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-08-24",
-    "type": "EXPENSE",
-    "amount": 121.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-08-24T21:41:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-26",
-    "type": "EXPENSE",
-    "amount": 24.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-08-26T20:46:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-29",
-    "type": "EXPENSE",
-    "amount": 90.0,
-    "note": "เติมเงิน WIDx4105/K Plus W",
-    "category": "other",
-    "createdAt": "2026-08-29T14:23:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-08-31",
+    "bank": "KTB",
+    "date": "2026-07-09",
     "type": "TRANSFER",
-    "amount": 170.0,
-    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "amount": 500.0,
+    "note": "โอนเงินออก (IORSWT) 030-020405337591",
     "category": "transfer",
-    "createdAt": "2026-08-31T20:39:00.000Z"
+    "createdAt": "2026-07-09T21:08:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-08-31",
-    "type": "EXPENSE",
-    "amount": 105.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-08-31T20:43:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-09-03",
-    "type": "INCOME",
-    "amount": 450.0,
-    "note": "รับโอนจาก KTB x5474 MISSKANOKWAN LAPTAWE",
-    "category": "extra_income",
-    "createdAt": "2026-09-03T20:38:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-09-04",
-    "type": "EXPENSE",
-    "amount": 68.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-09-04T15:58:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-09-04",
-    "type": "EXPENSE",
-    "amount": 116.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-09-04T16:31:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-09-05",
-    "type": "EXPENSE",
-    "amount": 363.79,
-    "note": "จ่ายบิล Credit Repayment",
-    "category": "bills",
-    "createdAt": "2026-09-05T13:31:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-09-05",
+    "bank": "KTB",
+    "date": "2026-07-09",
     "type": "TRANSFER",
-    "amount": 100.0,
-    "note": "รับโอนจาก KKP x7350 นางสาว จิตรลดา วงษ์น",
+    "amount": 55.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0643315599",
     "category": "transfer",
-    "createdAt": "2026-09-05T16:22:00.000Z"
+    "createdAt": "2026-07-09T21:09:00.000Z"
   },
   {
-    "bank": "SCB",
-    "date": "2026-09-07",
+    "bank": "KTB",
+    "date": "2026-07-08",
     "type": "EXPENSE",
-    "amount": 51.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-09-07T16:44:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-09-07",
-    "type": "EXPENSE",
-    "amount": 12.0,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-09-07T20:03:00.000Z"
-  },
-  {
-    "bank": "SCB",
-    "date": "2026-09-07",
-    "type": "EXPENSE",
-    "amount": 12.5,
-    "note": "SIPS TRUE MONEY CO.,LTD.",
-    "category": "food",
-    "createdAt": "2026-09-07T20:04:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-06-05",
-    "type": "EXPENSE",
-    "amount": 80746.59,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-06-05T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-06-05",
-    "type": "INCOME",
-    "amount": 3100.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-06-05T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-06-07",
-    "type": "EXPENSE",
-    "amount": 300.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-06-07T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-06-07",
-    "type": "INCOME",
-    "amount": 100.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-06-07T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-06-08",
-    "type": "INCOME",
-    "amount": 200.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-06-08T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-06-08",
-    "type": "INCOME",
-    "amount": 700.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-06-08T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-06-09",
-    "type": "INCOME",
     "amount": 10.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-06-09T12:00:00.000Z"
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 004-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-07-08T10:28:00.000Z"
   },
   {
-    "bank": "GSB",
-    "date": "2026-06-09",
-    "type": "EXPENSE",
-    "amount": 5.0,
-    "note": "MyMo Payment from SAV",
-    "category": "other",
-    "createdAt": "2026-06-09T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-06-09",
-    "type": "EXPENSE",
-    "amount": 5.0,
-    "note": "MyMo Payment from SAV",
-    "category": "other",
-    "createdAt": "2026-06-09T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-06-10",
-    "type": "INCOME",
-    "amount": 1000.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-06-10T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-06-11",
-    "type": "INCOME",
-    "amount": 500.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-06-11T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-06-16",
-    "type": "INCOME",
-    "amount": 1200.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-06-16T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-06-19",
-    "type": "INCOME",
-    "amount": 1500.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-06-19T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-06-19",
-    "type": "INCOME",
-    "amount": 1000.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-06-19T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-06-22",
-    "type": "INCOME",
-    "amount": 1500.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-06-22T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-06-22",
-    "type": "INCOME",
-    "amount": 2000.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-06-22T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-06-30",
-    "type": "EXPENSE",
-    "amount": 84.89,
-    "note": "SAV Increase Interest Paid",
-    "category": "other",
-    "createdAt": "2026-06-30T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-01",
-    "type": "EXPENSE",
-    "amount": 139.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-07-01T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-01",
-    "type": "EXPENSE",
-    "amount": 400.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-07-01T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-02",
-    "type": "EXPENSE",
-    "amount": 330.0,
-    "note": "C Scan B Transaction from SAV",
-    "category": "other",
-    "createdAt": "2026-07-02T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-03",
-    "type": "INCOME",
-    "amount": 330.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-07-03T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-05",
-    "type": "EXPENSE",
-    "amount": 1000.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-07-05T12:00:00.000Z"
+    "bank": "KTB",
+    "date": "2026-07-08",
+    "type": "TRANSFER",
+    "amount": 60.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (MORISW) TR To MSISDN 0643315599",
+    "category": "transfer",
+    "createdAt": "2026-07-08T21:30:00.000Z"
   },
   {
     "bank": "GSB",
@@ -1224,283 +2961,130 @@ window.INITIAL_STATEMENT_DATA = [
     "createdAt": "2026-07-07T12:00:00.000Z"
   },
   {
-    "bank": "GSB",
-    "date": "2026-07-09",
-    "type": "INCOME",
-    "amount": 500.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-07-09T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-13",
+    "bank": "KTB",
+    "date": "2026-07-07",
     "type": "EXPENSE",
-    "amount": 1000.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-07-13T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-13",
-    "type": "EXPENSE",
-    "amount": 100.0,
-    "note": "MyMo Digital Fund Withdraw from",
-    "category": "other",
-    "createdAt": "2026-07-13T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-13",
-    "type": "EXPENSE",
-    "amount": 100.0,
-    "note": "MyMo Digital Fund Withdraw from",
-    "category": "other",
-    "createdAt": "2026-07-13T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-13",
-    "type": "EXPENSE",
-    "amount": 3000.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-07-13T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-17",
-    "type": "INCOME",
-    "amount": 2700.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-07-17T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-18",
-    "type": "EXPENSE",
-    "amount": 100.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-07-18T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-19",
-    "type": "INCOME",
-    "amount": 1400.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-07-19T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-22",
-    "type": "INCOME",
-    "amount": 3000.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-07-22T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-23",
-    "type": "INCOME",
-    "amount": 2000.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-07-23T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-27",
-    "type": "EXPENSE",
-    "amount": 200.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-07-27T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-29",
-    "type": "EXPENSE",
-    "amount": 200.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-07-29T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-29",
-    "type": "EXPENSE",
-    "amount": 200.0,
-    "note": "MyMo ATM CASH WITHDRAWAL",
-    "category": "other",
-    "createdAt": "2026-07-29T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-30",
-    "type": "EXPENSE",
-    "amount": 500.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-07-30T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-07-30",
-    "type": "EXPENSE",
-    "amount": 200.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-07-30T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-08-01",
-    "type": "EXPENSE",
-    "amount": 100.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-08-01T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-08-01",
-    "type": "EXPENSE",
-    "amount": 100.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-08-01T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-08-08",
-    "type": "INCOME",
-    "amount": 3800.0,
-    "note": "Transfer SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-08-08T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-08-12",
-    "type": "EXPENSE",
-    "amount": 3000.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-08-12T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-08-12",
-    "type": "EXPENSE",
-    "amount": 1000.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-08-12T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-08-13",
-    "type": "EXPENSE",
-    "amount": 4500.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-08-13T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-08-13",
-    "type": "EXPENSE",
-    "amount": 5000.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-08-13T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-08-14",
-    "type": "INCOME",
-    "amount": 100.04,
-    "note": "SPIN SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-08-14T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-08-15",
-    "type": "EXPENSE",
-    "amount": 2000.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-08-15T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-08-17",
-    "type": "INCOME",
-    "amount": 100.04,
-    "note": "SPIN SAV Deposit",
-    "category": "extra_income",
-    "createdAt": "2026-08-17T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-08-17",
-    "type": "EXPENSE",
-    "amount": 3700.0,
-    "note": "MyMo Transfer from SAV",
-    "category": "other",
-    "createdAt": "2026-08-17T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-08-17",
-    "type": "EXPENSE",
-    "amount": 5.0,
-    "note": "MyMo Payment from SAV",
-    "category": "other",
-    "createdAt": "2026-08-17T12:00:00.000Z"
-  },
-  {
-    "bank": "GSB",
-    "date": "2026-08-17",
-    "type": "EXPENSE",
-    "amount": 5.0,
-    "note": "MyMo Payment from SAV",
-    "category": "other",
-    "createdAt": "2026-08-17T12:00:00.000Z"
+    "amount": 406.33,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X4001 MPAY",
+    "category": "bills_internet",
+    "createdAt": "2026-07-07T12:00:00.000Z"
   },
   {
     "bank": "KTB",
-    "date": "2026-07-01",
+    "date": "2026-07-07",
     "type": "EXPENSE",
-    "amount": 390.0,
-    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X6904 มายเดย์ สตูดิโอ",
+    "amount": 40.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป X3234 นาง สมสมร ศรีละค++",
+    "category": "other",
+    "createdAt": "2026-07-07T15:26:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-07",
+    "type": "INCOME",
+    "amount": 1500.0,
+    "note": "เงินโอนเข้า (IORSDT) 004-2078568065",
+    "category": "extra_income",
+    "createdAt": "2026-07-07T07:48:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-07",
+    "type": "TRANSFER",
+    "amount": 1000.0,
+    "note": "โอนเงินออก (IORSWT) 030-020405337591",
+    "category": "transfer",
+    "createdAt": "2026-07-07T11:51:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-07",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนเงินออก (IORSWT) 030-020405337591",
+    "category": "transfer",
+    "createdAt": "2026-07-07T12:13:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-07",
+    "type": "EXPENSE",
+    "amount": 30.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 002-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-07-07T19:01:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-07",
+    "type": "EXPENSE",
+    "amount": 406.33,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X4001 MPAY",
+    "category": "bills_internet",
+    "createdAt": "2026-07-07T12:00:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-07",
+    "type": "TRANSFER",
+    "amount": 40.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป X3234 นาง สมสมร ศรีละค++",
+    "category": "transfer",
+    "createdAt": "2026-07-07T15:26:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-06",
+    "type": "EXPENSE",
+    "amount": 35.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-07-06T23:34:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-06",
+    "type": "EXPENSE",
+    "amount": 50.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X5691 ค่าลงทะเบียนมหาวิทยาลัย",
+    "category": "bills_utility",
+    "createdAt": "2026-07-06T15:44:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-06",
+    "type": "EXPENSE",
+    "amount": 35.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X1056 ร้านค้าออมสิน มหาเฮง (",
     "category": "bills",
-    "createdAt": "2026-07-01T17:54:00.000Z"
+    "createdAt": "2026-07-06T21:59:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-01",
+    "bank": "KBANK",
+    "date": "2026-07-06",
     "type": "EXPENSE",
-    "amount": 16.0,
-    "note": "โอนเงิน MAKE by KBank โอนไป X3876 นาย ทรัพยสุทธิ์ พ++",
-    "category": "other",
-    "createdAt": "2026-07-01T21:46:00.000Z"
+    "amount": 50.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X5691 ค่าลงทะเบียนมหาวิทยาลัย มหาสารคาม",
+    "category": "other_expense",
+    "createdAt": "2026-07-06T15:44:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-01",
+    "bank": "KBANK",
+    "date": "2026-07-06",
     "type": "EXPENSE",
-    "amount": 45.0,
-    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X3678 น.ส. อรลภัสญา แก้ว++",
+    "amount": 35.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X1056 ร้านค้าออมสิน มหาเฮง ( ไพโรจน์ หน่อยปู้)",
+    "category": "other_expense",
+    "createdAt": "2026-07-06T21:59:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-07-05",
+    "type": "EXPENSE",
+    "amount": 1000.0,
+    "note": "MyMo Transfer from SAV",
     "category": "other",
-    "createdAt": "2026-07-01T22:35:00.000Z"
+    "createdAt": "2026-07-05T12:00:00.000Z"
   },
   {
     "bank": "KTB",
@@ -1548,264 +3132,1164 @@ window.INITIAL_STATEMENT_DATA = [
     "createdAt": "2026-07-05T11:29:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-06",
+    "bank": "KBANK",
+    "date": "2026-07-05",
+    "type": "TRANSFER",
+    "amount": 1000.0,
+    "note": "รับโอนเงิน Internet/Mobile GSB จาก GSB X7591 นางสาว จิตรลดา วงษ++",
+    "category": "transfer",
+    "createdAt": "2026-07-05T10:52:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-05",
+    "type": "EXPENSE",
+    "amount": 13.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X5691 หอพัก มหาวิทยาลัย มหาสารคาม",
+    "category": "other_expense",
+    "createdAt": "2026-07-05T10:56:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-05",
     "type": "EXPENSE",
     "amount": 50.0,
-    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X5691 ค่าลงทะเบียนมหาวิทยาลัย",
-    "category": "bills_utility",
-    "createdAt": "2026-07-06T15:44:00.000Z"
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X5691 หอพัก มหาวิทยาลัย มหาสารคาม",
+    "category": "other_expense",
+    "createdAt": "2026-07-05T10:56:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-05",
+    "type": "EXPENSE",
+    "amount": 300.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X5691 ค่าลงทะเบียนมหาวิทยาลัย มหาสารคาม",
+    "category": "other_expense",
+    "createdAt": "2026-07-05T10:57:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-05",
+    "type": "EXPENSE",
+    "amount": 130.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref XR002 บ้านขนมนันทวัน",
+    "category": "other_expense",
+    "createdAt": "2026-07-05T11:29:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-03",
+    "type": "TRANSFER",
+    "amount": 200.0,
+    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "category": "transfer",
+    "createdAt": "2026-07-03T14:59:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-03",
+    "type": "EXPENSE",
+    "amount": 107.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-07-03T14:59:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-07-03",
+    "type": "INCOME",
+    "amount": 330.0,
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-07-03T12:00:00.000Z"
   },
   {
     "bank": "KTB",
-    "date": "2026-07-06",
-    "type": "EXPENSE",
-    "amount": 35.0,
-    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X1056 ร้านค้าออมสิน มหาเฮง (",
-    "category": "bills",
-    "createdAt": "2026-07-06T21:59:00.000Z"
+    "date": "2026-07-03",
+    "type": "TRANSFER",
+    "amount": 200.0,
+    "note": "โอนเงินออก (IORSWT) 014-6002697401",
+    "category": "transfer",
+    "createdAt": "2026-07-03T14:59:00.000Z"
   },
   {
     "bank": "KTB",
-    "date": "2026-07-07",
-    "type": "EXPENSE",
-    "amount": 406.33,
-    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X4001 MPAY",
-    "category": "bills_internet",
-    "createdAt": "2026-07-07T12:00:00.000Z"
+    "date": "2026-07-03",
+    "type": "TRANSFER",
+    "amount": 330.0,
+    "note": "โอนเงินออก (IORSWT) 030-020405337591",
+    "category": "transfer",
+    "createdAt": "2026-07-03T17:35:00.000Z"
   },
   {
     "bank": "KTB",
-    "date": "2026-07-07",
+    "date": "2026-07-03",
+    "type": "TRANSFER",
+    "amount": 93.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NMWPSW) TR To EWALLETID 006990438006045",
+    "category": "transfer",
+    "createdAt": "2026-07-03T17:37:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-07-02",
     "type": "EXPENSE",
-    "amount": 40.0,
-    "note": "โอนเงิน MAKE by KBank โอนไป X3234 นาง สมสมร ศรีละค++",
+    "amount": 17.5,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-07-02T10:12:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-07-02",
+    "type": "EXPENSE",
+    "amount": 330.0,
+    "note": "C Scan B Transaction from SAV",
     "category": "other",
-    "createdAt": "2026-07-07T15:26:00.000Z"
+    "createdAt": "2026-07-02T12:00:00.000Z"
   },
   {
     "bank": "KTB",
-    "date": "2026-07-13",
-    "type": "TRANSFER",
-    "amount": 33.0,
-    "note": "โอนเงิน MAKE by KBank โอนไป KTB X5681 น.ส.จิตรลดา วงษ์นั++",
-    "category": "transfer",
-    "createdAt": "2026-07-13T10:46:00.000Z"
+    "date": "2026-07-02",
+    "type": "EXPENSE",
+    "amount": 8.0,
+    "note": "จ่ายค่าสินค้า/บริการ (MORPSW) 071-BILLERID",
+    "category": "other_expense",
+    "createdAt": "2026-07-02T12:18:00.000Z"
   },
   {
     "bank": "KTB",
-    "date": "2026-07-20",
-    "type": "TRANSFER",
-    "amount": 500.0,
-    "note": "รับโอนเงิน Internet/Mobile KTB จาก KTB X5681 MISSJITLADA WONGN++",
-    "category": "transfer",
-    "createdAt": "2026-07-20T18:13:00.000Z"
-  },
-  {
-    "bank": "KTB",
-    "date": "2026-07-20",
-    "type": "TRANSFER",
+    "date": "2026-07-02",
+    "type": "INCOME",
     "amount": 100.0,
-    "note": "รับโอนเงิน Internet/Mobile SCB จาก SCB X7401 นางสาว จิตรลดา วงษ++",
-    "category": "transfer",
-    "createdAt": "2026-07-20T18:17:00.000Z"
+    "note": "เงินโอนเข้า (IORSDT) 004-2078568065",
+    "category": "extra_income",
+    "createdAt": "2026-07-02T12:33:00.000Z"
   },
   {
     "bank": "KTB",
-    "date": "2026-07-20",
+    "date": "2026-07-02",
+    "type": "INCOME",
+    "amount": 330.0,
+    "note": "เงินโอนเข้า-พร้อมเพย์ (MORISD) TR fr 014-4092792219",
+    "category": "extra_income",
+    "createdAt": "2026-07-02T21:20:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-07-01",
     "type": "EXPENSE",
-    "amount": 10.0,
-    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X0115 น.ส. จุฑารัตน์ พิน++",
+    "amount": 139.0,
+    "note": "MyMo Transfer from SAV",
     "category": "other",
-    "createdAt": "2026-07-20T21:36:00.000Z"
+    "createdAt": "2026-07-01T12:00:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-21",
+    "bank": "GSB",
+    "date": "2026-07-01",
     "type": "EXPENSE",
-    "amount": 25.0,
-    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X8681 นางแสง ไชยประสิทธ++",
+    "amount": 400.0,
+    "note": "MyMo Transfer from SAV",
     "category": "other",
-    "createdAt": "2026-07-21T12:46:00.000Z"
+    "createdAt": "2026-07-01T12:00:00.000Z"
   },
   {
     "bank": "KTB",
-    "date": "2026-07-21",
+    "date": "2026-07-01",
     "type": "EXPENSE",
-    "amount": 40.0,
-    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X3217 ศุภลักษณ์ อาหารตามสั่ง",
+    "amount": 390.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X6904 มายเดย์ สตูดิโอ",
     "category": "bills",
-    "createdAt": "2026-07-21T12:53:00.000Z"
+    "createdAt": "2026-07-01T17:54:00.000Z"
   },
   {
     "bank": "KTB",
-    "date": "2026-07-21",
+    "date": "2026-07-01",
+    "type": "EXPENSE",
+    "amount": 16.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป X3876 นาย ทรัพยสุทธิ์ พ++",
+    "category": "other",
+    "createdAt": "2026-07-01T21:46:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-01",
+    "type": "EXPENSE",
+    "amount": 45.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X3678 น.ส. อรลภัสญา แก้ว++",
+    "category": "other",
+    "createdAt": "2026-07-01T22:35:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-01",
     "type": "TRANSFER",
+    "amount": 50.0,
+    "note": "โอนเงินออก (IORSWT) 004-0268781056",
+    "category": "transfer",
+    "createdAt": "2026-07-01T11:21:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-01",
+    "type": "INCOME",
+    "amount": 400.0,
+    "note": "เงินโอนเข้า-พร้อมเพย์ (MORISD) TR fr 030-020405337591",
+    "category": "extra_income",
+    "createdAt": "2026-07-01T20:42:00.000Z"
+  },
+  {
+    "bank": "KTB",
+    "date": "2026-07-01",
+    "type": "TRANSFER",
+    "amount": 200.0,
+    "note": "โอนเงินออก-พร้อมเพย์ (NMWPSW) TR To EWALLETID 006990438006045",
+    "category": "transfer",
+    "createdAt": "2026-07-01T21:35:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-01",
+    "type": "EXPENSE",
+    "amount": 390.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X6904 มายเดย์ สตูดิโอ",
+    "category": "other_expense",
+    "createdAt": "2026-07-01T17:54:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-01",
+    "type": "TRANSFER",
+    "amount": 16.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป X3876 นาย ทรัพยสุทธิ์ พ++",
+    "category": "transfer",
+    "createdAt": "2026-07-01T21:46:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-07-01",
+    "type": "TRANSFER",
+    "amount": 45.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X3678 น.ส. อรลภัสญา แก้ว++",
+    "category": "transfer",
+    "createdAt": "2026-07-01T22:35:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-06-30",
+    "type": "EXPENSE",
+    "amount": 84.89,
+    "note": "SAV Increase Interest Paid",
+    "category": "other",
+    "createdAt": "2026-06-30T12:00:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-30",
+    "type": "EXPENSE",
     "amount": 30.0,
-    "note": "โอนเงิน MAKE by KBank โอนไป KTB X6045 จิตรลดา วงษ์นัน++",
-    "category": "transfer",
-    "createdAt": "2026-07-21T19:19:00.000Z"
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X1624 Ksher_TALADNOI",
+    "category": "other_expense",
+    "createdAt": "2026-06-30T08:48:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-22",
+    "bank": "KBANK",
+    "date": "2026-06-30",
     "type": "TRANSFER",
-    "amount": 30.0,
-    "note": "โอนเงิน MAKE by KBank โอนไป KTB X6045 จิตรลดา วงษ์นัน++",
+    "amount": 16.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป X3876 นาย ทรัพยสุทธิ์ พ++",
     "category": "transfer",
-    "createdAt": "2026-07-22T20:11:00.000Z"
+    "createdAt": "2026-06-30T22:00:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-23",
+    "bank": "KBANK",
+    "date": "2026-06-30",
     "type": "TRANSFER",
-    "amount": 40.0,
-    "note": "โอนเงิน MAKE by KBank โอนไป KTB X6045 จิตรลดา วงษ์นัน++",
+    "amount": 50.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X5599 นาย วีรภัทร แก้วสอ++",
     "category": "transfer",
-    "createdAt": "2026-07-23T15:09:00.000Z"
+    "createdAt": "2026-06-30T22:45:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-23",
+    "bank": "KBANK",
+    "date": "2026-06-29",
     "type": "TRANSFER",
     "amount": 1000.0,
     "note": "รับโอนเงิน Internet/Mobile KTB จาก KTB X5681 MISSJITLADA WONGN++",
     "category": "transfer",
-    "createdAt": "2026-07-23T18:07:00.000Z"
+    "createdAt": "2026-06-29T10:36:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-23",
-    "type": "EXPENSE",
-    "amount": 475.33,
-    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X0829 บจก. แอดวานซ์ ไวร์เลส",
-    "category": "bills_internet",
-    "createdAt": "2026-07-23T18:36:00.000Z"
-  },
-  {
-    "bank": "KTB",
-    "date": "2026-07-24",
+    "bank": "KBANK",
+    "date": "2026-06-29",
     "type": "TRANSFER",
-    "amount": 60.0,
-    "note": "โอนเงิน MAKE by KBank โอนไป SCB X7401 นางสาว จิตรลดา วงษ++",
+    "amount": 40.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป X4025 นาง นุชฎาภรณ์ จำปา++",
     "category": "transfer",
-    "createdAt": "2026-07-24T00:12:00.000Z"
+    "createdAt": "2026-06-29T11:16:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-24",
+    "bank": "KBANK",
+    "date": "2026-06-29",
+    "type": "TRANSFER",
+    "amount": 20.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X7057 น.ส. สุวรรณี นุสี++",
+    "category": "transfer",
+    "createdAt": "2026-06-29T18:05:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-29",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป X5412 นาย จีรพัฒน์ สุทธา++",
+    "category": "transfer",
+    "createdAt": "2026-06-29T18:14:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-29",
+    "type": "TRANSFER",
+    "amount": 120.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X0505 น.ส.วรรณนิภา ภวภูต++",
+    "category": "transfer",
+    "createdAt": "2026-06-29T18:17:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-29",
+    "type": "TRANSFER",
+    "amount": 20.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป X3740 น.ส. นารี ดิน++",
+    "category": "transfer",
+    "createdAt": "2026-06-29T18:20:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-29",
+    "type": "TRANSFER",
+    "amount": 50.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X6061 น.ส.อริศรา จะเรรัม++",
+    "category": "transfer",
+    "createdAt": "2026-06-29T18:29:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-29",
     "type": "EXPENSE",
-    "amount": 30.0,
-    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X6437 Ksher_TALADNOI",
-    "category": "bills",
-    "createdAt": "2026-07-24T09:23:00.000Z"
+    "amount": 35.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X5581 TrueMoney Shop (เซน เบเกอรี่)",
+    "category": "food",
+    "createdAt": "2026-06-29T19:37:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-24",
+    "bank": "SCB",
+    "date": "2026-06-28",
+    "type": "EXPENSE",
+    "amount": 55.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-06-28T13:57:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-27",
     "type": "TRANSFER",
     "amount": 200.0,
-    "note": "โอนเงิน MAKE by KBank โอนไป KTB X6045 จิตรลดา วงษ์นัน++",
+    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
     "category": "transfer",
-    "createdAt": "2026-07-24T11:55:00.000Z"
+    "createdAt": "2026-06-27T18:38:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-24",
+    "bank": "SCB",
+    "date": "2026-06-27",
     "type": "EXPENSE",
-    "amount": 16.0,
-    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X3581 ดัชมิลล์ เวนดิ้ง",
-    "category": "bills",
-    "createdAt": "2026-07-24T12:24:00.000Z"
+    "amount": 74.5,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-06-27T22:08:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-24",
+    "bank": "SCB",
+    "date": "2026-06-25",
     "type": "EXPENSE",
-    "amount": 3.0,
-    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X8622 RATANACHAI COPY",
+    "amount": 45.0,
+    "note": "จ่ายบิล Ksher_TALADNOI",
     "category": "bills",
-    "createdAt": "2026-07-24T13:20:00.000Z"
+    "createdAt": "2026-06-25T12:16:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-24",
+    "bank": "SCB",
+    "date": "2026-06-25",
     "type": "TRANSFER",
-    "amount": 400.0,
-    "note": "โอนเงิน MAKE by KBank โอนไป KTB X5681 น.ส.จิตรลดา วงษ์นั++",
+    "amount": 37.0,
+    "note": "PromptPay x0973 น.ส.จิตรลดา วงษ์นันท์",
     "category": "transfer",
-    "createdAt": "2026-07-24T13:32:00.000Z"
+    "createdAt": "2026-06-25T19:39:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-26",
+    "bank": "SCB",
+    "date": "2026-06-25",
+    "type": "INCOME",
+    "amount": 1.43,
+    "note": "จากระบบเงินฝาก",
+    "category": "extra_income",
+    "createdAt": "2026-06-25T00:00:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-25",
     "type": "EXPENSE",
-    "amount": 30.0,
-    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X8903 Ksher_TALADNOI",
-    "category": "bills",
-    "createdAt": "2026-07-26T14:18:00.000Z"
+    "amount": 20.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X2059 Ksher_TALADNOI",
+    "category": "other_expense",
+    "createdAt": "2026-06-25T16:17:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-26",
-    "type": "TRANSFER",
-    "amount": 60.0,
-    "note": "โอนเงิน MAKE by KBank โอนไป SCB X7401 นางสาว จิตรลดา วงษ++",
-    "category": "transfer",
-    "createdAt": "2026-07-26T21:37:00.000Z"
-  },
-  {
-    "bank": "KTB",
-    "date": "2026-07-27",
+    "bank": "KBANK",
+    "date": "2026-06-25",
     "type": "EXPENSE",
-    "amount": 40.0,
-    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X7860 Ksher_TALADNOI",
-    "category": "bills",
-    "createdAt": "2026-07-27T16:33:00.000Z"
+    "amount": 89.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X9001 เซ็นทรัลวัตสัน-3271 ปตท. ยูพาร์",
+    "category": "other_expense",
+    "createdAt": "2026-06-25T19:32:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-27",
+    "bank": "KBANK",
+    "date": "2026-06-25",
     "type": "TRANSFER",
-    "amount": 40.0,
-    "note": "โอนเงิน MAKE by KBank โอนไป SCB X7401 นางสาว จิตรลดา วงษ++",
+    "amount": 1300.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X5599 นาย วีรภัทร แก้วสอ++",
     "category": "transfer",
-    "createdAt": "2026-07-27T19:22:00.000Z"
+    "createdAt": "2026-06-25T19:52:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-28",
+    "bank": "KBANK",
+    "date": "2026-06-25",
+    "type": "TRANSFER",
+    "amount": 50.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X5599 นาย วีรภัทร แก้วสอ++",
+    "category": "transfer",
+    "createdAt": "2026-06-25T19:53:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-24",
+    "type": "EXPENSE",
+    "amount": 118.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-06-24T11:02:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-24",
+    "type": "TRANSFER",
+    "amount": 119.0,
+    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "category": "transfer",
+    "createdAt": "2026-06-24T11:08:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-24",
     "type": "EXPENSE",
     "amount": 25.0,
-    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X6704 Ksher_TALADNOI",
-    "category": "bills",
-    "createdAt": "2026-07-28T13:37:00.000Z"
+    "note": "PromptPay x3884 น.ส.กิตติพร ช่อประพันธ์",
+    "category": "other",
+    "createdAt": "2026-06-24T19:40:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-30",
+    "bank": "SCB",
+    "date": "2026-06-24",
+    "type": "EXPENSE",
+    "amount": 20.0,
+    "note": "PromptPay x7729 นาย แสวง ศรีเทพ",
+    "category": "other",
+    "createdAt": "2026-06-24T19:48:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-24",
+    "type": "EXPENSE",
+    "amount": 20.0,
+    "note": "PromptPay x1086 นางสาว หฤทัย ศรีชัยมูล",
+    "category": "other",
+    "createdAt": "2026-06-24T19:54:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-24",
+    "type": "EXPENSE",
+    "amount": 50.0,
+    "note": "PromptPay x5599 นาย วีรภัทร แก้วสอาด",
+    "category": "other",
+    "createdAt": "2026-06-24T21:51:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-23",
     "type": "TRANSFER",
-    "amount": 500.0,
-    "note": "รับโอนเงิน Internet/Mobile GSB จาก GSB X7591 นางสาว จิตรลดา วงษ++",
+    "amount": 200.0,
+    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
     "category": "transfer",
-    "createdAt": "2026-07-30T16:37:00.000Z"
+    "createdAt": "2026-06-23T10:36:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-30",
+    "bank": "SCB",
+    "date": "2026-06-23",
     "type": "EXPENSE",
+    "amount": 62.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-06-23T10:42:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-06-22",
+    "type": "INCOME",
+    "amount": 1500.0,
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-06-22T12:00:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-06-22",
+    "type": "INCOME",
+    "amount": 2000.0,
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-06-22T12:00:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-21",
+    "type": "EXPENSE",
+    "amount": 30.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X8945 Ksher_TALADNOI",
+    "category": "other_expense",
+    "createdAt": "2026-06-21T09:19:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-21",
+    "type": "EXPENSE",
+    "amount": 20.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X6982 Ksher_TALADNOI",
+    "category": "other_expense",
+    "createdAt": "2026-06-21T09:23:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-21",
+    "type": "EXPENSE",
+    "amount": 35.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X4191 Ksher_TALADNOI",
+    "category": "other_expense",
+    "createdAt": "2026-06-21T13:03:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-21",
+    "type": "EXPENSE",
+    "amount": 25.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X4266 Ksher_TALADNOI",
+    "category": "other_expense",
+    "createdAt": "2026-06-21T13:23:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-20",
+    "type": "EXPENSE",
+    "amount": 50.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X2576 loekchai dokmai )52-30(",
+    "category": "other_expense",
+    "createdAt": "2026-06-20T20:18:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-06-19",
+    "type": "INCOME",
+    "amount": 1500.0,
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-06-19T12:00:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-06-19",
+    "type": "INCOME",
+    "amount": 1000.0,
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-06-19T12:00:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-19",
+    "type": "TRANSFER",
+    "amount": 1500.0,
+    "note": "รับโอนเงิน Internet/Mobile KTB จาก KTB X5681 MISSJITLADA WONGN++",
+    "category": "transfer",
+    "createdAt": "2026-06-19T08:57:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-19",
+    "type": "TRANSFER",
+    "amount": 60.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X5681 น.ส.จิตรลดา วงษ์นั++",
+    "category": "transfer",
+    "createdAt": "2026-06-19T09:04:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-19",
+    "type": "EXPENSE",
+    "amount": 20.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X0723 บจก. แอดวานซ์ ไวร์เลส เน็ทเวอร์ค",
+    "category": "bills_internet",
+    "createdAt": "2026-06-19T16:35:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-19",
+    "type": "TRANSFER",
+    "amount": 40.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป X2367 นาย วิชยา จุลวราภร++",
+    "category": "transfer",
+    "createdAt": "2026-06-19T21:04:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-19",
+    "type": "INCOME",
+    "amount": 2.57,
+    "note": "รับดอกเบี้ยเงินฝาก โอนเข้า/หักบัญชีอัตโนมัติ รหัสอ้างอิง PCB09400",
+    "category": "extra_income",
+    "createdAt": "2026-06-19T23:59:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-18",
+    "type": "EXPENSE",
+    "amount": 62.5,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-06-18T20:08:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-18",
+    "type": "TRANSFER",
+    "amount": 40.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X5681 น.ส.จิตรลดา วงษ์นั++",
+    "category": "transfer",
+    "createdAt": "2026-06-18T20:03:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-16",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "category": "transfer",
+    "createdAt": "2026-06-16T09:07:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-06-16",
+    "type": "INCOME",
+    "amount": 1200.0,
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-06-16T12:00:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-16",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "รับโอนเงิน Internet/Mobile KTB จาก KTB X5681 MISSJITLADA WONGN++",
+    "category": "transfer",
+    "createdAt": "2026-06-16T09:07:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-16",
+    "type": "TRANSFER",
+    "amount": 200.0,
+    "note": "รับโอนเงิน Internet/Mobile KTB จาก KTB X5681 MISSJITLADA WONGN++",
+    "category": "transfer",
+    "createdAt": "2026-06-16T09:07:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-15",
+    "type": "TRANSFER",
+    "amount": 129.0,
+    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "category": "transfer",
+    "createdAt": "2026-06-15T19:43:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-15",
+    "type": "TRANSFER",
+    "amount": 24.0,
+    "note": "รับโอนจาก KBANK x8678 น.ส. จิตรลดา วงษ์น",
+    "category": "transfer",
+    "createdAt": "2026-06-15T19:47:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-15",
+    "type": "TRANSFER",
+    "amount": 28.0,
+    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "category": "transfer",
+    "createdAt": "2026-06-15T19:50:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-15",
+    "type": "INCOME",
+    "amount": 23.0,
+    "note": "รับโอนจาก KTB x6045 KTB G-WALLET",
+    "category": "extra_income",
+    "createdAt": "2026-06-15T19:54:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-15",
+    "type": "EXPENSE",
+    "amount": 206.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-06-15T20:02:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-15",
+    "type": "TRANSFER",
+    "amount": 24.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป SCB X7401 นางสาว จิตรลดา วงษ++",
+    "category": "transfer",
+    "createdAt": "2026-06-15T19:47:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-14",
+    "type": "TRANSFER",
+    "amount": 30.0,
+    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "category": "transfer",
+    "createdAt": "2026-06-14T21:23:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-14",
+    "type": "EXPENSE",
+    "amount": 41.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-06-14T21:24:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-14",
+    "type": "TRANSFER",
+    "amount": 30.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X9878 น.ส.กนกวรรณ ลาภท++",
+    "category": "transfer",
+    "createdAt": "2026-06-14T22:35:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-12",
+    "type": "EXPENSE",
+    "amount": 37.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-06-12T09:33:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-12",
+    "type": "EXPENSE",
+    "amount": 40.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X9333 Ksher_TALADNOI",
+    "category": "other_expense",
+    "createdAt": "2026-06-12T11:50:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-06-11",
+    "type": "INCOME",
     "amount": 500.0,
-    "note": "โอนเงิน MAKE by KBank โอนไป X9189 น.ส. อนัญญา ผลจันท++",
-    "category": "other",
-    "createdAt": "2026-07-30T16:38:00.000Z"
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-06-11T12:00:00.000Z"
   },
   {
-    "bank": "KTB",
-    "date": "2026-07-30",
+    "bank": "GSB",
+    "date": "2026-06-10",
+    "type": "INCOME",
+    "amount": 1000.0,
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-06-10T12:00:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-10",
     "type": "EXPENSE",
+    "amount": 50.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X1645 Jiraporn Sarasuk",
+    "category": "other_expense",
+    "createdAt": "2026-06-10T12:54:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-10",
+    "type": "EXPENSE",
+    "amount": 40.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X5547 Hop chafe สาขาหน้าป้าย มมส ม.ใหม่",
+    "category": "other_expense",
+    "createdAt": "2026-06-10T17:42:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-10",
+    "type": "TRANSFER",
+    "amount": 25.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป X7622 นาย สุรชาติ เปภัก++",
+    "category": "transfer",
+    "createdAt": "2026-06-10T18:33:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-09",
+    "type": "EXPENSE",
+    "amount": 6.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-06-09T08:04:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-09",
+    "type": "EXPENSE",
+    "amount": 32.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-06-09T13:33:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-06-09",
+    "type": "INCOME",
     "amount": 10.0,
-    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X8288 MR. JAR LAR LAW D",
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-06-09T12:00:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-06-09",
+    "type": "EXPENSE",
+    "amount": 5.0,
+    "note": "MyMo Payment from SAV",
     "category": "other",
-    "createdAt": "2026-07-30T21:10:00.000Z"
+    "createdAt": "2026-06-09T12:00:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-06-09",
+    "type": "EXPENSE",
+    "amount": 5.0,
+    "note": "MyMo Payment from SAV",
+    "category": "other",
+    "createdAt": "2026-06-09T12:00:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-09",
+    "type": "TRANSFER",
+    "amount": 25.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X7831 นาย ธนกฤต มากสก++",
+    "category": "transfer",
+    "createdAt": "2026-06-09T08:03:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-09",
+    "type": "EXPENSE",
+    "amount": 100.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X2040 ร้านถุงเงิน ( LUEMMAILONG)",
+    "category": "other_expense",
+    "createdAt": "2026-06-09T20:19:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-09",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "รับโอนเงิน Internet/Mobile KTB จาก KTB X5681 MISSJITLADA WONGN++",
+    "category": "transfer",
+    "createdAt": "2026-06-09T20:20:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-08",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "รับโอนจาก KTB x5681 MISSJITLADA WONGNAN",
+    "category": "transfer",
+    "createdAt": "2026-06-08T16:28:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-06-08",
+    "type": "INCOME",
+    "amount": 200.0,
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-06-08T12:00:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-06-08",
+    "type": "INCOME",
+    "amount": 700.0,
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-06-08T12:00:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-08",
+    "type": "TRANSFER",
+    "amount": 200.0,
+    "note": "รับโอนเงิน Internet/Mobile KTB จาก KTB X5681 MISSJITLADA WONGN++",
+    "category": "transfer",
+    "createdAt": "2026-06-08T11:01:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-06-07",
+    "type": "EXPENSE",
+    "amount": 300.0,
+    "note": "MyMo Transfer from SAV",
+    "category": "other",
+    "createdAt": "2026-06-07T12:00:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-06-07",
+    "type": "INCOME",
+    "amount": 100.0,
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-06-07T12:00:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-06-05",
+    "type": "EXPENSE",
+    "amount": 80746.59,
+    "note": "MyMo Transfer from SAV",
+    "category": "other",
+    "createdAt": "2026-06-05T12:00:00.000Z"
+  },
+  {
+    "bank": "GSB",
+    "date": "2026-06-05",
+    "type": "INCOME",
+    "amount": 3100.0,
+    "note": "Transfer SAV Deposit",
+    "category": "extra_income",
+    "createdAt": "2026-06-05T12:00:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-05",
+    "type": "TRANSFER",
+    "amount": 20.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป X0640 นาย ณัฐพงศ์ ราชาว++",
+    "category": "transfer",
+    "createdAt": "2026-06-05T19:04:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-05",
+    "type": "EXPENSE",
+    "amount": 29.79,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref XLLER TikTokShop Seller",
+    "category": "other_expense",
+    "createdAt": "2026-06-05T21:32:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-04",
+    "type": "TRANSFER",
+    "amount": 100.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X5681 น.ส.จิตรลดา วงษ์นั++",
+    "category": "transfer",
+    "createdAt": "2026-06-04T18:50:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-04",
+    "type": "TRANSFER",
+    "amount": 60.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X5087 ร้าน จี้อันตึ๊ง 20++",
+    "category": "transfer",
+    "createdAt": "2026-06-04T19:31:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-04",
+    "type": "TRANSFER",
+    "amount": 1885.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X5599 นาย วีรภัทร แก้วสอ++",
+    "category": "transfer",
+    "createdAt": "2026-06-04T23:04:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-04",
+    "type": "TRANSFER",
+    "amount": 2900.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X5681 น.ส.จิตรลดา วงษ์นั++",
+    "category": "transfer",
+    "createdAt": "2026-06-04T23:05:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-04",
+    "type": "TRANSFER",
+    "amount": 265.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X5681 น.ส.จิตรลดา วงษ์นั++",
+    "category": "transfer",
+    "createdAt": "2026-06-04T23:20:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-03",
+    "type": "TRANSFER",
+    "amount": 20.0,
+    "note": "รับโอนจาก KBANK x8678 น.ส. จิตรลดา วงษ์น",
+    "category": "transfer",
+    "createdAt": "2026-06-03T13:37:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-03",
+    "type": "EXPENSE",
+    "amount": 86.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-06-03T13:44:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-03",
+    "type": "INCOME",
+    "amount": 114.0,
+    "note": "รับโอนจาก KBANK x1618 นาย วีรภัทร แก้วสอ",
+    "category": "extra_income",
+    "createdAt": "2026-06-03T14:03:00.000Z"
+  },
+  {
+    "bank": "SCB",
+    "date": "2026-06-03",
+    "type": "EXPENSE",
+    "amount": 114.0,
+    "note": "SIPS TRUE MONEY CO.,LTD.",
+    "category": "food",
+    "createdAt": "2026-06-03T14:03:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-03",
+    "type": "TRANSFER",
+    "amount": 20.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป SCB X7401 นางสาว จิตรลดา วงษ++",
+    "category": "transfer",
+    "createdAt": "2026-06-03T13:37:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-02",
+    "type": "EXPENSE",
+    "amount": 30.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X1768 LINE Pay Merchant (QR by ttb)",
+    "category": "other_expense",
+    "createdAt": "2026-06-02T06:25:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-02",
+    "type": "TRANSFER",
+    "amount": 250.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X1851 นางสาว กนกอร รอนศ+ +",
+    "category": "transfer",
+    "createdAt": "2026-06-02T06:28:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-02",
+    "type": "EXPENSE",
+    "amount": 20.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X0125 นาย สถาพร เอี่ยมสวัสดิ์",
+    "category": "other_expense",
+    "createdAt": "2026-06-02T14:39:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-02",
+    "type": "TRANSFER",
+    "amount": 110.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป KTB X5681 น.ส.จิตรลดา วงษ์นั++",
+    "category": "transfer",
+    "createdAt": "2026-06-02T21:02:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-02",
+    "type": "EXPENSE",
+    "amount": 150.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X0973 บจก. ทรู มันนี่ เพื่อเก็บรักษา เงินรับล่วงหน้าของธุรกิจ E-MON",
+    "category": "other_expense",
+    "createdAt": "2026-06-02T23:02:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-01",
+    "type": "EXPENSE",
+    "amount": 20.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X0723 บจก. แอดวานซ์ ไวร์เลส เน็ทเวอร์ค",
+    "category": "bills_internet",
+    "createdAt": "2026-06-01T13:45:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-01",
+    "type": "TRANSFER",
+    "amount": 50.0,
+    "note": "โอนเงิน MAKE by KBank โอนไป พร้อมเพย์ X9290 นาง อรุณี ทิพอาศ++",
+    "category": "transfer",
+    "createdAt": "2026-06-01T18:24:00.000Z"
+  },
+  {
+    "bank": "KBANK",
+    "date": "2026-06-01",
+    "type": "EXPENSE",
+    "amount": 49.0,
+    "note": "ชำระเงิน MAKE by KBank เพื่อชำระ Ref X0682 CP AXTRA PUBLIC COMPANY LIMITED (HEAD",
+    "category": "other_expense",
+    "createdAt": "2026-06-01T19:20:00.000Z"
   }
 ];

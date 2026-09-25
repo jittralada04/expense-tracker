@@ -25,17 +25,21 @@
             <!-- Logo Section -->
             <div class="p-4 sm:p-5 border-b border-slate-100 flex items-center justify-between">
                 <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 rounded-2xl bg-emerald-500 text-white flex items-center justify-center shadow-md shadow-emerald-500/20">
+                    <div class="w-10 h-10 rounded-2xl bg-emerald-500 text-white flex items-center justify-center shadow-md shadow-emerald-500/20 shrink-0">
                         <i class="fa-solid fa-wallet text-lg"></i>
                     </div>
-                    <div>
-                        <h1 class="text-base font-bold tracking-tight text-slate-900">Expense Tracker</h1>
-                        <p class="text-[11px] text-slate-500 flex items-center space-x-1">
+                    <div class="sidebar-text transition-all duration-300">
+                        <h1 class="text-base font-bold tracking-tight text-slate-900 whitespace-nowrap">Expense Tracker</h1>
+                        <p class="text-[11px] text-slate-500 flex items-center space-x-1 whitespace-nowrap">
                             <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                             <span>Cloud Synced</span>
                         </p>
                     </div>
                 </div>
+                <!-- Toggle Sidebar Button (Desktop) -->
+                <button onclick="toggleSidebar()" class="hidden md:flex text-slate-400 hover:text-slate-600 hover:bg-slate-100 p-2 rounded-xl transition" title="ย่อ/ขยาย เมนูด้านข้าง">
+                    <i id="sidebar-toggle-icon" class="fa-solid fa-bars-staggered text-sm"></i>
+                </button>
             </div>
 
             <!-- Quick Add Action Button -->
@@ -510,6 +514,7 @@
                                             </span>
                                         </div>
                                     </th>
+                                    <th class="p-3.5">เวลา</th>
                                     <th class="p-3.5">ประเภท</th>
                                     <th class="p-3.5">ธนาคาร</th>
                                     <th class="p-3.5">หมวดหมู่</th>
@@ -820,7 +825,7 @@
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
 
     <!-- Initial Local Data Script (Bypasses CORS restrictions on file://) -->
-    <script src="data.js?v=7"></script>
-    <script src="app.js?v=7"></script>
+    <script src="data.js?v=13"></script>
+    <script src="app.js?v=13"></script>
 </body>
 </html>
